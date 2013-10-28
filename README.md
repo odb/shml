@@ -59,3 +59,23 @@ But what if you didn't want to change the foreground color, instead you want to 
 Changing Foreground and Background colors are great but that isn't everything Clistrap can do.  For example you can add icons, make text bold among other things:
 
 ![Clistrap Attributes Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap_example_officespace.png)
+
+Let's see how this was done shall we?
+
+```sh
+fake_install_yes() {
+	
+	echo -e "\nCreating Coversheet for TPS Reports... ${cs_f_green}${cs_checkmark} Pass${cs_e_f}"
+	sleep 1;
+	echo -e "Misplaced decimal check... ${cs_f_red}${cs_xmark} Fail${cs_e_f}"
+	sleep 1;
+	echo -e "Divert fractions of pennies into a bank account... ${cs_f_green}${cs_checkmark} Pass${cs_e_f}"
+	sleep 1;
+	echo -e "${cs_f_green}${cs_checkmark} Program installed${cs_e_f}"
+	sleep 1;
+	echo -e "Account Balance: ${cs_bold}${cs_f_red}\$305,326.13 ${cs_e_f}${cs_e_a}"
+	sleep 1;
+	echo -e "${cs_hr}${cs_br}"
+	echo -e "${cs_bold}${cs_f_red}CALL MICHAEL! ${cs_e_f}${cs_e_a}"
+}
+```

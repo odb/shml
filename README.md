@@ -50,8 +50,10 @@ while true; do
 done
 
 ```
-![Clistrap Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example.gif)
+![Clistrap Foreground Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example.png)
 
 In the example above we are prompting the user to make a decision: **Yes** or **No**.  Before Clistrap, the original exception handler was just a simple string that looked similar to the `read` prompt.  Now the exception handler will display the string with style applied.  `Yes` will be **Green** `No` will be **Red**.
 
-But what if you didn't want to change the foreground color, instead you want to change the background color?  Simple just replace `${cs_f_green}` with `${cs_b_green}`.  You also need to make sure to replace the "end" sequence from `${cs_e_fc}` to `${cs_e_bc}`. 
+But what if you didn't want to change the foreground color, instead you want to change the background color?  Simple just replace `${cs_f_green}` with `${cs_b_green}`.  You also need to make sure to replace the "end" sequence from `${cs_e_f}` to `${cs_e_b}`. 
+
+![Clistrap Background Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example_2.png)

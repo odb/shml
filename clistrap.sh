@@ -23,7 +23,7 @@
 
 ## Adjectives
 
-cs_e_fc='\033[39m' #End Foreground Color
+cs_e_f='\033[39m' #End Foreground Color
 cs_f_black='\033[30m'
 cs_f_red='\033[31m'
 cs_f_green='\033[32m'
@@ -63,8 +63,9 @@ cs_f_ffffff='\033[97m'
 # b  == Background
 # l  == Light
 # d  == Dark
+# e  == End
 
-cs_ebc='\033[49m' #End Background Color
+cs_e_b='\033[49m' #End Background Color
 cs_b_black='\033[40m'
 cs_b_red='\033[41m'
 cs_b_green='\033[42m'

@@ -50,7 +50,7 @@ while true; do
 done
 
 ```
-**Animated GIF**
+![Clistrap Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example.gif)
 
 In the example above we are prompting the user to make a decision: **Yes** or **No**.  Before Clistrap, the original exception handler was just a simple string that looked similar to the `read` prompt.  Now the exception handler will display the string with style applied.  `Yes` will be **Green** `No` will be **Red**.
 

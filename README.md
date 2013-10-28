@@ -34,8 +34,7 @@ Next open your Shell script and type the following at the top:
 
 Now that you have included `clistrap.sh` in your shell script you can start using the framework.  Here is a sample:
 
-```shell
-
+```sh
 #!/usr/bin/env bash
 
 source clistrap.sh
@@ -48,7 +47,6 @@ while true; do
         * ) echo -e "Please answer ${cs_f_green}yes${cs_e_fc} or ${cs_f_red}no${cs_e_fc}.";;
     esac
 done
-
 ```
 ![Clistrap Foreground Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example.png)
 
@@ -57,3 +55,7 @@ In the example above we are prompting the user to make a decision: **Yes** or **
 But what if you didn't want to change the foreground color, instead you want to change the background color?  Simple just replace `${cs_f_green}` with `${cs_b_green}`.  You also need to make sure to replace the "end" sequence from `${cs_e_f}` to `${cs_e_b}`. 
 
 ![Clistrap Background Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap_example_2.png)
+
+Changing Foreground and Background colors are great but that isn't everything Clistrap can do.  For example you can add icons, make text bold among other things:
+
+![Clistrap Attributes Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap_example_officespace.png)

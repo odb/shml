@@ -26,7 +26,7 @@ Before getting started lets review the naming conventions:
 
 It is easy to get started with Clistrap.  Download (and Copy) `clistrap.sh` into your project folder:
 
-`$ wget https://raw.github.com/jdorfman/clistrap/beta/clistrap.sh`
+`$ wget https://raw.github.com/jdorfman/clistrap/WIP/clistrap.sh`
 
 Next open your Shell script and type the following at the top: 
 

@@ -91,7 +91,7 @@ cs_g_yellow="`for i in {226..229}{229..226}; do echo -en "\033[48;5;${i}m \033[0
 
 ## Attributes
 
-cs_ea='\[0m' # End Attribute Style
+cs_e_a='\033[0m' # End Attribute Style
 cs_reset='\033[0m'
 cs_bold='\033[1m'
 cs_dim='\033[2m'

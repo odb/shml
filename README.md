@@ -56,4 +56,4 @@ In the example above we are prompting the user to make a decision: **Yes** or **
 
 But what if you didn't want to change the foreground color, instead you want to change the background color?  Simple just replace `${cs_f_green}` with `${cs_b_green}`.  You also need to make sure to replace the "end" sequence from `${cs_e_f}` to `${cs_e_b}`. 
 
-![Clistrap Background Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example_2.png)
+![Clistrap Background Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap_example_2.png)

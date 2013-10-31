@@ -9,9 +9,9 @@ clistrap
 
 HTML has CSS, CLI has "ANSI/VT100 Control Sequences".  Clistrap makes is easy to apply some style to your shell scripts without trying to remember that Yellow = `\033[33m` instead Yellow is `cs_f_yellow`. If you couldn't tell, Clistrap is heavily inspired by [Bootstrap](http://getbootstrap.com).
 
-## What
+## How
 
-Run `./example.sh` for examples.
+Run `./clistyle.sh` for usage.
 
 ## Dev
 

@@ -15,6 +15,8 @@
 #     https://github.com/jdorfman/sTre-lang
 #************************************************#
 
+#CLISTYLE:START
+
 # Foreground (Text)
 ##
 function color {
@@ -191,6 +193,9 @@ function icon {
     ':-)'|':)'|smile|face) echo -n '☺';;
   esac
 }
+
+#CLISTYLE:END
+
 
 # Usage / Examples
 ##

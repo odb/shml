@@ -13,7 +13,7 @@
 #           Mark Otto & Dave Gandy
 #
 #
-#     https://github.com/jdorfman/sTre-lang
+#     https://github.com/jdorfman/clistyle
 #************************************************#
 
 # Foreground (Text)

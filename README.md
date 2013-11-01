@@ -173,3 +173,33 @@ Section 7: Color Bar
 
 Run tests with `make`.
 
+## Extras
+
+To include the core of `clistyle.sh` in to another project (and be able to update it) via a script do the following...
+
+1. Add the following to `your_script.sh`
+
+```
+#CLISTYLE:START
+
+#CLISTYLE:END
+```
+
+2. Create `update_clistyle.sh` with the following (replacing `your_script.sh` with your actual script name):
+
+```
+#!/usr/bin/env bash
+SCRIPT_NAME="your_script.sh"
+set -xue
+curl -L https://raw.github.com/jdorfman/clisyle/master/clistyle.sh > clistyle.sh
+awk '/CLISTYLE:START/,/CLISTYLE:END/' clistyle.sh | grep -v "CLISTYLE:\(START\|END\)" > tmp
+mv tmp clistyle.sh
+awk 'FNR==NR{ _[++d]=$0;next}; /CLISTYLE:START/{ print; for(i=1;i<=d;i++){ print _[i] }; f=1;next; }; /CLISTYLE:END/{f=0}!f' clistyle.sh $SCRIPT_NAME > tmp
+mv tmp $SCRIPT_NAME
+chmod 755 $SCRIPT_NAME
+rm clistyle.sh
+```
+
+3. Run: `bash ./update_clistyle.sh` any time you want the latest code.
+
+> Note: While this isn't offically supported, any tweaks/improvments to this method are welcome via an issue labeled 'Enhancment' or by a PR to the readme. Thanks!

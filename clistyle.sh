@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#CLISTYLE:START
 #************************************************#
 #    CLIstyle - Style Framework for The Terminal
 #                    Beta
@@ -14,8 +15,6 @@
 #
 #     https://github.com/jdorfman/sTre-lang
 #************************************************#
-
-#CLISTYLE:START
 
 # Foreground (Text)
 ##

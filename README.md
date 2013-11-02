@@ -1,7 +1,7 @@
 clistrap
 ========
 
-Clistrap is a command-line interface style framework for faster and easier shell script development.
+`clistrap.sh` is a command-line interface style framework for faster and easier shell script development.
 
 **Please Note**: This is a work in progress, naming conventions will change.  Also feel free to contribute by making a pull request.
 
@@ -9,75 +9,197 @@ Clistrap is a command-line interface style framework for faster and easier shell
 
 HTML has CSS, CLI has "ANSI/VT100 Control Sequences".  Clistrap makes is easy to apply some style to your shell scripts without trying to remember that Yellow = `\033[33m` instead Yellow is `cs_f_yellow`. If you couldn't tell, Clistrap is heavily inspired by [Bootstrap](http://getbootstrap.com).
 
-## What
-
-Before getting started lets review the naming conventions:
-
-### Colors
-* `cs` == clistrap
-* `f`  == Foreground
-* `b`  == Background
-* `g`  == Gradient
-* `l`  == Light
-* `d`  == Dark
-* `e`  == End
-
-### Color Examples
-
 ## How
 
-It is easy to get started with Clistrap.  Download (and Copy) `clistrap.sh` into your project folder:
+Run `./clistyle.sh` for usage.
+```
+CLIstyle Usage / Help
+============================================================
 
-`$ wget https://raw.github.com/jdorfman/clistrap/WIP/clistrap.sh`
+Section 0: Sourcing
+------------------------------------------------------------
 
-Next open your Shell script and type the following at the top: 
+  When installed in path:
+    source $(which clistyle.sh)
 
-`source clistrap.sh`
+  When installed locally:
+    source ./clistyle.sh
 
-Now that you have included `clistrap.sh` in your shell script you can start using the framework.  Here is a sample:
+Section 1: Foreground
+------------------------------------------------------------
 
-```sh
+  $(color red "foo bar")
+
+  $(color blue "foo bar")
+
+  $(color green)
+    >>foo bar<<
+    >>bah boo<<
+  $(color end)
+
+  Short Hand: c
+
+  $(c red 'foo')
+
+  Argument list:
+
+  black, red, green, yellow, blue, magenta, cyan, gray,
+  white, darkgray, lightgreen, lightyellow, lightblue,
+  lightmagenta, lightcyan
+
+  Termination: end, off, reset
+
+  Default (no arg): end
+
+
+Section 2: Background
+------------------------------------------------------------
+
+  $(background red "foo bar")
+
+  $(background blue "foo bar")
+
+  $(background green)
+    >>foo bar<<
+    >>bah boo<<
+  $(background end)
+
+  Short Hand: bg
+
+  $(bg red 'foo')
+
+  Argument list:
+
+  black, red, green, yellow, blue, magenta, cyan, gray,
+  white, darkgray, lightred, lightgreen, lightyellow,
+  lightblue, lightmagenta, lightcyan
+
+  Termination: end, off, reset
+
+  Default (no arg): end
+
+
+Section 3: Attributes
+------------------------------------------------------------
+
+  !! EXPERMENTAL !!
+  AKA It doesn't work for me, but should.
+
+  > Note:
+  > attribute end turns off everything,
+  > including foreground and background color.
+
+  $(attribute bold "foo bar")
+
+  $(attribute italic "foo bar")
+
+  $(attribute dim)
+    >>foo bar<<
+    >>bah boo<<
+  $(attribute end)
+
+  Short Hand: a
+
+  $(a bold 'foo')
+
+  Argument list:
+
+  bold, dim, italic, blink, invert, hidden
+
+  Termination: end, off, reset
+
+  Default (no arg): end
+
+
+Section 4: Elements
+------------------------------------------------------------
+
+  foo$(br)$(tab)bar
+
+  foo$(br)$(indent)bar$(br)$(indent 6)boo
+
+  > Note: short hand for `indent` is `i`
+
+  $(hr)
+
+  $(hr 50)
+
+  $(hr '~' 40)
+
+  $(hr '#' 30)
+
+
+Section 5: Icons
+------------------------------------------------------------
+
+  $(icon check) $(icon '<3') $(icon '*') $(icon ':)')
+
+
+Section 6: Mixed Examples
+------------------------------------------------------------
+
+  $(bg white "$(c black "foo bar")")
+
+  $(bg green)$(c red)$(a bold)
+    >>foo bar<<
+    $(hr "$(i \'darkstar\')" 11)
+    >>bah boo<<
+  $(a end)$(c end)$(bg end)
+
+  Argument list:
+
+  check|checkmark, X|x|xmark, <3|heart, sun, *|star,
+  darkstar, umbrella, flag, snow|snowflake, music,
+  scissors, tm|trademark, copyright, apple,
+  :-)|:)|smile|face
+
+
+Section 7: Color Bar
+------------------------------------------------------------
+
+  $(color-bar)
+
+  $(color-bar red green yellow blue magenta \
+                 cyan lightgray darkgray lightred \
+                 lightgreen lightyellow lightblue \
+                 lightmagenta lightcyan)
+
+  Short Hand: bar
+
+  $(bar red red red red)
+
+```
+## Dev
+
+Run tests with `make`.
+
+## Extras
+
+To include the core of `clistyle.sh` in to another project (and be able to update it) via a script do the following...
+
+1. Add the following to `your_script.sh`
+
+```
+#CLISTYLE:START
+
+#CLISTYLE:END
+```
+
+2. Create `update_clistyle.sh` with the following (replacing `your_script.sh` with your actual script name):
+
+```
 #!/usr/bin/env bash
-
-source clistrap.sh
-
-while true; do
-    read -p "Do you wish to install this program?" yn
-    case $yn in
-        [Yy]* ) make install; break;;
-        [Nn]* ) exit;;
-        * ) echo -e "Please answer ${cs_f_green}yes${cs_e_fc} or ${cs_f_red}no${cs_e_fc}.";;
-    esac
-done
+SCRIPT_NAME="your_script.sh"
+set -xue
+curl -L https://raw.github.com/jdorfman/clisyle/master/clistyle.sh > clistyle.sh
+awk '/CLISTYLE:START/,/CLISTYLE:END/' clistyle.sh | grep -v "CLISTYLE:\(START\|END\)" > tmp
+mv tmp clistyle.sh
+awk 'FNR==NR{ _[++d]=$0;next}; /CLISTYLE:START/{ print; for(i=1;i<=d;i++){ print _[i] }; f=1;next; }; /CLISTYLE:END/{f=0}!f' clistyle.sh $SCRIPT_NAME > tmp
+mv tmp $SCRIPT_NAME
+chmod 755 $SCRIPT_NAME
+rm clistyle.sh
 ```
-![Clistrap Foreground Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap-example.png)
 
-In the example above we are prompting the user to make a decision: **Yes** or **No**.  Before Clistrap, the original exception handler was just a simple string that looked similar to the `read` prompt.  Now the exception handler will display the string with style applied.  `Yes` will be **Green** `No` will be **Red**.
+3. Run: `bash ./update_clistyle.sh` any time you want the latest code.
 
-But what if you didn't want to change the foreground color, instead you want to change the background color?  Simple just replace `${cs_f_green}` with `${cs_b_green}`.  You also need to make sure to replace the "end" sequence from `${cs_e_f}` to `${cs_e_b}`. 
-
-![Clistrap Background Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap_example_2.png)
-
-Changing Foreground and Background colors are great but that isn't everything Clistrap can do.  For example you can add icons, make text bold among other things:
-
-![Clistrap Attributes Example](http://jdorfman.cdnconnect.com/tmp/clistrap/clistrap_example_officespace.png)
-
-Let's see how this was done shall we?
-
-```sh
-fake_install_yes() {
-	
-	echo -e "\nCreating Coversheet for TPS Reports... ${cs_f_green}${cs_checkmark} Pass${cs_e_f}"
-	sleep 1;
-	echo -e "Misplaced decimal check... ${cs_f_red}${cs_xmark} Fail${cs_e_f}"
-	sleep 1;
-	echo -e "Divert fractions of pennies into a bank account... ${cs_f_green}${cs_checkmark} Pass${cs_e_f}"
-	sleep 1;
-	echo -e "${cs_f_green}${cs_checkmark} Program installed${cs_e_f}"
-	sleep 1;
-	echo -e "Account Balance: ${cs_bold}${cs_f_red}\$305,326.13 ${cs_e_f}${cs_e_a}"
-	sleep 1;
-	echo -e "${cs_hr}${cs_br}"
-	echo -e "${cs_bold}${cs_f_red}CALL MICHAEL! ${cs_e_f}${cs_e_a}"
-}
-```
+> Note: While this isn't offically supported, any tweaks/improvments to this method are welcome via an issue labeled 'Enhancment' or by a PR to the readme. Thanks!

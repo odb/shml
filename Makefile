@@ -1,13 +1,13 @@
 test: setup .PHONY
 
-setup: test/CLIunit.sh
-	./test/CLIunit.sh ./test/tests.sh
+setup: test/shunt.sh
+	./test/shunt.sh ./test/tests.sh
 
 clean:
-	rm test/CLIunit.sh
+	rm test/shunt.sh
 
-test/CLIunit.sh:
-	cd test && curl -L https://raw.github.com/jmervine/CLIunit/master/install.sh | bash -s local
+test/shunt.sh:
+	cd test && curl -L https://raw.github.com/odb/shunt/master/install.sh | bash -s local
 
 .PHONY:
 

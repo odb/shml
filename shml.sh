@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-#CLISTYLE:START
+#SHML:START
 #************************************************#
-#    CLIstyle - Style Framework for The Terminal
+#        shml - Shell Markup Framework
 #                    Beta
 #        by Justin Dorfman - @jdorfman
 #        && Joshua Mervine - @mervinej
 #
 #               Inspired by:
 #
-#       Kiyor Cia, Jeff Foard FLOZz' MISC,
+#      Kiyor Cia, Jeff Foard FLOZz' MISC,
 #           Mark Otto & Dave Gandy
 #
 #
-#     https://github.com/jdorfman/clistyle
+#          https://github.com/odb/shml
 #************************************************#
 
 # Foreground (Text)
@@ -193,25 +193,25 @@ function icon {
   esac
 }
 
-#CLISTYLE:END
+#SHML:END
 
 
 # Usage / Examples
 ##
-if [[ "`basename $0`" = "clistyle.sh" ]]; then
+if [[ "`basename $0`" = "shml.sh" ]]; then
 I=2
 echo -e "
-$(a bold 'CLIstyle Usage / Help')
+$(a bold 'SHML Usage / Help')
 $(hr '=')
 
 $(a bold 'Section 0: Sourcing')
 $(hr '-')
 
 $(i $I)When installed in path:
-$(i $I)  source \$(which clistyle.sh)
+$(i $I)  source \$(which shml.sh)
 
 $(i $I)When installed locally:
-$(i $I)  source ./clistyle.sh
+$(i $I)  source ./shml.sh
 
 $(a bold 'Section 1: Foreground')
 $(hr '-')

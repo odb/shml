@@ -1,20 +1,20 @@
 ### Real-world Example
 
-Taking from CLIstyle Usage
+Taking from SHML Usage
 
 ``` bash
-source ./clistyle.sh
-$(a bold 'CLIstyle Usage / Help')
+source ./shml.sh
+$(a bold 'SHML Usage / Help')
 $(hr '=')
 
 $(a bold 'Section 0: Sourcing')
 $(hr '-')
 
 $(i $I)When installed in path:
-$(i $I)  source \$(which clistyle.sh)
+$(i $I)  source \$(which shml.sh)
 
 $(i $I)When installed locally:
-$(i $I)  source ./clistyle.sh
+$(i $I)  source ./shml.sh
 
 $(a bold 'Section 1: Foreground')
 $(hr '-')

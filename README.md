@@ -1,7 +1,7 @@
-clistrap
-========
+shml
+====
 
-`clistrap.sh` is a command-line interface style framework for faster and easier shell script development.
+`shml.sh` is a shell framework for faster and easier script development.
 
 **Please Note**: This is a work in progress, naming conventions will change.  Also feel free to contribute by making a pull request.
 
@@ -11,7 +11,7 @@ HTML has CSS, CLI has "ANSI/VT100 Control Sequences".  Clistrap makes is easy to
 
 ## How
 
-Run `./clistyle.sh` for usage.
+Run `./shml.sh` for usage.
 ```
 CLIstyle Usage / Help
 ============================================================
@@ -20,10 +20,10 @@ Section 0: Sourcing
 ------------------------------------------------------------
 
   When installed in path:
-    source $(which clistyle.sh)
+    source $(which shml.sh)
 
   When installed locally:
-    source ./clistyle.sh
+    source ./shml.sh
 
 Section 1: Foreground
 ------------------------------------------------------------
@@ -175,7 +175,7 @@ Run tests with `make`.
 
 ## Extras
 
-To include the core of `clistyle.sh` in to another project (and be able to update it) via a script do the following...
+To include the core of `shml.sh` in to another project (and be able to update it) via a script do the following...
 
 1. Add the following to `your_script.sh`
 
@@ -185,21 +185,21 @@ To include the core of `clistyle.sh` in to another project (and be able to updat
 #CLISTYLE:END
 ```
 
-2. Create `update_clistyle.sh` with the following (replacing `your_script.sh` with your actual script name):
+2. Create `update_shml.sh` with the following (replacing `your_script.sh` with your actual script name):
 
 ```
 #!/usr/bin/env bash
 SCRIPT_NAME="your_script.sh"
 set -xue
-curl -L https://raw.github.com/jdorfman/clisyle/master/clistyle.sh > clistyle.sh
-awk '/CLISTYLE:START/,/CLISTYLE:END/' clistyle.sh | grep -v "CLISTYLE:\(START\|END\)" > tmp
-mv tmp clistyle.sh
-awk 'FNR==NR{ _[++d]=$0;next}; /CLISTYLE:START/{ print; for(i=1;i<=d;i++){ print _[i] }; f=1;next; }; /CLISTYLE:END/{f=0}!f' clistyle.sh $SCRIPT_NAME > tmp
+curl -L https://raw.github.com/jdorfman/clisyle/master/shml.sh > shml.sh
+awk '/CLISTYLE:START/,/CLISTYLE:END/' shml.sh | grep -v "CLISTYLE:\(START\|END\)" > tmp
+mv tmp shml.sh
+awk 'FNR==NR{ _[++d]=$0;next}; /CLISTYLE:START/{ print; for(i=1;i<=d;i++){ print _[i] }; f=1;next; }; /CLISTYLE:END/{f=0}!f' shml.sh $SCRIPT_NAME > tmp
 mv tmp $SCRIPT_NAME
 chmod 755 $SCRIPT_NAME
-rm clistyle.sh
+rm shml.sh
 ```
 
-3. Run: `bash ./update_clistyle.sh` any time you want the latest code.
+3. Run: `bash ./update_shml.sh` any time you want the latest code.
 
 > Note: While this isn't offically supported, any tweaks/improvments to this method are welcome via an issue labeled 'Enhancment' or by a PR to the readme. Thanks!

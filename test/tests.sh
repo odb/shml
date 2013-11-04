@@ -1,6 +1,6 @@
 # file: tests.sh
 
-source ./clistyle.sh
+source ./shml.sh
 
 function before {
   true

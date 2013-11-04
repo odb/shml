@@ -12,7 +12,6 @@
 #      Kiyor Cia, Jeff Foard FLOZz' MISC,
 #           Mark Otto & Dave Gandy
 #
-#
 #          https://github.com/odb/shml
 #************************************************#
 

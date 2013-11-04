@@ -1,6 +1,6 @@
-clistrap
+SHML
 ========
 
-Clistrap is a command-line interface framework for faster and easier shell script development.
+SHML is a command-line interface framework for faster and easier shell script development.
 
-Currently a WIP: https://github.com/jdorfman/clistrap/tree/WIP
+Currently a WIP: https://github.com/odb/shml/tree/WIP

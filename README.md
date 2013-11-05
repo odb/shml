@@ -11,164 +11,70 @@ HTML has CSS, terminals have "ANSI/VT100 Control Sequences". SHML makes is easy 
 
 ## How
 
-Run `./shml.sh` for usage.
+Run `./shml.sh` for usage/help.
+
+## Examples
+
+### Font Color
+For the first example we are going to make the text red.
+
 ```sh
-SHML Usage / Help
-============================================================
+#!/usr/bin/env bash
+source ./shml.sh
 
-Section 0: Sourcing
-------------------------------------------------------------
-
-  When installed in path:
-    source $(which shml.sh)
-
-  When installed locally:
-    source ./shml.sh
-
-Section 1: Foreground
-------------------------------------------------------------
-
-  $(color red "foo bar")
-
-  $(color blue "foo bar")
-
-  $(color green)
-    >>foo bar<<
-    >>bah boo<<
-  $(color end)
-
-  Short Hand: c
-
-  $(c red 'foo')
-
-  Argument list:
-
-  black, red, green, yellow, blue, magenta, cyan, gray,
-  white, darkgray, lightgreen, lightyellow, lightblue,
-  lightmagenta, lightcyan
-
-  Termination: end, off, reset
-
-  Default (no arg): end
-
-
-Section 2: Background
-------------------------------------------------------------
-
-  $(background red "foo bar")
-
-  $(background blue "foo bar")
-
-  $(background green)
-    >>foo bar<<
-    >>bah boo<<
-  $(background end)
-
-  Short Hand: bg
-
-  $(bg red 'foo')
-
-  Argument list:
-
-  black, red, green, yellow, blue, magenta, cyan, gray,
-  white, darkgray, lightred, lightgreen, lightyellow,
-  lightblue, lightmagenta, lightcyan
-
-  Termination: end, off, reset
-
-  Default (no arg): end
-
-
-Section 3: Attributes
-------------------------------------------------------------
-
-  !! EXPERMENTAL !!
-  AKA It doesn't work for me, but should.
-
-  > Note:
-  > attribute end turns off everything,
-  > including foreground and background color.
-
-  $(attribute bold "foo bar")
-
-  $(attribute italic "foo bar")
-
-  $(attribute dim)
-    >>foo bar<<
-    >>bah boo<<
-  $(attribute end)
-
-  Short Hand: a
-
-  $(a bold 'foo')
-
-  Argument list:
-
-  bold, dim, italic, blink, invert, hidden
-
-  Termination: end, off, reset
-
-  Default (no arg): end
-
-
-Section 4: Elements
-------------------------------------------------------------
-
-  foo$(br)$(tab)bar
-
-  foo$(br)$(indent)bar$(br)$(indent 6)boo
-
-  > Note: short hand for `indent` is `i`
-
-  $(hr)
-
-  $(hr 50)
-
-  $(hr '~' 40)
-
-  $(hr '#' 30)
-
-
-Section 5: Icons
-------------------------------------------------------------
-
-  $(icon check) $(icon '<3') $(icon '*') $(icon ':)')
-
-
-Section 6: Mixed Examples
-------------------------------------------------------------
-
-  $(bg white "$(c black "foo bar")")
-
-  $(bg green)$(c red)$(a bold)
-    >>foo bar<<
-    $(hr "$(i \'darkstar\')" 11)
-    >>bah boo<<
-  $(a end)$(c end)$(bg end)
-
-  Argument list:
-
-  check|checkmark, X|x|xmark, <3|heart, sun, *|star,
-  darkstar, umbrella, flag, snow|snowflake, music,
-  scissors, tm|trademark, copyright, apple,
-  :-)|:)|smile|face
-
-
-Section 7: Color Bar
-------------------------------------------------------------
-
-  $(color-bar)
-
-  $(color-bar red green yellow blue magenta \
-                 cyan lightgray darkgray lightred \
-                 lightgreen lightyellow lightblue \
-                 lightmagenta lightcyan)
-
-  Short Hand: bar
-
-  $(bar red red red red)
-
+echo -e "
+$(color red)
+Couldn’t peep it with a pair of bi-focals.
+$(color end)
+"
 ```
+### Result
+
+![Red Text](http://jdorfman.cdnconnect.com/odb/images/odb-red-text.png)
+
+### Background Color
+For the second example we are going to make the background red.
+
+```sh
+echo -e "
+$(background red "I'm no joker, play me as a joker")
+"
+```
+### Result
+
+![Red Text](http://jdorfman.cdnconnect.com/odb/images/odb-bkg-red.png)
+
+### Icons
+In this example we are going to illustrate Pass and Fail Messages using colors and icons
+
+```sh
+echo -e "
+$(color green) Pass $(icon check) $(color end)
+$(color red) Fail $(icon xmark) $(color end)
+"
+```
+### Result
+
+![Pass Fail](http://jdorfman.cdnconnect.com/odb/images/odb-pass-fail.png)
+
+### Horizontal Rule Element
+In this example we are going to create 5 hr elements.
+
+```sh
+echo -e "
+$(color green)
+10 $(hr '-' 10)
+20 $(hr '*' 20)
+30 $(hr '~' 30)
+40 $(hr '#' 40)
+50 $(hr '_' 50)
+$(color end)
+"
+```
+### Result
+
+![Green HR](http://jdorfman.cdnconnect.com/odb/images/odb-green-hr.png)
+
 ## Dev
 
 Run tests with `make`.

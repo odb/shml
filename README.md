@@ -3,8 +3,6 @@ shml
 
 `shml.sh` is a shell framework for faster and easier script development.
 
-**Please Note**: This is a work in progress, naming conventions will change.  Also feel free to contribute by making a pull request.
-
 ## Why
 
 HTML has CSS, terminals have "ANSI/VT100 Control Sequences". SHML makes is easy to apply some style to your shell scripts without trying to remember that Yellow = `\033[33m` instead Yellow is `$(color yellow)`.

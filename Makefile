@@ -1,6 +1,4 @@
-test: setup .PHONY
-
-setup: test/shunt.sh
+test: test/shunt.sh .PHONY
 	./test/shunt.sh ./test/tests.sh
 
 clean:

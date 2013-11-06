@@ -2,14 +2,6 @@
 
 source ./shml.sh
 
-function before {
-  true
-}
-
-function after {
-  true
-}
-
 function run_tests {
 ####################################################
 # Tests go here.

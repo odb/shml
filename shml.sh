@@ -197,7 +197,7 @@ function icon {
 
 # Usage / Examples
 ##
-if [[ "`basename $0`" = "shml.sh" ]]; then
+if [[ "$0" != "-bash" ]] && [[ "`basename $0`" = "shml.sh" ]]; then
 I=2
 echo -e "
 $(a bold 'SHML Usage / Help')

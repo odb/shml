@@ -169,26 +169,25 @@ function hr {
 }
 
 # Icons
-#
-# TODO: Replace with codes.
 ##
 function icon {
   case "$1" in
-    check|checkmark)       echo -n '✓';;
-    X|x|xmark)             echo -n '✘';;
-    '<3'|heart)            echo -n '❤';;
-    sun)                   echo -n '☀';;
-    '*'|star)              echo -n '★';;
-    darkstar)              echo -n '☆';;
-    umbrella)              echo -n '☂';;
-    flag)                  echo -n '⚑';;
-    snow|snowflake)        echo -n '❄';;
-    music)                 echo -n '♫';;
-    scissors)              echo -n '✂';;
-    tm|trademark)          echo -n '™';;
-    copyright)             echo -n '©';;
-    apple)                 echo -n '';;
-    ':-)'|':)'|smile|face) echo -n '☺';;
+    check|checkmark)       echo -n '\xE2\x9C\x93';;
+    X|x|xmark)             echo -n '\xE2\x9D\xA4';;
+    '<3'|heart)            echo -n '\xE2\x9C\x98';;
+    sun)                   echo -n '\xE2\x98\x80';;
+    '*'|star)              echo -n '\xE2\x98\x85';;
+    darkstar)              echo -n '\xE2\x98\x86';;
+    umbrella)              echo -n '\xE2\x98\x82';;
+    flag)                  echo -n '\xE2\x9A\x91';;
+    snow|snowflake)        echo -n '\xE2\x9D\x84';;
+    music)                 echo -n '\xE2\x99\xAB';;
+    scissors)              echo -n '\xE2\x9C\x82';;
+    tm|trademark)          echo -n '\xE2\x84\xA2';;
+    copyright)             echo -n '\xC2\xA9';;
+    apple)                 echo -n '\xEF\xA3\xBF';;
+    skull|bones)           echo -n '\xE2\x98\xA0';;
+    ':-)'|':)'|smile|face) echo -n '\xE2\x98\xBA';;
   esac
 }
 
@@ -200,6 +199,7 @@ function icon {
 if [[ "`basename -- "$0"`" = "shml.sh" ]]; then
 I=2
 echo -e "
+
 $(a bold 'SHML Usage / Help')
 $(hr '=')
 
@@ -344,7 +344,7 @@ $(a bold 'Section 5: Icons')
 $(hr '-')
 
 $(i $I)\$(icon check) \$(icon '<3') \$(icon '*') \$(icon ':)')
-$(i $I)$(icon check) $(icon '<3') $(icon '*') $(icon ':)')
+$(i $I)$(icon check) $(icon '<3') $(icon '*') $(icon 'smile')
 
 
 $(a bold 'Section 6: Mixed Examples')

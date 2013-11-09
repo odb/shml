@@ -171,24 +171,26 @@ function hr {
 # Icons
 ##
 function icon {
+  local i='';
   case "$1" in
-    check|checkmark)       echo -n '\xE2\x9C\x93';;
-    X|x|xmark)             echo -n '\xE2\x9D\xA4';;
-    '<3'|heart)            echo -n '\xE2\x9C\x98';;
-    sun)                   echo -n '\xE2\x98\x80';;
-    '*'|star)              echo -n '\xE2\x98\x85';;
-    darkstar)              echo -n '\xE2\x98\x86';;
-    umbrella)              echo -n '\xE2\x98\x82';;
-    flag)                  echo -n '\xE2\x9A\x91';;
-    snow|snowflake)        echo -n '\xE2\x9D\x84';;
-    music)                 echo -n '\xE2\x99\xAB';;
-    scissors)              echo -n '\xE2\x9C\x82';;
-    tm|trademark)          echo -n '\xE2\x84\xA2';;
-    copyright)             echo -n '\xC2\xA9';;
-    apple)                 echo -n '\xEF\xA3\xBF';;
-    skull|bones)           echo -n '\xE2\x98\xA0';;
-    ':-)'|':)'|smile|face) echo -n '\xE2\x98\xBA';;
+    check|checkmark)       i='\xE2\x9C\x93';;
+    X|x|xmark)             i='\xE2\x9C\x98';;
+    '<3'|heart)            i='\xE2\x9D\xA4';;
+    sun)                   i='\xE2\x98\x80';;
+    '*'|star)              i='\xE2\x98\x85';;
+    darkstar)              i='\xE2\x98\x86';;
+    umbrella)              i='\xE2\x98\x82';;
+    flag)                  i='\xE2\x9A\x91';;
+    snow|snowflake)        i='\xE2\x9D\x84';;
+    music)                 i='\xE2\x99\xAB';;
+    scissors)              i='\xE2\x9C\x82';;
+    tm|trademark)          i='\xE2\x84\xA2';;
+    copyright)             i='\xC2\xA9';;
+    apple)                 i='\xEF\xA3\xBF';;
+    skull|bones)           i='\xE2\x98\xA0';;
+    ':-)'|':)'|smile|face) i='\xE2\x98\xBA';;
   esac
+  echo -ne "$i";
 }
 
 #SHML:END

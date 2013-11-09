@@ -85,9 +85,9 @@ function run_tests {
 
   # Elements
   ##
-  assert_equal "`br`" "\n" "should line break"
+  assert_equal "`br`" "$(echo -ne "\n\r")" "should line break"
 
-  assert_equal "`tab`" "\t" "should tab"
+  assert_equal "`tab`" "$(echo -e '\t')" "should tab"
 
   assert_equal "`indent`" "    " "should tab"
   assert_equal "`indent 2`" "  " "should tab"

@@ -20,7 +20,7 @@ For the first example we are going to make the text red.
 #!/usr/bin/env bash
 source ./shml.sh
 
-echo -e "
+echo "
 $(color red)
 Couldn’t peep it with a pair of bi-focals.
 $(color end)
@@ -34,7 +34,7 @@ $(color end)
 For the second example we are going to make the background red.
 
 ```sh
-echo -e "
+echo "
 $(background red "I'm no joker, play me as a joker")
 "
 ```
@@ -46,7 +46,7 @@ $(background red "I'm no joker, play me as a joker")
 In this example we are going to illustrate Pass and Fail Messages using colors and icons
 
 ```sh
-echo -e "
+echo "
 $(color green) Pass $(icon check) $(color end)
 $(color red) Fail $(icon xmark) $(color end)
 "
@@ -59,7 +59,7 @@ $(color red) Fail $(icon xmark) $(color end)
 In this example we are going to create 5 hr elements.
 
 ```sh
-echo -e "
+echo "
 $(color green)
 10 $(hr '-' 10)
 20 $(hr '*' 20)

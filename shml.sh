@@ -108,7 +108,7 @@ function attribute {
     end|off|reset) __attr=$__end;;
     bold)          __attr='\033[1m';;
     dim)           __attr='\033[2m';;
-    italic)        __attr='\033[4m';;
+    underline)     __attr='\033[4m';;
     blink)         __attr='\033[5m';;
     invert)        __attr='\033[7m';;
     hidden)        __attr='\033[8m';;
@@ -289,7 +289,7 @@ $(i $I)>>foo bar<<
 $(i $I)>>bah boo<<
 $(i $I)$(color end)
 
-$(i $I)Short Hand: $(a italic 'c')
+$(i $I)Short Hand: $(a underline 'c')
 
 $(i $I)\$(c red 'foo')
 
@@ -322,7 +322,7 @@ $(i $I)>>foo bar<<
 $(i $I)>>bah boo<<
 $(background end)
 
-$(i $I)Short Hand: $(a italic 'bg')
+$(i $I)Short Hand: $(a underline 'bg')
 
 $(i $I)\$(bg red 'foo')
 
@@ -340,18 +340,23 @@ $(i $I)Default (no arg): end
 $(a bold 'Section 3: Attributes')
 $(hr '-')
 
-$(i $I)$(a bold '!! EXPERMENTAL !!')
-$(i $I)$(a italic "AKA It doesn't work for me, but should.")
+$(i $I)$(a bold "Attributes only work on vt100 compatable terminals.")
 
 $(i $I)> Note:
-$(i $I)> $(a italic 'attribute end') turns off everything,
+$(i $I)> $(a underline 'attribute end') turns off everything,
 $(i $I)> including foreground and background color.
 
 $(i $I)\$(attribute bold \"foo bar\")
 $(i $I)$(attribute bold "foo bar")
 
-$(i $I)\$(attribute italic \"foo bar\")
-$(i $I)$(attribute italic "foo bar")
+$(i $I)\$(attribute underline \"foo bar\")
+$(i $I)$(attribute underline "foo bar")
+
+$(i $I)\$(attribute blink \"foo bar\")
+$(i $I)$(attribute blink "foo bar")
+
+$(i $I)\$(attribute invert \"foo bar\")
+$(i $I)$(attribute invert "foo bar")
 
 $(i $I)\$(attribute dim)
 $(i $I)$(i $I)>>foo bar<<
@@ -362,13 +367,13 @@ $(i $I)$(i $I)>>foo bar<<
 $(i $I)$(i $I)>>bah boo<<
 $(i $I)$(attribute end)
 
-$(i $I)Short Hand: $(a italic 'a')
+$(i $I)Short Hand: $(a underline 'a')
 
 $(i $I)\$(a bold 'foo')
 
 $(i $I)Argument list:
 
-$(i $I)bold, dim, italic, blink, invert, hidden
+$(i $I)bold, dim, underline, blink, invert, hidden
 
 $(i $I)Termination: end, off, reset
 
@@ -384,7 +389,7 @@ $(i $I)
 $(i $I)foo\$(br)\$(indent)bar\$(br)\$(indent 6)boo
 $(i $I)foo$(br)$(indent)bar$(br)$(indent 6)boo
 $(i $I)
-$(i $I)> Note: short hand for $(a italic 'indent') is $(a italic 'i')
+$(i $I)> Note: short hand for $(a underline 'indent') is $(a underline 'i')
 $(i $I)
 $(i $I)\$(hr)
 $(i $I)$(hr)
@@ -469,7 +474,7 @@ $(i $I)$(color-bar red green yellow blue magenta \
                   lightgreen lightyellow lightblue \
                   lightmagenta lightcyan)
 
-$(i $I)Short Hand: $(a italic 'bar')
+$(i $I)Short Hand: $(a underline 'bar')
 $(i $I)
 $(i $I)\$(bar red red red red)
 

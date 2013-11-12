@@ -170,6 +170,61 @@ function hr {
 
 # Icons
 ##
+declare -A entities=()
+entities[quot]='\u0022'
+entities[amp]='\u0026'
+entities[lt]='\u003C'
+entities[gt]='\u003E'
+entities[nbsp]=' '
+entities[pi]='\u03C0'
+entities[ndash]='\u2013'
+entities[mdash]='\u2014'
+entities[lsquo]='\u2018'
+entities[rsquo]='\u2019'
+entities[sbquo]='\u201A'
+entities[ldquo]='\u201C'
+entities[rdquo]='\u201D'
+entities[dagger]='\u2020'
+entities[bullet]='\u2022'
+entities[lsaquo]='\u2039'
+entities[rasquo]='\u203A'
+entities[oline]='\u203E'
+entities[frasl]='\u2044'
+entities[euro]='\u20AC'
+entities[larr]='\u2190'
+entities[uarr]='\u2191'
+entities[rarr]='\u2192'
+entities[darr]='\u2193'
+entities[harr]='\u2194'
+entities[cararr]='\u21B5'
+entities[lArr]='\u21D0'
+entities[uArr]='\u21D1'
+entities[rArr]='\u21D2'
+entities[dArr]='\u21D3'
+entities[hArr]='\u21D4'
+entities[empty]='\u2205'
+entities[sum]='\u2211'
+entities[minus]='\u2212'
+entities[spades]='\u2660'
+entities[clubs]='\u2663'
+entities[hearts]='\u2665'
+entities[diams]='\u2666'
+function _entity_list {
+  local w=0
+  for i in "${!entities[@]}"; do
+    if [ $w -lt 3 ]; then
+      printf "  %07s:  %s   " "$i" "$( echo -e "${entities[$i]}")"
+      w="$(expr $w + 1)"
+    else
+      printf "  %07s:  %s   \n" "$i" "$( echo -e "${entities[$i]}")"
+      w=0
+    fi
+  done
+  echo " "
+}
+function entity {
+  echo -ne "${entities[$1]}"
+}
 function icon {
   local i='';
   case "$1" in
@@ -189,6 +244,8 @@ function icon {
     apple)                 i='\xEF\xA3\xBF';;
     skull|bones)           i='\xE2\x98\xA0';;
     ':-)'|':)'|smile|face) i='\xE2\x98\xBA';;
+    *)
+      entity $1; return 0;;
   esac
   echo -ne "$i";
 }
@@ -342,11 +399,41 @@ $(i $I)\$(hr '#' 30)
 $(i $I)$(hr '#' 30)
 
 
-$(a bold 'Section 5: Icons')
+$(a bold 'Section 5: Icons / Entities')
 $(hr '-')
 
+$(i $I)Icons
+$(i $I)$(hr '-' 10)
+
 $(i $I)\$(icon check) \$(icon '<3') \$(icon '*') \$(icon ':)')
+
 $(i $I)$(icon check) $(icon '<3') $(icon '*') $(icon 'smile')
+
+$(i $I)Argument list:
+
+$(i $I)check|checkmark, X|x|xmark, <3|heart, sun, *|star,
+$(i $I)darkstar, umbrella, flag, snow|snowflake, music,
+$(i $I)scissors, tm|trademark, copyright, apple,
+$(i $I):-)|:)|smile|face
+
+$(i $I)Entities
+$(i $I)$(hr '-' 10)
+
+$(i $I)A limited implementation of browser HTML Entities.
+
+$(i $I)\$(entity spades) \$(entity clubs) \$(entity hearts) \$(entity diams)
+
+$(i $I)$(entity spades) $(entity clubs) $(entity hearts) $(entity diams)
+
+$(i $I)Entities can also be referenced via 'icon':
+
+$(i $I)\$(icon spades) \$(icon clubs) \$(icon hearts) \$(icon diams)
+
+$(i $I)$(icon spades) $(icon clubs) $(icon hearts) $(icon diams)
+
+$(i $I)Argument list:
+
+$(_entity_list)
 
 
 $(a bold 'Section 6: Mixed Examples')
@@ -365,13 +452,6 @@ $(i $I)>>foo bar<<
 $(i $I)$(hr "$(i 'darkstar')" 11)
 $(i $I)>>bah boo<<
 $(a end)$(c end)$(bg end)
-
-$(i $I)Argument list:
-
-$(i $I)check|checkmark, X|x|xmark, <3|heart, sun, *|star,
-$(i $I)darkstar, umbrella, flag, snow|snowflake, music,
-$(i $I)scissors, tm|trademark, copyright, apple,
-$(i $I):-)|:)|smile|face
 
 
 $(a bold 'Section 7: Color Bar')

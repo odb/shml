@@ -102,10 +102,16 @@ function run_tests {
   assert_equal "`hr '.' 4`" "...." \
                 "should draw hr 4 wide with char"
 
-  # Icons
+  # Icons / Entities
   ##
   assert_equal "`icon smile`" '☺' \
-                "should draw simple"
+                "should draw smile"
+
+  assert_equal "`icon lt`" '<' \
+                "should draw lt"
+
+  assert_equal "`entity lt`" '<' \
+                "should draw lt"
 
   # Mixed
   ##

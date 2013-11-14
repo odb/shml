@@ -87,7 +87,7 @@ function bg {
 function color-bar {
   if test "$2"; then
     for i in "$@"; do
-      echo -en "`background "$i" " "`"
+      echo -en "$(background "$i" " ")"
     done; echo
   else
     for i in {16..21}{21..16}; do
@@ -255,7 +255,7 @@ function icon {
 
 # Usage / Examples
 ##
-if [[ "`basename -- "$0"`" = "shml.sh" ]]; then
+if [[ "$(basename -- "$0")" = "shml.sh" ]]; then
 I=2
 echo -e "
 

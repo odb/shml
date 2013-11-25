@@ -340,7 +340,7 @@ $(i $I)Default (no arg): end
 $(a bold 'Section 3: Attributes')
 $(hr '-')
 
-$(i $I)$(a bold "Attributes only work on vt100 compatable terminals.")
+$(i $I)$(a bold "Attributes only work on vt100 compatible terminals.")
 
 $(i $I)> Note:
 $(i $I)> $(a underline 'attribute end') turns off everything,

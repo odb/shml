@@ -106,4 +106,4 @@ rm shml.sh
 
 3. Run: `bash ./update_shml.sh` any time you want the latest code.
 
-> Note: While this isn't offically supported, any tweaks/improvments to this method are welcome via an issue labeled 'Enhancment' or by a PR to the readme. Thanks!
+> Note: While this isn't offically supported, any tweaks/improvments to this method are welcome via an issue labeled 'Enhancement' or by a PR to the readme. Thanks!

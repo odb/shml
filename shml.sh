@@ -170,7 +170,7 @@ function hr {
 
 # Icons
 ##
-declare -A entities=()
+declare -a entities=()
 entities[quot]='\u0022'
 entities[amp]='\u0026'
 entities[lt]='\u003C'

@@ -28,7 +28,7 @@ $(color end)
 ```
 ### Result
 
-![Red Text](http://jdorfman.cdnconnect.com/odb/images/odb-red-text.jpg)
+![Red Text](screens/1red.png)
 
 ### Background Color
 For the second example we are going to make the background red.
@@ -40,7 +40,7 @@ $(background red "I'm no joker, play me as a joker")
 ```
 ### Result
 
-![Red Text](http://jdorfman.cdnconnect.com/odb/images/odb-bkg-red.jpg)
+![Red Text](screens/2background.png)
 
 ### Icons
 In this example we are going to illustrate Pass and Fail Messages using colors and icons
@@ -53,7 +53,7 @@ $(color red) Fail $(icon xmark) $(color end)
 ```
 ### Result
 
-![Pass Fail](http://jdorfman.cdnconnect.com/odb/images/odb-pass-fail.jpg)
+![Pass Fail](screens/3icons.png)
 
 ### Horizontal Rule Element
 In this example we are going to create 5 hr elements.
@@ -71,7 +71,7 @@ $(color end)
 ```
 ### Result
 
-![Green HR](http://jdorfman.cdnconnect.com/odb/images/odb-green-hr.jpg)
+![Green HR](screens/4horizontal.png)
 
 ## Dev
 

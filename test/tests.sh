@@ -100,7 +100,7 @@ function run_tests {
   assert_equal "$(hr '.' 4)" "...." \
                 "should draw hr 4 wide with char"
 
-  # Icons / Entities
+  # Icons / Entities / Emojis
   ##
   assert_equal "$(icon smile)" '☺' \
                 "should draw smile"
@@ -111,6 +111,8 @@ function run_tests {
   assert_equal "$(entity lt)" '<' \
                 "should draw lt"
 
+  assert_equal "$(emoji brew)" '🍺' \
+                "should draw beer"
   # Mixed
   ##
   assert_equal "$(bg white)$(c black foo)$(bg)" \

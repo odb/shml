@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Welcome to Jekyll! &middot; SHML
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <img src="/public/images/logo.png">
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/getting-started/">Getting Started</a>
+          
+        
+      
+        
+          
+        
+      
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Sourcing">Sourcing</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Foreground">Foreground</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Background">Background</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Attributes</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Elements</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Icons</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Mixed Examples</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Emojis</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Color Bar</a>
+      <a class="sidebar-nav-item" href="#">Tests</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Install SHUNT</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Adding Test</a>
+      <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+      <span class="sidebar-nav-item">version 1.0.0</span>
+    </nav>
+
+    <span class="sidebar-nav">&copy; 2015 MaxCDN</span>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Welcome to Jekyll!</h1>
+  <span class="post-date">23 Dec 2014</span>
+  <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="lineno"> 1</span> <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kd">var</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;net&#39;</span><span class="p">),</span>
+<span class="lineno"> 4</span>     <span class="nx">HOST</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+<span class="lineno"> 5</span>     <span class="nx">PORT</span> <span class="o">=</span> <span class="mi">45999</span><span class="p">,</span>
+<span class="lineno"> 6</span>     <span class="nx">server</span> <span class="o">=</span> <span class="nx">net</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="kd">function</span> <span class="nx">onConnection</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 9</span>   <span class="nx">socket</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">);</span>
+<span class="lineno">10</span>   <span class="nx">socket</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+<span class="lineno">11</span> <span class="p">}</span>
+<span class="lineno">12</span> 
+<span class="lineno">13</span> <span class="nx">server</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="nx">onConnection</span><span class="p">);</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span> <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="nx">HOST</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">16</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Server listening on %s, on port %d&#39;</span><span class="p">,</span> <span class="nx">HOST</span><span class="p">,</span> <span class="nx">PORT</span><span class="p">);</span>
+<span class="lineno">17</span> <span class="p">});</span></code></pre></div>
+
+<h2 id="gist">Gist</h2>
+
+<p><noscript><pre>400: Invalid request
+</pre></noscript><script src="https://gist.github.com/8d84463549b5adbc19d3.js"> </script></p>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2014/12/23/welcome-post/">
+            Welcome post
+            <small>23 Dec 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>

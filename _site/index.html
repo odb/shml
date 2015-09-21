@@ -82,8 +82,7 @@
       <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
       <span class="sidebar-nav-item">version 1.0.0</span>
     </nav>
-
-    <span class="sidebar-nav">&copy; 2015 MaxCDN</span>
+    <span class="sidebar-nav">&copy; 2015 <a href="http://www.maxcdn.com/open-source?utm_source=SHML&utm_medium=footer-link">MaxCDN</a> | <a href="https://github.com/poole/hyde" target="_blank">Theme</a> by <a href="https://twitter.com/mdo" target="_blank">@mdo</a></span>
   </div>
 </div>
 
@@ -95,7 +94,21 @@
 
 <p><code>SHML</code> is a shell framework for faster and easier script development.</p>
 
+<h2 id="why">Why</h2>
+
 <p>HTML has CSS, terminals have <code>ANSI/VT100 Control Sequences</code>. SHML makes is easy to apply some style to your shell scripts without trying to remember that <code>Yellow = \033[33m</code> instead Yellow is <code>$(color yellow)</code>.</p>
+
+<div align="center">
+<img src="/public/images/terminal-home.png">
+</div>
+
+<h2 id="install">Install</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sh -c <span class="s2">&quot;curl https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml &amp;&amp; chmod +x /usr/local/bin/shml&quot;</span>
+</code></pre></div>
+<h2 id="run">Run</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>shml <span class="s2">&quot;$(color yellow)Couldn&#39;t peep it with a pair of 👓$(color end)&quot;</span>
+</code></pre></div>
+<p><code>Couldn&#39;t peep it with a pair of 👓</code></p>
 
     </div>
 

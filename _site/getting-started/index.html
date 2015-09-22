@@ -65,15 +65,15 @@
           
         
       
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Install">Install</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Sourcing">Sourcing</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Foreground">Foreground</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Background">Background</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Attributes</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Elements</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Icons</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Mixed Examples</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Emojis</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#">Color Bar</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Attributes">Attributes</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Elements">Elements</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Icons">Icons</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Emojis">Emojis</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="/getting-started/#Color-Bar">Color Bar</a>
       <a class="sidebar-nav-item" href="#">Tests</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="#">Install SHUNT</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="#">Adding Test</a>
@@ -88,46 +88,226 @@
       <div class="page">
   <h1 class="page-title">Getting Started</h1>
   <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  An overview of SHML, how to download, install and use, syntax overview with examples.
 </p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="k">$(</span>background blue <span class="s2">&quot;foo bar&quot;</span><span class="k">)</span>
+
+<p>To use SHML you must have unix-like (Darwin/OS X, Linux, etc.) POSIX-compliant operating system that supports ANSI/VT100 Control Sequences.  If you are using an up to date version of OS X or any Linux distribution you should be good to go.  If you run into issues please <a href="https://github.com/MaxCDN/shml/issues">report it here</a>.</p>
+
+<p><hr>
+<a name="Install"></a></p>
+
+<h1 id="install">Install</h1>
+
+<h4 id="1-liner">1-liner</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml <span class="o">&amp;&amp;</span> chmod +x /usr/local/bin/shml
 </code></pre></div>
-<p><a name="Sourcing"></a></p>
+<p class="message">
+You can also just download SHML without installing it...
+</p>
 
-<h2 id="sourcing">Sourcing</h2>
+<h4 id="git">Git</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone git@github.com:MaxCDN/shml.git
+</code></pre></div>
+<h4 id="wget">Wget</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wget https://github.com/MaxCDN/shml/archive/master.zip
+</code></pre></div>
+<p><hr>
+<a name="Sourcing"></a></p>
 
-<ul>
-<li>Foo</li>
-<li>Bar
+<h1 id="sourcing">Sourcing</h1>
 
-<ul>
-<li>FooFoo</li>
-</ul></li>
-</ul>
+<p>In order to use SHML you must tell your shell environment where it is located.  Lets assume that we are writing a BASH script and want to use SHML.</p>
 
-<p><a name="Foreground"></a></p>
+<p>If you installed in using the 1-liner above you would do:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">source</span> <span class="k">$(</span>which shml<span class="k">)</span>
+</code></pre></div>
+<p>If you downloaded SHML using git or wget you would do:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">source</span> ./shml.sh
+</code></pre></div>
+<p><hr>
+<a name="Foreground"></a></p>
 
-<h2 id="foreground">Foreground</h2>
+<h1 id="foreground">Foreground</h1>
 
-<ul>
-<li>Foo</li>
-<li>Bar</li>
-<li>FooFoo</li>
-</ul>
+<p>To set the foreground color of any string or object you need to call the <code>color</code> function followed by an argument.</p>
+
+<h3 id="arguments">Arguments</h3>
+
+<p class="message">
+black, red, green, yellow, blue, magenta, cyan, gray,
+white, darkgray, lightgreen, lightyellow, lightblue,
+lightmagenta, lightcyan
+</p>
+
+<p>Following the string you must terminate the function to ensure color doesn&#39;t bleed to the next string or object.</p>
+
+<h3 id="termination">Termination</h3>
+
+<p><code>end</code> <code>off</code> or <code>reset</code></p>
+
+<h3 id="code-samples">Code Samples</h3>
+
+<p>Here we will demonstrate how SHML can be used on a single line.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(color green) RZA GZA $(color end)&quot;</span>
+</code></pre></div>
+<p>Some times one-line is not enough.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;</span>
+<span class="s2">$(color yellow)</span>
+<span class="s2">Inspectah Deck</span>
+<span class="s2">Ghostface Killah</span>
+<span class="s2">$(color end)</span>
+<span class="s2">&quot;</span>
+</code></pre></div>
+<p>You can also use <code>c</code> as an alias for <code>color</code>.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(c red) Killa Beez on a swarm $(c end)&quot;</span>
+</code></pre></div>
+<h3 id="results">Results</h3>
+
+<p>Here is what the output should look like.  Style may differ slightly depending on your particular terminal emulator settings.
+<center>
+<img src="/public/images/foreground-demo.png" alt="Foreground Demo">
+</center>
+Give it a try, we&#39;ll wait here for you.
+<hr></p>
 
 <p><a name="Background"></a></p>
 
 <h2 id="background">Background</h2>
 
-<ul>
-<li>Foo</li>
-<li>Bar
+<p><code>$(background lightgreen &quot;I&#39;m the O-D-B&quot;)</code></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$(background green)
+...as you can see
+$(background end)
+</code></pre></div>
+<p>Tip: you can also use <code>bg</code> as an alias for <code>background</code></p>
 
-<ul>
-<li>FooFoo</li>
-</ul></li>
-</ul>
+<p><code>$(bg green &#39;CREAM&#39;)</code></p>
 
+<h3 id="argument-list">Argument List</h3>
+
+<p class="message">
+black, red, green, yellow, blue, magenta, cyan, gray,
+white, darkgray, lightred, lightgreen, lightyellow,
+lightblue, lightmagenta, lightcyan
+</p>
+
+<h3 id="termination">Termination</h3>
+
+<p><code>end</code> <code>off</code> <code>reset</code></p>
+
+<p><a name="Attributes"></a></p>
+
+<h2 id="attributes">Attributes</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Attributes only work on vt100 compatible terminals.
+
+&gt; Note:
+&gt; attribute end turns off everything,
+&gt; including foreground and background color.
+
+$(attribute bold &quot;foo bar&quot;)
+foo bar
+
+$(attribute underline &quot;foo bar&quot;)
+foo bar
+
+$(attribute blink &quot;foo bar&quot;)
+foo bar
+
+$(attribute invert &quot;foo bar&quot;)
+foo bar
+
+$(attribute dim)
+</code></pre></div>
+<p>foo
+    $(attribute end)</p>
+
+<p>Short Hand: a</p>
+
+<p><code>$(a bold &#39;foo&#39;)</code></p>
+
+<p>Argument list:</p>
+
+<p>bold, dim, underline, blink, invert, hidden</p>
+
+<p>Termination: end, off, reset</p>
+
+<p>Default (no arg): end</p>
+
+<p><a name="Elements"></a></p>
+
+<h2 id="elements">Elements</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foo$(br)$(tab)bar
+foo
+    bar
+
+foo$(br)$(indent)bar$(br)$(indent 6)boo
+foo
+bar
+boo
+
+&gt; Note: short hand for indent is i
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">    $(hr)
+    ------------------------------------------------------------
+
+    $(hr 50)
+    --------------------------------------------------
+
+    $(hr &#39;~&#39; 40)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $(hr &#39;#&#39; 30)
+    ##############################
+</code></pre></div>
+<p><a name="Icons"></a></p>
+
+<h2 id="icons">Icons</h2>
+
+<p><code>$(icon check) $(icon &#39;&lt;3&#39;) $(icon &#39;*&#39;) $(icon &#39;:)&#39;)</code></p>
+
+<p>✓ ❤ ★ ☺</p>
+
+<h3 id="argument-list">Argument List</h3>
+
+<p class ="method">
+check|checkmark, X|x|xmark, <3|heart, sun, *|star,
+darkstar, umbrella, flag, snow|snowflake, music,
+scissors, tm|trademark, copyright, apple,
+:-)|:)|smile|face
+</p>
+
+<p><hr>
+<a name="Emojis"></a></p>
+
+<h2 id="emojis">Emojis</h2>
+
+<p><code>$(color yellow &#39;My name is Dirt&#39;) $(emoji dog)</code></p>
+
+<p><code>My name is Dirt 🐶</code></p>
+
+<h3 id="argument-list">Argument List</h3>
+
+<p class="message">
+panda, dog|woof, cookie, secure|lock, *|star,
+poop, monkey, cry|crying|=*(, =)|:-)|:)|smile|face
+</p>
+
+<p><a name="Color-Bar"></a></p>
+
+<h2 id="color-bar">Color Bar</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$(color-bar)
+
+$(color-bar red green yellow blue magenta \
+    cyan lightgray darkgray lightred \
+    lightgreen lightyellow lightblue \
+    lightmagenta lightcyan)
+
+
+Short Hand: bar
+
+$(bar red red red red)
+</code></pre></div>
 </div>
 
     </div>

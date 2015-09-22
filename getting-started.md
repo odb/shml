@@ -58,15 +58,18 @@ To set the foreground color of any string or object you need to call the `color`
 
 ### Arguments
 
-<p class="message">
-black, red, green, yellow, blue, magenta, cyan, gray,
-white, darkgray, lightgreen, lightyellow, lightblue,
-lightmagenta, lightcyan
-</p>
+#### Colors
 
-Following the string you must terminate the function to ensure color doesn't bleed to the next string or object.
+Fifteen different colors to choose from:
 
-### Termination
+`black` `red` `green` `yellow` `blue` `magenta` `cyan` `gray`
+`white` `darkgray` `lightgreen` `lightyellow` `lightblue`
+`lightmagenta` `lightcyan`
+
+
+#### Termination
+Following a string or object you must terminate the function to ensure color doesn't bleed.  You can use any of the following termination arguments:
+
 `end` `off` or `reset`
 
 ### Code Samples

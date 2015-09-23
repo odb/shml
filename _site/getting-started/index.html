@@ -131,7 +131,7 @@ You can also just download SHML without installing it...
 
 <h1 id="foreground">Foreground</h1>
 
-<p>To set the foreground color of any string or object you need to call the <code>color</code> function followed by an argument.</p>
+<p>To set the foreground color of any string or object you need to call the <code>color</code> method followed by an argument.</p>
 
 <h3 id="arguments">Arguments</h3>
 
@@ -145,14 +145,14 @@ You can also just download SHML without installing it...
 
 <h4 id="termination">Termination</h4>
 
-<p>Following a string or object you must terminate the function to ensure color doesn&#39;t bleed.  You can use any of the following termination arguments:</p>
+<p>Following a string or object you must terminate the <code>color</code> method to ensure color doesn&#39;t bleed.  You can use any of the following termination arguments:</p>
 
 <p><code>end</code> <code>off</code> or <code>reset</code></p>
 
 <h3 id="code-samples">Code Samples</h3>
 
-<p>Here we will demonstrate how SHML can be used on a single line.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(color green) RZA GZA $(color end)&quot;</span>
+<p>Here we will demonstrate how the foreground <code>color</code> method can be used on a single line.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>color green <span class="s2">&quot;RZA GZA&quot;</span><span class="k">)</span> <span class="k">$(</span>color end<span class="k">)</span>
 </code></pre></div>
 <p>Some times one-line is not enough.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;</span>
@@ -163,83 +163,103 @@ You can also just download SHML without installing it...
 <span class="s2">&quot;</span>
 </code></pre></div>
 <p>You can also use <code>c</code> as an alias for <code>color</code>.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(c red) Killa Beez on a swarm $(c end)&quot;</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>c red <span class="s2">&quot;Killa Beez on a swarm&quot;</span><span class="k">)</span> <span class="k">$(</span>c end<span class="k">)</span>
 </code></pre></div>
 <h3 id="results">Results</h3>
 
-<p>Here is what the output should look like.  Style may differ slightly depending on your particular terminal emulator settings.
+<p>Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.
 <center>
 <img src="/public/images/foreground-demo.png" alt="Foreground Demo">
 </center>
-Give it a try, we&#39;ll wait here for you.
-<hr></p>
+Give it a try, we&#39;ll wait here for you.</p>
 
-<p><a name="Background"></a></p>
+<p><hr>
+<a name="Background"></a></p>
 
-<h2 id="background">Background</h2>
+<h1 id="background">Background</h1>
 
-<p><code>$(background lightgreen &quot;I&#39;m the O-D-B&quot;)</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(background green)
-...as you can see
-$(background end)
-</code></pre></div>
-<p>Tip: you can also use <code>bg</code> as an alias for <code>background</code></p>
+<p>To set the background color of any string or object you need to call the <code>background</code> method followed by an argument.</p>
 
-<p><code>$(bg green &#39;CREAM&#39;)</code></p>
+<h3 id="arguments">Arguments</h3>
 
-<h3 id="argument-list">Argument List</h3>
+<h4 id="colors">Colors</h4>
 
-<p class="message">
-black, red, green, yellow, blue, magenta, cyan, gray,
-white, darkgray, lightred, lightgreen, lightyellow,
-lightblue, lightmagenta, lightcyan
-</p>
+<p>Fifteen different colors to choose from:</p>
 
-<h3 id="termination">Termination</h3>
+<p><code>black</code> <code>red</code> <code>green</code> <code>yellow</code> <code>blue</code> <code>magenta</code> <code>cyan</code> <code>gray</code>
+<code>white</code> <code>darkgray</code> <code>lightgreen</code> <code>lightyellow</code> <code>lightblue</code>
+<code>lightmagenta</code> <code>lightcyan</code></p>
+
+<h4 id="termination">Termination</h4>
+
+<p>Following a string or object you must terminate the <code>background</code> method to ensure color doesn&#39;t bleed.  You can use any of the following termination arguments:</p>
 
 <p><code>end</code> <code>off</code> <code>reset</code></p>
 
-<p><a name="Attributes"></a></p>
+<h3 id="code-samples">Code Samples</h3>
 
-<h2 id="attributes">Attributes</h2>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Attributes only work on vt100 compatible terminals.
-
-&gt; Note:
-&gt; attribute end turns off everything,
-&gt; including foreground and background color.
-
-$(attribute bold &quot;foo bar&quot;)
-foo bar
-
-$(attribute underline &quot;foo bar&quot;)
-foo bar
-
-$(attribute blink &quot;foo bar&quot;)
-foo bar
-
-$(attribute invert &quot;foo bar&quot;)
-foo bar
-
-$(attribute dim)
+<p>Here we will demonstrate how the <code>background</code> method can be used on a single line.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>background red <span class="s2">&quot;I&#39;m the O-D-B&quot;</span><span class="k">)</span> <span class="k">$(</span>background end<span class="k">)</span>
 </code></pre></div>
-<p>foo
-    $(attribute end)</p>
+<p>Some times one-line is not enough.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;</span>
+<span class="s2">$(background grey)</span>
+<span class="s2">...as you can see</span>
+<span class="s2">$(background end)</span>
+<span class="s2">&quot;</span>
+</code></pre></div>
+<p>You can also use <code>bg</code> as an alias for <code>background</code></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(bg green) C.R.E.A.M. $(bg end)&quot;</span>
+</code></pre></div>
+<h3 id="results">Results</h3>
 
-<p>Short Hand: a</p>
+<p>Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.
+<center>
+<img src="/public/images/background-demo.png" alt="Foreground Demo">
+</center>
+Give it a try, we&#39;ll wait here for you.</p>
 
-<p><code>$(a bold &#39;foo&#39;)</code></p>
+<p><hr>
+<a name="Attributes"></a></p>
 
-<p>Argument list:</p>
+<h1 id="attributes">Attributes</h1>
 
-<p>bold, dim, underline, blink, invert, hidden</p>
+<p>The <code>attribute</code> method lets you stylize your text in 5 different ways.</p>
 
-<p>Termination: end, off, reset</p>
+<h3 id="arguments">Arguments</h3>
 
-<p>Default (no arg): end</p>
+<p><code>bold</code> <code>dim</code> <code>underline</code> <code>invert</code> <code>hidden</code></p>
 
-<p><a name="Elements"></a></p>
+<h4 id="termination">Termination</h4>
 
-<h2 id="elements">Elements</h2>
+<p>You can use any of the following termination arguments:</p>
+
+<p><code>end</code> <code>off</code> <code>reset</code></p>
+
+<p>Following a string or object you must terminate the <code>attribute</code> method.
+Typing <code>$(attribute end)</code> turns off everything, including <code>foreground</code> and <code>background</code> color methods.</p>
+
+<h3 id="code-samples">Code Samples</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute bold <span class="s2">&quot;Such Bold&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute underline <span class="s2">&quot;So Underlined&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute invert <span class="s2">&quot;Why this inverted?&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
+</code></pre></div>
+<p>You can also use <code>a</code> as an alias for <code>attribute</code></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>a bold <span class="s2">&quot;Nice BOLD&quot;</span><span class="k">)</span> <span class="k">$(</span>a end<span class="k">)</span>
+</code></pre></div>
+<h3 id="results">Results</h3>
+
+<p>Here is what the output should look like. Style may differ slightly depending on your terminal emulator settings.</p>
+
+<p><center>
+<img src="/public/images/attributes-demo.png" alt="Attributes Demo">
+</center>
+Give it a try, we&#39;ll keep the lights on.</p>
+
+<p><hr>
+<a name="Elements"></a></p>
+
+<h1 id="elements">Elements</h1>
 <div class="highlight"><pre><code class="language-text" data-lang="text">foo$(br)$(tab)bar
 foo
     bar

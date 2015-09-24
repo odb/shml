@@ -77,9 +77,8 @@
       <a class="sidebar-nav-item" href="#">Tests</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="#">Install SHUNT</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="#">Adding Test</a>
-      <span class="sidebar-nav-item">version 1.0.0</span>
     </nav>
-    <span class="sidebar-nav">&copy; 2015 <a href="http://www.maxcdn.com/open-source?utm_source=SHML&utm_medium=footer-link">MaxCDN</a> | <a href="https://github.com/poole/hyde" target="_blank">Theme</a> by <a href="https://twitter.com/mdo" target="_blank">@mdo</a></span>
+    <span class="sidebar-nav">&copy; 2015 <a href="http://www.maxcdn.com/open-source?utm_source=SHML&utm_medium=footer-link">MaxCDN</a> | v1.0.0</span>
   </div>
 </div>
 
@@ -240,12 +239,12 @@ Give it a try, we&#39;ll wait here for you.</p>
 Typing <code>$(attribute end)</code> turns off everything, including <code>foreground</code> and <code>background</code> color methods.</p>
 
 <h3 id="code-samples">Code Samples</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute bold <span class="s2">&quot;Such Bold&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
-</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute underline <span class="s2">&quot;So Underlined&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute underline <span class="s2">&quot;So Underlined&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute bold <span class="s2">&quot;Such Bold&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
 </code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>attribute invert <span class="s2">&quot;Why this inverted?&quot;</span><span class="k">)</span> <span class="k">$(</span>attribute end<span class="k">)</span>
 </code></pre></div>
 <p>You can also use <code>a</code> as an alias for <code>attribute</code></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>a bold <span class="s2">&quot;Nice BOLD&quot;</span><span class="k">)</span> <span class="k">$(</span>a end<span class="k">)</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>a bold <span class="s2">&quot;such BOLD shorter&quot;</span><span class="k">)</span> <span class="k">$(</span>a end<span class="k">)</span>
 </code></pre></div>
 <h3 id="results">Results</h3>
 
@@ -260,44 +259,70 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <a name="Elements"></a></p>
 
 <h1 id="elements">Elements</h1>
-<div class="highlight"><pre><code class="language-text" data-lang="text">foo$(br)$(tab)bar
-foo
-    bar
 
-foo$(br)$(indent)bar$(br)$(indent 6)boo
-foo
-bar
-boo
+<p>Elements are methods that work a lot like <code>&lt;hr&gt;</code> &amp; <code>&lt;br&gt;</code> HTML element tags. There is also a <code>tab</code> &amp; <code>indent</code> method that acts like a <code>&amp;nbsp;</code> character entity. They are empty which means that they have no termination ends like the foreground <code>color</code>, <code>background</code> and <code>attribute</code> methods.</p>
 
-&gt; Note: short hand for indent is i
-</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">    $(hr)
-    ------------------------------------------------------------
+<h3 id="arguments">Arguments</h3>
 
-    $(hr 50)
-    --------------------------------------------------
+<p>The only method that allows arguments is <code>hr</code>:</p>
 
-    $(hr &#39;~&#39; 40)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<p><code>~</code> <code>#</code> <code>*</code> <code>+</code> and/or any number e.g. <code>50</code></p>
 
-    $(hr &#39;#&#39; 30)
-    ##############################
+<h3 id="code-samples-hr">Code Samples (hr)</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(hr)&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(hr 40)&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(hr &#39;~&#39; 30)&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(hr &#39;#&#39; 20)&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(hr &#39;*&#39; 10)&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(hr &#39;+&#39; 5)&quot;</span>
 </code></pre></div>
-<p><a name="Icons"></a></p>
+<h3 id="results-hr">Results (hr)</h3>
+
+<p><img src="/public/images/elements-hr-demo.png" alt="HR Demo"></p>
+
+<h3 id="code-samples-br-indent-tab">Code Samples (br, indent, tab)</h3>
+
+<p>Break Line</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;Wu$(br)Wu Tang$(br)Wu Tang$(br)Killah Beez$(br)We on a swarm&quot;</span>
+</code></pre></div>
+<p>Indent</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;W$(indent)U$(indent)T$(indent)A$(indent)N$(indent)G&quot;</span>
+</code></pre></div>
+<p>You can also use <code>i</code> as an alias for <code>indent</code></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;F$(i)O$(i)R$(i)E$(i)V$(i)A&quot;</span>
+</code></pre></div>
+<p>Tab</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;W$(tab)U$(tab)T$(tab)A$(tab)N$(tab)G&quot;</span>
+</code></pre></div>
+<h3 id="results-br-indent-tab">Results (br, indent, tab)</h3>
+
+<p><img src="/public/images/elements-other-demo.png" alt="hr demo"></p>
+
+<p><hr>
+<a name="Icons"></a></p>
 
 <h2 id="icons">Icons</h2>
 
-<p><code>$(icon check) $(icon &#39;&lt;3&#39;) $(icon &#39;*&#39;) $(icon &#39;:)&#39;)</code></p>
+<p>Icons are flat ascii characters that are supported by most unix-like systems.  If you run into compatibility issues please <a href="https://github.com/MaxCDN/shml/issues">report it here</a>.</p>
 
-<p>✓ ❤ ★ ☺</p>
+<h3 id="arguments">Arguments</h3>
 
-<h3 id="argument-list">Argument List</h3>
+<p><code>checkmark</code> <code>xmark</code> <code>heart</code> <code>sun</code> <code>star</code>
+<code>darkstar</code> <code>umbrella</code> <code>flag</code> <code>snowflake</code> <code>music</code>
+<code>scissors</code> <code>trademark</code> <code>copyright</code> <code>apple</code> <code>smile</code></p>
 
-<p class ="method">
-check|checkmark, X|x|xmark, <3|heart, sun, *|star,
-darkstar, umbrella, flag, snow|snowflake, music,
-scissors, tm|trademark, copyright, apple,
-:-)|:)|smile|face
-</p>
+<h3 id="code-samples">Code Samples</h3>
+
+<p>Peter, a software engineer likes to use the <code>xmark</code> icon in his programs:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(icon xmark)TPS Report $(icon xmark)Lumberg $(icon xmark)Working&quot;</span>
+</code></pre></div>
+<p>When he is in a better mood, he tends to use the <code>check</code> icon:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(icon check)Kung Fu $(icon check)Fishing $(icon check)Sleep&quot;</span>
+</code></pre></div>
+<p>Sometimes he even uses the foreground <code>color</code> method to add some emphasis:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(color red)$(icon xmark)$(color end)TPS Report $(color green)$(icon check)$(color end)Fishing&quot;</span>
+</code></pre></div>
+<h3 id="results">Results</h3>
 
 <p><hr>
 <a name="Emojis"></a></p>

@@ -20,11 +20,11 @@ Typing `$(attribute end)` turns off everything, including `foreground` and `back
 ### Code Samples
 
 ```bash
-$(attribute bold "Such Bold") $(attribute end)
+$(attribute underline "So Underlined") $(attribute end)
 ```
 
 ```bash
-$(attribute underline "So Underlined") $(attribute end)
+$(attribute bold "Such Bold") $(attribute end)
 ```
 
 ```bash
@@ -34,7 +34,7 @@ $(attribute invert "Why this inverted?") $(attribute end)
 You can also use `a` as an alias for `attribute`
 
 ```bash
-$(a bold "Nice BOLD") $(a end)
+$(a bold "such BOLD shorter") $(a end)
 ```
 
 ### Results

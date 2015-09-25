@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>SHML</title>
- <link href="https://github.com/maxcdn/shml/atom.xml" rel="self"/>
- <link href="https://github.com/maxcdn/shml/"/>
- <updated>2015-09-24T11:29:36-07:00</updated>
- <id>https://github.com/maxcdn/shml</id>
+ <link href="https://github.com/maxcdn/shml//atom.xml" rel="self"/>
+ <link href="https://github.com/maxcdn/shml//"/>
+ <updated>2015-09-24T18:05:17-07:00</updated>
+ <id>https://github.com/maxcdn/shml/</id>
  <author>
    <name></name>
    <email></email>

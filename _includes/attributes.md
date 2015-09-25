@@ -41,6 +41,6 @@ $(a bold "such BOLD shorter") $(a end)
 Here is what the output should look like. Style may differ slightly depending on your terminal emulator settings.
 
 <center>
-![Attributes Demo](/public/images/attributes-demo.png)
+![Attributes Demo](public/images/attributes-demo.png)
 </center>
 Give it a try, we'll keep the lights on.

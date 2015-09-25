@@ -16,19 +16,19 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="../getting-started/">{{ node.title }}</a>
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="getting-started/">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Install">Install</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Sourcing">Sourcing</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Foreground">Foreground</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Background">Background</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Attributes">Attributes</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Elements">Elements</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Icons">Icons</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Emojis">Emojis</a>
-      <a class="sidebar-nav-item sidebar-nav-indent" href="#Color-Bar">Color Bar</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Install">Install</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Sourcing">Sourcing</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Foreground">Foreground</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Background">Background</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Attributes">Attributes</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Elements">Elements</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Icons">Icons</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Emojis">Emojis</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="getting-started/#Color-Bar">Color Bar</a>
       <a class="sidebar-nav-item" href="https://github.com/MaxCDN/shml" target="_blank">GitHub</a>
     </nav>
     <span class="sidebar-nav">&copy; {{ site.time | date: '%Y' }} <a href="http://www.maxcdn.com/open-source?utm_source=SHML&utm_medium=footer-link">MaxCDN</a> | v{{ site.version }}</span>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
@@ -11,7 +11,7 @@ title: Home
 HTML has CSS, terminals have `ANSI/VT100 Control Sequences`. SHML makes is easy to apply some style to your shell scripts without trying to remember that `Yellow = \033[33m` instead Yellow is `$(color yellow)`.
 
 <div align="center">
-<img src="/public/images/terminal-home.png">
+<img src="public/images/terminal-home.png">
 </div>
 
 ## Install

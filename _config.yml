@@ -12,7 +12,8 @@ relative_permalinks: true
 title: SHML
 tagline: '$(shell markup language)'
 description: 'SHML is a shell framework for faster and easier script development.'
-url: https://github.com/maxcdn/shml
+url: https://github.com/maxcdn/shml/
+baseurl: /shml/
 
 authors:
   name: 'Justin Dorfman'

@@ -47,6 +47,6 @@ echo $(c red "Killa Beez on a swarm") $(c end)
 ### Results
 Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.
 <center>
-![Foreground Demo](/public/images/foreground-demo.png)
+![Foreground Demo](../public/images/foreground-demo.png)
 </center>
 Give it a try, we'll wait here for you.

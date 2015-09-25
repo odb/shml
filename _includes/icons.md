@@ -14,7 +14,7 @@ Icons are flat ascii characters that are supported by most unix-like systems.  I
 Peter, a software engineer likes to use the `xmark` icon in his programs:
 
 ```bash
-echo "$(icon xmark)TPS Report $(icon xmark)Lumberg $(icon xmark)Working"
+echo "$(icon xmark)TPS Reports $(icon xmark)Lumbergh $(icon xmark)Working"
 ```
 
 When he is in a better mood, he tends to use the `check` icon:
@@ -26,7 +26,10 @@ echo "$(icon check)Kung Fu $(icon check)Fishing $(icon check)Sleep"
 Sometimes he even uses the foreground `color` method to add some emphasis:
 
 ```bash
-echo "$(color red)$(icon xmark)$(color end)TPS Report $(color green)$(icon check)$(color end)Fishing"
+echo "$(color red)$(icon xmark)$(color end)TPS Reports $(color green)$(icon check)$(color end)Fishing"
 ```
 
 ### Results
+<center>
+![Icons Demo](../public/images/icons-demo.png)
+</center>

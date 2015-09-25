@@ -30,7 +30,9 @@ echo "$(hr '*' 10)"
 echo "$(hr '+' 5)"
 ```
 ### Results (hr)
-![HR Demo](/public/images/elements-hr-demo.png)
+<center>
+![HR Demo](../public/images/elements-hr-demo.png)
+</center>
 
 ### Code Samples (br, indent, tab)
 
@@ -58,4 +60,6 @@ echo "W$(tab)U$(tab)T$(tab)A$(tab)N$(tab)G"
 ```
 
 ### Results (br, indent, tab)
-![hr demo](/public/images/elements-other-demo.png)
+<center>
+![hr demo](../public/images/elements-other-demo.png)
+</center>

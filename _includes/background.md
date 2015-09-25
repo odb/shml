@@ -46,6 +46,6 @@ echo "$(bg green) C.R.E.A.M. $(bg end)"
 
 Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.
 <center>
-![Foreground Demo](/public/images/background-demo.png)
+![Foreground Demo](../public/images/background-demo.png)
 </center>
 Give it a try, we'll wait here for you.

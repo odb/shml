@@ -1,5 +1,5 @@
 <a name="Color-Bar"></a>
-## Color Bar
+# Color Bar
 
 ```
 $(color-bar)

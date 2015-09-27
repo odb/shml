@@ -363,7 +363,7 @@ Give it a try, we&#39;ll keep the lights on.</p>
 </tr>
 <tr>
 <td><code>playful</code></td>
-<td><code>cheky</code> <code>tongueout</code> <code>=p</code></td>
+<td><code>cheeky</code> <code>tongueout</code> <code>=p</code> <code>=P</code></td>
 <td>😛</td>
 </tr>
 <tr>
@@ -412,6 +412,21 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td>👎</td>
 </tr>
 <tr>
+<td><code>check</code></td>
+<td><code>greencheck</code> <code>done</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>xmark</code></td>
+<td><code>redx</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>noentry</code></td>
+<td><code>warning</code> <code>noauth</code></td>
+<td>⛔</td>
+</tr>
+<tr>
 <td><code>cookie</code></td>
 <td>n/a</td>
 <td>🍪</td>
@@ -437,8 +452,8 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td>🃏</td>
 </tr>
 <tr>
-<td><code>glasses</code></td>
-<td><code>bifocals</code> <code>eyeglases</code></td>
+<td><code>eyeglases</code></td>
+<td><code>bifocals</code> <code>glasses</code></td>
 <td>👓</td>
 </tr>
 <tr>
@@ -450,11 +465,6 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td><code>beer</code></td>
 <td><code>brew</code> <code>homebrew</code> <code>celebrate</code></td>
 <td>🍺</td>
-</tr>
-<tr>
-<td><code>check</code></td>
-<td><code>greencheck</code> <code>done</code></td>
-<td>✅</td>
 </tr>
 <tr>
 <td><code>sushi</code></td>
@@ -502,39 +512,58 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td>🎯</td>
 </tr>
 <tr>
-<td><code>xmark</code></td>
-<td><code>redx</code></td>
-<td>❌</td>
-</tr>
-<tr>
-<td><code>noentry</code></td>
-<td><code>noauth</code></td>
-<td>⛔</td>
+<td><code>money</code></td>
+<td><code>cash</code> <code>cream</code></td>
+<td>💵</td>
 </tr>
 </tbody></table>
 
 <h3 id="code-samples">Code Samples</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(color yellow &#39;My name is Dirt&#39;) $(emoji dog)&quot;</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;Couldn&#39;t peep it with a pair of $(emoji bifocals)&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;I&#39;m no $(emoji joker) play me as a $(emoji joker)&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke) ya&quot;</span>
 </code></pre></div>
 <h3 id="results">Results</h3>
 
-<p><code>My name is Dirt 🐶</code></p>
+<p><center>
+<img src="../public/images/emojis-demo.png" alt="Icons Demo">
+</center></p>
 
-<p><a name="Color-Bar"></a></p>
+<p><hr>
+<a name="Color-Bar"></a></p>
 
 <h1 id="color-bar">Color Bar</h1>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(color-bar)
 
-$(color-bar red green yellow blue magenta \
-    cyan lightgray darkgray lightred \
-    lightgreen lightyellow lightblue \
-    lightmagenta lightcyan)
+<p>To add a color bar you need to call the <code>color-bar</code> method followed by an (optional) argument.</p>
 
+<h3 id="arguments">Arguments</h3>
 
-Short Hand: bar
+<p>Fifteen different colors to choose from:</p>
 
-$(bar red red red red)
+<p><code>black</code> <code>red</code> <code>green</code> <code>yellow</code> <code>blue</code> <code>magenta</code> <code>cyan</code> <code>gray</code>
+<code>white</code> <code>darkgray</code> <code>lightgreen</code> <code>lightyellow</code> <code>lightblue</code>
+<code>lightmagenta</code> <code>lightcyan</code></p>
+
+<h3 id="code-samples">Code Samples</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(color-bar)&quot;</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;</span>
+<span class="s2">$(color-bar red green yellow blue magenta \</span>
+<span class="s2">cyan lightgray darkgray lightred \</span>
+<span class="s2">lightmagenta lightcyan)</span>
+<span class="s2">&quot;</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Yeah ahuh, you know what it is $(color-bar black yellow black yellow)&quot;</span>
 </code></pre></div>
+<p>You can also use <code>bar</code> as an alias for <code>color-bar</code></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;I put it down from the whip to my diamonds, I&#39;m in $(bar black yellow black yellow)&quot;</span>
+</code></pre></div>
+<h3 id="results">Results</h3>
+
+<p><center>
+<img src="../public/images/color-bar-demo.png" alt="Color Bar Demo">
+</center></p>
+
 </div>
 
     </div>

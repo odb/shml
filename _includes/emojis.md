@@ -11,7 +11,7 @@ To add an emoji you need to call the `emoji` method followed by an argument.
 |   `smile`	|   `=)` `:-)` `:)`	|   😄	|
 |   `cry`	|   `crying` `=*(`	|   😢	|
 |   `frown`	|   `=(` `:-(` `:(`	|   😦	|
-|   	`playful`|   `cheky` `tongueout` `=p`	|   😛	|
+|   	`playful`|   `cheeky` `tongueout` `=p` `=P`	|   😛	|
 |   `skeptical`	|   `=/`	|   😕	|
 |   `wink`	|   `;)` `;-)` `;]` `;D`	|   😉	|
 | `panda` 	|  `sadpanda` `shpanda`	|   🐼	|
@@ -21,15 +21,17 @@ To add an emoji you need to call the `emoji` method followed by an argument.
 |   `poop`	|   `crap` `dump` `sheet`	|   💩	|
 |   `like`	|   `thumbsup` `+1`	|   👍	|
 |   `dislike`	|   `thumbsdown` `-1`	|   👎	|
+|   `check`	|   `greencheck` `done`	|   ✅	|
+|   `xmark`	|   `redx`	|   ❌	|
+|   `noentry`	|   `warning` `noauth`	|   ⛔	|
 |   `cookie`	|   n/a	|   🍪	|
 |   `lock`	|   `secure`	|   🔒	|
 |   `star`	|   `*`	|   ⭐	|
 |   `home`	|   `house`	|   🏠	|
 |   `joker`	|   `wildcard`	|   🃏	|
-|   `glasses`	|   `bifocals` `eyeglases`	|   👓	|
+|   `eyeglases`	|   `bifocals` `glasses`	|   👓	|
 |   `bell`	|   `ring`	|   🔔	|
 |   `beer`	|   `brew` `homebrew` `celebrate`	|   🍺	|
-|   `check`	|   `greencheck` `done`	|   ✅	|
 |   `sushi`	|   `raw`	|  🍣	|
 |   `toilet`	|   `bathroom`	|   🚽	|
 |   `search`	|   `searching` `magnify`	|   🔎	|
@@ -39,16 +41,17 @@ To add an emoji you need to call the `emoji` method followed by an argument.
 |   `fire`	|   `burn` `burning`	|   🔥	|
 |   `smoke`	|   `cig` `grit` `cancerstick`	|   🚬	|
 |   `bullseye`	|   `darts`	|   🎯	|
-|   `xmark`	|   `redx`	|   ❌	|
-|   `noentry`	|   `noauth`	|   ⛔	|
+|   `money`	|   `cash` `cream`	|   💵	|
 
 ### Code Samples
 
 ```bash
-echo "$(color yellow 'My name is Dirt') $(emoji dog)"
+echo "Couldn't peep it with a pair of $(emoji bifocals)"
+echo "I'm no $(emoji joker) play me as a $(emoji joker)"
+echo "$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke) ya"
 ```
 
 ### Results
-
-
-`My name is Dirt 🐶`
+<center>
+![Icons Demo](../public/images/emojis-demo.png)
+</center>

@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-> Shimmy shimmy ya, shimmy yam, shimmy yay - O.D.B. '95
+`Shimmy shimmy ya, shimmy yam, shimmy yay - O.D.B. '95`
 
 `SHML` is a shell framework for faster and easier script development.
 

@@ -81,26 +81,39 @@
 </div>
 
 
+
     <div class="content container">
-      <p><code>Shimmy shimmy ya, shimmy yam, shimmy yay - O.D.B. &#39;95</code></p>
-
-<p><code>SHML</code> is a shell framework for faster and easier script development.</p>
-
-<h2 id="why">Why</h2>
+      <div class="message" align="center">
+      <b>SHML</b> is a shell framework for faster and easier script development.
+      </div>
+      <div align="center">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://maxcdn.github.io/shml/" data-via="MaxCDNDeveloper" data-size="large" data-related="jdorfman">Tweet</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/MaxCDN" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @MaxCDN</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/MaxCDNDeveloper" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @MaxCDNDeveloper</a>&nbsp;&nbsp;&nbsp;
+        <iframe src="https://ghbtns.com/github-btn.html?user=maxcdn&repo=shml&type=watch&count=true&size=large" frameborder="0" scrolling="0" width="135px" height="30px"></iframe>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+      <hr>
+      <h3 id="why">Why</h3>
 
 <p>HTML has CSS, terminals have <code>ANSI/VT100 Control Sequences</code>. SHML makes is easy to apply some style to your shell scripts without trying to remember that <code>Yellow = \033[33m</code> instead Yellow is <code>$(color yellow)</code>.</p>
 
+<h3 id="1-liner-install">1-liner Install</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml <span class="o">&amp;&amp;</span> chmod +x /usr/local/bin/shml
+</code></pre></div>
 <div align="center">
-<img src="public/images/terminal-home.png">
+<small>Currently v1.0.0
+<br><a href="getting-started/">Now RTFM</a>
+</small>
 </div>
 
-<h2 id="install">Install</h2>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sh -c <span class="s2">&quot;curl https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml &amp;&amp; chmod +x /usr/local/bin/shml&quot;</span>
-</code></pre></div>
-<h2 id="run">Run</h2>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>shml <span class="s2">&quot;$(color yellow)Couldn&#39;t peep it with a pair of 👓$(color end)&quot;</span>
-</code></pre></div>
-<p><code>Couldn&#39;t peep it with a pair of 👓</code></p>
+<p><hr>
+<div align="center">
+<small>
+Designed and built by <a href="#">@jdorfman</a> and <a href="#">@mervinej</a>.<br>
+Code licensed under <a href="https://github.com/MaxCDN/shml/blob/master/LICENSE">MIT</a>, documentation under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+</small>
+</div></p>
 
     </div>
 

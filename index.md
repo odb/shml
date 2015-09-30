@@ -4,7 +4,7 @@ title: Home
 ---
 
 ### Why
-HTML has CSS, terminals have `ANSI/VT100 Control Sequences`. SHML makes is easy to apply some style to your shell scripts without trying to remember that `Yellow = \033[33m` instead Yellow is `$(color yellow)`.
+HTML has CSS, Unix-like shells have ANSI/VT100 Control Sequences. SHML makes is easy to apply style to your shell scripts without trying to remember that **yellow** is `\033[33m` instead it's `$(color yellow)`.
 
 ### 1-liner Install
 ```bash
@@ -12,8 +12,10 @@ $ curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/l
 ```
 <div align="center">
 <small>Currently v1.0.0
-<br><a href="getting-started/">Now RTFM</a>
+<br><a href="getting-started/">Please be responsible &amp; RTFM</a>
 </small>
+<br><br>
+<iframe src="slideshow.html" width="100%" height="250" frameborder="0"></iframe>
 </div>
 
 <hr>

@@ -18,3 +18,11 @@ To use SHML you must have unix-like (Darwin/OS X, Linux, etc.) POSIX-compliant o
 {% include icons.md %}
 {% include emojis.md %}
 {% include color-bar.md %}
+
+<hr>
+<div align="center">
+<small>
+Designed and built by [@jdorfman](#) and [@mervinej](#).<br>
+Code licensed under [MIT](https://github.com/MaxCDN/shml/blob/master/LICENSE), documentation under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+</small>
+</div>

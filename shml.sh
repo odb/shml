@@ -12,7 +12,7 @@
 #      Kiyor Cia, Jeff Foard FLOZz' MISC,
 #           Mark Otto & Dave Gandy
 #
-#          https://github.com/odb/shml
+#          https://github.com/MaxCDN/shml
 #************************************************#
 
 # Foreground (Text)

@@ -2,7 +2,7 @@
 <a name="Emojis"></a>
 # Emojis
 
-To add an emoji you need to call the `emoji` method followed by an argument.
+To add an emoji you need to call the `emoji` method followed by an argument. Each emoji added to SHML was approved as part of [Unicode 6.0.0 Standard](http://unicode.org/versions/Unicode6.0.0/) in 2010.
 
 ### Arguments
 

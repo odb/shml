@@ -2,7 +2,7 @@
 <a name="Foreground"></a>
 # Foreground
 
-To set the foreground color of any string or object you need to call the `color` method followed by an argument.
+To set the foreground color of any string or object you need to call the `fgcolor` method followed by an argument.
 
 ### Arguments
 
@@ -16,32 +16,32 @@ Fifteen different colors to choose from:
 
 
 #### Termination
-Following a string or object you must terminate the `color` method to ensure color doesn't bleed.  You can use any of the following termination arguments:
+Following a string or object you must terminate the `fgcolor` method to ensure color doesn't bleed.  You can use any of the following termination arguments:
 
 `end` `off` or `reset`
 
 ### Code Samples
 
-Here we will demonstrate how the foreground `color` method can be used on a single line.
+Here we will demonstrate how the `fgcolor` method can be used on a single line.
 
 ```bash
-echo $(color green "RZA GZA") $(color end)
+echo $(fgcolor green "RZA GZA") $(fgcolor end)
 ```
 Some times one-line is not enough.
 
 ```bash
 echo "
-$(color yellow)
+$(fgcolor yellow)
 Inspectah Deck
 Ghostface Killah
-$(color end)
+$(fgcolor end)
 "
 ```
 
-You can also use `c` as an alias for `color`.
+You can also use `fgc` as an alias for `fgcolor`.
 
 ```bash
-echo $(c red "Killa Beez on a swarm") $(c end)
+echo $(fgc red "Killa Beez on a swarm") $(fgc end)
 ```
 
 ### Results

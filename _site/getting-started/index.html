@@ -124,7 +124,7 @@ You can also just download SHML without installing it...
 
 <h1 id="foreground">Foreground</h1>
 
-<p>To set the foreground color of any string or object you need to call the <code>color</code> method followed by an argument.</p>
+<p>To set the foreground color of any string or object you need to call the <code>fgcolor</code> method followed by an argument.</p>
 
 <h3 id="arguments">Arguments</h3>
 
@@ -138,25 +138,25 @@ You can also just download SHML without installing it...
 
 <h4 id="termination">Termination</h4>
 
-<p>Following a string or object you must terminate the <code>color</code> method to ensure color doesn&#39;t bleed.  You can use any of the following termination arguments:</p>
+<p>Following a string or object you must terminate the <code>fgcolor</code> method to ensure color doesn&#39;t bleed.  You can use any of the following termination arguments:</p>
 
 <p><code>end</code> <code>off</code> or <code>reset</code></p>
 
 <h3 id="code-samples">Code Samples</h3>
 
-<p>Here we will demonstrate how the foreground <code>color</code> method can be used on a single line.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>color green <span class="s2">&quot;RZA GZA&quot;</span><span class="k">)</span> <span class="k">$(</span>color end<span class="k">)</span>
+<p>Here we will demonstrate how the <code>fgcolor</code> method can be used on a single line.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>fgcolor green <span class="s2">&quot;RZA GZA&quot;</span><span class="k">)</span> <span class="k">$(</span>fgcolor end<span class="k">)</span>
 </code></pre></div>
 <p>Some times one-line is not enough.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;</span>
-<span class="s2">$(color yellow)</span>
+<span class="s2">$(fgcolor yellow)</span>
 <span class="s2">Inspectah Deck</span>
 <span class="s2">Ghostface Killah</span>
-<span class="s2">$(color end)</span>
+<span class="s2">$(fgcolor end)</span>
 <span class="s2">&quot;</span>
 </code></pre></div>
-<p>You can also use <code>c</code> as an alias for <code>color</code>.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>c red <span class="s2">&quot;Killa Beez on a swarm&quot;</span><span class="k">)</span> <span class="k">$(</span>c end<span class="k">)</span>
+<p>You can also use <code>fgc</code> as an alias for <code>fgcolor</code>.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>fgc red <span class="s2">&quot;Killa Beez on a swarm&quot;</span><span class="k">)</span> <span class="k">$(</span>fgc end<span class="k">)</span>
 </code></pre></div>
 <h3 id="results">Results</h3>
 
@@ -171,7 +171,7 @@ Give it a try, we&#39;ll wait here for you.</p>
 
 <h1 id="background">Background</h1>
 
-<p>To set the background color of any string or object you need to call the <code>background</code> method followed by an argument.</p>
+<p>To set the background color of any string or object you need to call the <code>bgcolor</code> method followed by an argument.</p>
 
 <h3 id="arguments">Arguments</h3>
 
@@ -192,17 +192,18 @@ Give it a try, we&#39;ll wait here for you.</p>
 <h3 id="code-samples">Code Samples</h3>
 
 <p>Here we will demonstrate how the <code>background</code> method can be used on a single line.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>background red <span class="s2">&quot;I&#39;m the O-D-B&quot;</span><span class="k">)</span> <span class="k">$(</span>background end<span class="k">)</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="k">$(</span>bgcolor red <span class="s2">&quot;I&#39;m the O-D-B&quot;</span><span class="k">)</span> <span class="k">$(</span>bgcolor end<span class="k">)</span>
 </code></pre></div>
 <p>Some times one-line is not enough.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;</span>
-<span class="s2">$(background grey)</span>
+<span class="s2">$(bgcolor cyan)</span>
 <span class="s2">...as you can see</span>
-<span class="s2">$(background end)</span>
+<span class="s2">F.B.I. don&#39;t you be watching me</span>
+<span class="s2">$(bgcolor end)</span>
 <span class="s2">&quot;</span>
 </code></pre></div>
-<p>You can also use <code>bg</code> as an alias for <code>background</code></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(bg green) C.R.E.A.M. $(bg end)&quot;</span>
+<p>You can also use <code>bgc</code> as an alias for <code>bgcolor</code></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;$(bgc green)NUH you know name, now give me my money!$(bgc end)&quot;</span>
 </code></pre></div>
 <h3 id="results">Results</h3>
 
@@ -331,7 +332,7 @@ Give it a try, we&#39;ll keep the lights on.</p>
 
 <h1 id="emojis">Emojis</h1>
 
-<p>To add an emoji you need to call the <code>emoji</code> method followed by an argument.</p>
+<p>To add an emoji you need to call the <code>emoji</code> method followed by an argument. Each emoji added to SHML was approved as part of <a href="http://unicode.org/versions/Unicode6.0.0/">Unicode&reg; 6.0.0 Standard</a> in 2010.</p>
 
 <h3 id="arguments">Arguments</h3>
 
@@ -343,19 +344,19 @@ Give it a try, we&#39;ll keep the lights on.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td><code>smile</code></td>
-<td><code>=)</code> <code>:-)</code> <code>:)</code></td>
+<td><code>smiley</code></td>
+<td><code>1F603</code> <code>&#39;=)&#39;</code> <code>&#39;:-)&#39;</code> <code>&#39;:)&#39;</code></td>
 <td>😄</td>
 </tr>
 <tr>
-<td><code>cry</code></td>
-<td><code>crying</code> <code>=*(</code></td>
-<td>😢</td>
+<td><code>innocent</code></td>
+<td><code>1F607</code> <code>halo</code></td>
+<td>😇</td>
 </tr>
 <tr>
-<td><code>frown</code></td>
-<td><code>=(</code> <code>:-(</code> <code>:(</code></td>
-<td>😦</td>
+<td><code>joy</code></td>
+<td><code>1F602</code> <code>lol</code> <code>laughing</code></td>
+<td>😂</td>
 </tr>
 <tr>
 <td><code>playful</code></td>
@@ -363,89 +364,89 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td>😛</td>
 </tr>
 <tr>
-<td><code>skeptical</code></td>
-<td><code>=/</code></td>
-<td>😕</td>
+<td><code>worried</code></td>
+<td><code>1F61F</code> <code>sadface</code> <code>sad</code></td>
+<td>😟</td>
 </tr>
 <tr>
-<td><code>wink</code></td>
-<td><code>;)</code> <code>;-)</code> <code>;]</code> <code>;D</code></td>
-<td>😉</td>
+<td><code>cry</code></td>
+<td><code>1F622</code> <code>crying</code> <code>tear</code></td>
+<td>😢</td>
 </tr>
 <tr>
-<td><code>panda</code></td>
-<td><code>sadpanda</code> <code>shpanda</code></td>
-<td>🐼</td>
+<td><code>rage</code></td>
+<td><code>1F621</code> <code>redface</code></td>
+<td>😡</td>
 </tr>
 <tr>
-<td><code>dog</code></td>
-<td><code>woof</code></td>
-<td>🐶</td>
+<td><code>wave</code></td>
+<td><code>1F44B</code> <code>hello</code> <code>goodbye</code></td>
+<td>👋</td>
 </tr>
 <tr>
-<td><code>cat</code></td>
-<td><code>catface</code> <code>meow</code></td>
-<td>🐱</td>
+<td><code>ok_hand</code></td>
+<td><code>1F44C</code> <code>perfect</code> <code>okay</code> <code>nice</code></td>
+<td>👌</td>
 </tr>
 <tr>
-<td><code>bee</code></td>
-<td><code>honeybee</code></td>
-<td>🐝</td>
-</tr>
-<tr>
-<td><code>poop</code></td>
-<td><code>crap</code> <code>dump</code> <code>sheet</code></td>
-<td>💩</td>
-</tr>
-<tr>
-<td><code>like</code></td>
-<td><code>thumbsup</code> <code>+1</code></td>
+<td><code>thumbsup</code></td>
+<td><code>1F44D</code> <code>+1</code> <code>like</code></td>
 <td>👍</td>
 </tr>
 <tr>
-<td><code>dislike</code></td>
-<td><code>thumbsdown</code> <code>-1</code></td>
+<td><code>thumbsdown</code></td>
+<td><code>1F44E</code> <code>-1</code> <code>no</code> <code>dislike</code></td>
 <td>👎</td>
 </tr>
 <tr>
-<td><code>check</code></td>
-<td><code>greencheck</code> <code>done</code></td>
-<td>✅</td>
+<td><code>smiley_cat</code></td>
+<td><code>1F63A</code> <code>happycat</code></td>
+<td>😺</td>
 </tr>
 <tr>
-<td><code>xmark</code></td>
-<td><code>redx</code></td>
-<td>❌</td>
+<td><code>cat</code></td>
+<td><code>1F431</code> <code>kitten</code> <code>:3</code> <code>kitty</code></td>
+<td>🐱</td>
 </tr>
 <tr>
-<td><code>noentry</code></td>
-<td><code>warning</code> <code>noauth</code></td>
-<td>⛔</td>
+<td><code>dog</code></td>
+<td><code>1F436</code> <code>puppy</code></td>
+<td>🐶</td>
 </tr>
 <tr>
-<td><code>cookie</code></td>
-<td>n/a</td>
-<td>🍪</td>
+<td><code>bee</code></td>
+<td><code>1F41D</code> <code>honeybee</code> <code>bumblebee</code></td>
+<td>🐝</td>
 </tr>
 <tr>
-<td><code>lock</code></td>
-<td><code>secure</code></td>
-<td>🔒</td>
+<td><code>pig</code></td>
+<td><code>1F437</code> <code>pighead</code></td>
+<td>🐷</td>
 </tr>
 <tr>
-<td><code>star</code></td>
-<td><code>*</code></td>
-<td>⭐</td>
+<td><code>monkey</code></td>
+<td><code>1F437</code> <code>monkey_face</code></td>
+<td>🐵</td>
+</tr>
+<tr>
+<td><code>cow</code></td>
+<td><code>1F42E</code> <code>happycow</code></td>
+<td>🐮</td>
+</tr>
+<tr>
+<td><code>panda</code></td>
+<td><code>1F43C</code> <code>panda_face</code> <code>shpanda</code></td>
+<td>🐼</td>
+</tr>
+<tr>
+<td><code>sushi</code></td>
+<td><code>1F363</code> <code>raw</code> <code>sashimi</code></td>
+<td>🍣</td>
 </tr>
 <tr>
 <td><code>home</code></td>
-<td><code>house</code></td>
+<td><code>1F3E0</code> <code>house</code></td>
 <td>🏠</td>
-</tr>
-<tr>
-<td><code>joker</code></td>
-<td><code>wildcard</code></td>
-<td>🃏</td>
 </tr>
 <tr>
 <td><code>eyeglases</code></td>
@@ -453,44 +454,9 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td>👓</td>
 </tr>
 <tr>
-<td><code>bell</code></td>
-<td><code>ring</code></td>
-<td>🔔</td>
-</tr>
-<tr>
-<td><code>beer</code></td>
-<td><code>brew</code> <code>homebrew</code> <code>celebrate</code></td>
-<td>🍺</td>
-</tr>
-<tr>
-<td><code>sushi</code></td>
-<td><code>raw</code></td>
-<td>🍣</td>
-</tr>
-<tr>
-<td><code>toilet</code></td>
-<td><code>bathroom</code></td>
-<td>🚽</td>
-</tr>
-<tr>
-<td><code>search</code></td>
-<td><code>searching</code> <code>magnify</code></td>
-<td>🔎</td>
-</tr>
-<tr>
-<td><code>unlock</code></td>
-<td><code>unsecure</code> <code>unsecure</code></td>
-<td>🔓</td>
-</tr>
-<tr>
-<td><code>luck</code></td>
-<td><code>lucky</code> <code>clover</code></td>
-<td>🍀</td>
-</tr>
-<tr>
-<td><code>think</code></td>
-<td><code>thinking</code> <code>thought</code></td>
-<td>💭</td>
+<td><code>smoke</code></td>
+<td><code>cig</code> <code>grit</code> <code>cancerstick</code></td>
+<td>🚬</td>
 </tr>
 <tr>
 <td><code>fire</code></td>
@@ -498,19 +464,84 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <td>🔥</td>
 </tr>
 <tr>
-<td><code>smoke</code></td>
-<td><code>cig</code> <code>grit</code> <code>cancerstick</code></td>
-<td>🚬</td>
+<td><code>fire</code></td>
+<td><code>burn</code> <code>burning</code></td>
+<td>💩</td>
 </tr>
 <tr>
-<td><code>bullseye</code></td>
-<td><code>darts</code></td>
+<td><code>beer</code></td>
+<td><code>1F37A</code> <code>homebrew</code> <code>brew</code></td>
+<td>🍺</td>
+</tr>
+<tr>
+<td><code>cookie</code></td>
+<td><code>1F36A</code> <code>biscuit</code> <code>chocolate</code></td>
+<td>🍪</td>
+</tr>
+<tr>
+<td><code>lock</code></td>
+<td><code>1F512</code> <code>padlock</code> <code>secure</code></td>
+<td>🔒</td>
+</tr>
+<tr>
+<td><code>unlock</code></td>
+<td><code>1F513</code> <code>openpadlock</code></td>
+<td>🔓</td>
+</tr>
+<tr>
+<td><code>star</code></td>
+<td><code>2B50</code> <code>yellowstar</code></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td><code>joker</code></td>
+<td><code>1F0CF</code> <code>black_joker</code> <code>wild</code></td>
+<td>🃏</td>
+</tr>
+<tr>
+<td><code>check</code></td>
+<td><code>2705</code> <code>white_check_mark</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td><code>274C</code> <code>cross</code> <code>xmark</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>toilet</code></td>
+<td><code>1F6BD</code> <code>restroom</code> <code>loo</code></td>
+<td>🚽</td>
+</tr>
+<tr>
+<td><code>bell</code></td>
+<td><code>ringer</code> <code>ring</code></td>
+<td>🔔</td>
+</tr>
+<tr>
+<td><code>search</code></td>
+<td><code>1F50E</code> <code>mag_right</code> <code>magnify</code></td>
+<td>🔎</td>
+</tr>
+<tr>
+<td><code>dart</code></td>
+<td><code>1F3AF</code> <code>bullseye</code> <code>darts</code></td>
 <td>🎯</td>
 </tr>
 <tr>
-<td><code>money</code></td>
-<td><code>cash</code> <code>cream</code></td>
+<td><code>cash</code></td>
+<td><code>1F4B5</code> <code>dollar</code> <code>cream</code></td>
 <td>💵</td>
+</tr>
+<tr>
+<td><code>thinking</code></td>
+<td><code>1F4AD</code> <code>thought_balloon</code></td>
+<td>💭</td>
+</tr>
+<tr>
+<td><code>luck</code></td>
+<td><code>1F340</code> <code>four_leaf_clover</code></td>
+<td>🍀</td>
 </tr>
 </tbody></table>
 
@@ -522,7 +553,7 @@ Give it a try, we&#39;ll keep the lights on.</p>
 <h3 id="results">Results</h3>
 
 <p><center>
-<img src="../public/images/emojis-demo.png" alt="Icons Demo">
+<img src="../public/images/emojis-demo.png" alt="Emojis Demo">
 </center></p>
 
 <p><hr>

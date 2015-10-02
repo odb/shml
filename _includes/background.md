@@ -1,7 +1,7 @@
 <hr>
 <a name="Background"></a>
 # Background
-To set the background color of any string or object you need to call the `background` method followed by an argument.
+To set the background color of any string or object you need to call the `bgcolor` method followed by an argument.
 
 ### Arguments
 
@@ -24,22 +24,23 @@ Following a string or object you must terminate the `background` method to ensur
 Here we will demonstrate how the `background` method can be used on a single line.
 
 ```bash
-echo $(background red "I'm the O-D-B") $(background end)
+echo $(bgcolor red "I'm the O-D-B") $(bgcolor end)
 ```
 Some times one-line is not enough.
 
 ```bash
 echo "
-$(background grey)
+$(bgcolor cyan)
 ...as you can see
-$(background end)
+F.B.I. don't you be watching me
+$(bgcolor end)
 "
 ```
 
-You can also use `bg` as an alias for `background`
+You can also use `bgc` as an alias for `bgcolor`
 
 ```bash
-echo "$(bg green) C.R.E.A.M. $(bg end)"
+echo "$(bgc green)NUH you know name, now give me my money!$(bgc end)"
 ```
 
 ### Results

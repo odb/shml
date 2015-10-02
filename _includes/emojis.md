@@ -2,46 +2,52 @@
 <a name="Emojis"></a>
 # Emojis
 
-To add an emoji you need to call the `emoji` method followed by an argument. Each emoji added to SHML was approved as part of [Unicode 6.0.0 Standard](http://unicode.org/versions/Unicode6.0.0/) in 2010.
+To add an emoji you need to call the `emoji` method followed by an argument. Each emoji added to SHML was approved as part of [Unicode&reg; 6.0.0 Standard](http://unicode.org/versions/Unicode6.0.0/) in 2010.
 
 ### Arguments
 
 | Argument  	| Alias(es) 	| Result  	|
 |---	|---	|---	|
-|   `smile`	|   `=)` `:-)` `:)`	|   😄	|
-|   `cry`	|   `crying` `=*(`	|   😢	|
-|   `frown`	|   `=(` `:-(` `:(`	|   😦	|
-|   	`playful`|   `cheeky` `tongueout` `=p` `=P`	|   😛	|
-|   `skeptical`	|   `=/`	|   😕	|
-|   `wink`	|   `;)` `;-)` `;]` `;D`	|   😉	|
-| `panda` 	|  `sadpanda` `shpanda`	|   🐼	|
-|   `dog`	|   `woof`	|  🐶	|
-|   `cat`	|   `catface` `meow`	|   🐱	|
-|   `bee`	|   `honeybee`	|   🐝	|
-|   `poop`	|   `crap` `dump` `sheet`	|   💩	|
-|   `like`	|   `thumbsup` `+1`	|   👍	|
-|   `dislike`	|   `thumbsdown` `-1`	|   👎	|
-|   `check`	|   `greencheck` `done`	|   ✅	|
-|   `xmark`	|   `redx`	|   ❌	|
-|   `noentry`	|   `warning` `noauth`	|   ⛔	|
-|   `cookie`	|   n/a	|   🍪	|
-|   `lock`	|   `secure`	|   🔒	|
-|   `star`	|   `*`	|   ⭐	|
-|   `home`	|   `house`	|   🏠	|
-|   `joker`	|   `wildcard`	|   🃏	|
+|   `smiley`	|   `1F603` `'=)'` `':-)'` `':)'`	|   😄	|
+|   `innocent`	|   `1F607` `halo`	|   😇	|
+|   `joy`	|   `1F602` `lol` `laughing`	|   😂	|
+|   `playful`|   `cheeky` `tongueout` `=p` `=P`	|   😛	|
+|   `worried`|   `1F61F` `sadface` `sad`	|   😟	|
+|   `cry`|   `1F622` `crying` `tear`	|   😢	|
+|   `rage`|   `1F621` `redface`	|   😡	|
+|   `wave`|   `1F44B` `hello` `goodbye`	|   👋	|
+|   `ok_hand`|   `1F44C` `perfect` `okay` `nice`	|   👌	|
+|   `thumbsup`|   `1F44D` `+1` `like`	|   👍	|
+|   `thumbsdown`|   `1F44E` `-1` `no` `dislike`	|   👎	|
+| `smiley_cat` 	|  `1F63A` `happycat`	|   😺	|
+| `cat` 	|   `1F431` `kitten` `:3` `kitty`	|   🐱	|
+| `dog` 	|   `1F436` `puppy`	|   🐶	|
+| `bee` 	|   `1F41D` `honeybee` `bumblebee`	|   🐝	|
+| `pig` 	|   `1F437` `pighead`	|   🐷	|
+| `monkey` 	|   `1F437` `monkey_face`	|   🐵	|
+| `cow` 	|   `1F42E` `happycow`	|   🐮	|
+| `panda` 	|  `1F43C` `panda_face` `shpanda`	|   🐼	|
+|  `sushi`	|   `1F363` `raw` `sashimi`	|  🍣	|
+|   `home`	|   `1F3E0` `house`	|   🏠	|
 |   `eyeglases`	|   `bifocals` `glasses`	|   👓	|
-|   `bell`	|   `ring`	|   🔔	|
-|   `beer`	|   `brew` `homebrew` `celebrate`	|   🍺	|
-|   `sushi`	|   `raw`	|  🍣	|
-|   `toilet`	|   `bathroom`	|   🚽	|
-|   `search`	|   `searching` `magnify`	|   🔎	|
-|   `unlock`	|   `unsecure` `unsecure` 	|   🔓	|
-|   `luck`	|   `lucky` `clover`	|   🍀	|
-|   `think`	|   `thinking` `thought`	|   💭	|
-|   `fire`	|   `burn` `burning`	|   🔥	|
 |   `smoke`	|   `cig` `grit` `cancerstick`	|   🚬	|
-|   `bullseye`	|   `darts`	|   🎯	|
-|   `money`	|   `cash` `cream`	|   💵	|
+|   `fire`	|   `burn` `burning`	|   🔥	|
+|   `fire`	|   `burn` `burning`	|   💩	|
+|   `beer`	|   `1F37A` `homebrew` `brew`	|   🍺	|
+|   `cookie`	|   `1F36A` `biscuit` `chocolate`	|   🍪	|
+|   `lock`	|   `1F512` `padlock` `secure`	|   🔒	|
+|   `unlock`	|   `1F513` `openpadlock`	|   🔓	|
+|   `star`	|   `2B50` `yellowstar`	|   ⭐	|
+|   `joker`	|   `1F0CF` `black_joker` `wild`	|   🃏	|
+|   `check`	|   `2705` `white_check_mark`	|   ✅	|
+|   `x`	|   `274C` `cross` `xmark`	|   ❌	|
+|   `toilet`	|   `1F6BD` `restroom` `loo`	|   🚽	|
+|   `bell`	|   `ringer` `ring`	|   🔔	|
+|   `search`	|   `1F50E` `mag_right` `magnify`	|   🔎	|
+|   `dart`	|  `1F3AF` `bullseye` `darts`	|   🎯	|
+|   `cash`	|   `1F4B5` `dollar` `cream`	|   💵	|
+|   `thinking`	|   `1F4AD` `thought_balloon`	|   💭	|
+|   `luck`	|   `1F340` `four_leaf_clover`	|   🍀	|
 
 ### Code Samples
 
@@ -53,5 +59,5 @@ echo "$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke)
 
 ### Results
 <center>
-![Icons Demo](../public/images/emojis-demo.png)
+![Emojis Demo](../public/images/emojis-demo.png)
 </center>

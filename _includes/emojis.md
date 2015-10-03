@@ -11,7 +11,7 @@ To add an emoji you need to call the `emoji` method followed by an argument. Eac
 |   `smiley`	|   `1F603` `'=)'` `':-)'` `':)'`	|   😄	|
 |   `innocent`	|   `1F607` `halo`	|   😇	|
 |   `joy`	|   `1F602` `lol` `laughing`	|   😂	|
-|   `playful`|   `cheeky` `tongueout` `=p` `=P`	|   😛	|
+|   `=p`|   `1F61B` `stuck_out_tongue` `=P`	|   😛	|
 |   `worried`|   `1F61F` `sadface` `sad`	|   😟	|
 |   `cry`|   `1F622` `crying` `tear`	|   😢	|
 |   `rage`|   `1F621` `redface`	|   😡	|

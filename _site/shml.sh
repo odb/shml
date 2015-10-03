@@ -226,6 +226,7 @@ emoji() {
     1F603|smiley|'=)'|':-)'|':)')    i='😃';;
     1F607|innocent|halo)             i='😇';;
     1F602|joy|lol|laughing)          i='😂';;
+    1F61B|tongue|'=p'|'=P')          i='😛';;
     1F60A|blush|'^^'|blushing)       i='😊';;
     1F61F|worried|sadface|sad)       i='😟';;
     1F622|cry|crying|tear)           i='😢';;
@@ -265,7 +266,7 @@ emoji() {
     1F340|four_leaf_clover|luck)     i='🍀';;
 
     *)
-      entity $1; return 0;;
+      #entity $1; return 0;;
   esac
   echo -ne "$i"
 }

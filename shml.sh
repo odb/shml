@@ -2,22 +2,27 @@
 
 #SHML:START
 #************************************************#
-#        shml - Shell Markup Framework
-#                    Beta
+#    SHML - Shell Markup Language Framework
+#                   v1.0.0
+#                    (MIT)
 #        by Justin Dorfman - @jdorfman
 #        && Joshua Mervine - @mervinej
 #
+<<<<<<< HEAD
 #               Inspired by:
 #
 #      Kiyor Cia, Jeff Foard FLOZz' MISC,
 #           Mark Otto & Dave Gandy
 #
 #          https://github.com/MaxCDN/shml
+=======
+#        https://maxcdn.github.io/shml/
+>>>>>>> jd-v1.0.0
 #************************************************#
 
 # Foreground (Text)
 ##
-function color {
+fgcolor() {
   local __end='\033[39m'
   local __color=$__end # end by default
   case "$1" in
@@ -44,13 +49,24 @@ function color {
     echo -en "$__color"
   fi
 }
-function c {
-  color "$@"
+
+# Backwards Compatibility
+color() {
+  fgcolor "$@"
+}
+
+# Aliases
+fgc() {
+  fgcolor "$@"
+}
+
+c() {
+  fgcolor "$@"
 }
 
 # Background
 ##
-function background {
+bgcolor() {
   local __end='\033[49m'
   local __color=$__end # end by default
   case "$1" in
@@ -79,12 +95,23 @@ function background {
     echo -en "$__color"
   fi
 }
-function bg {
-  background "$@"
+
+#Backwards Compatibility
+background() {
+  bgcolor "$@"
+}
+
+#Aliases
+bgc() {
+  bgcolor "$@"
+}
+
+bg() {
+  bgcolor "$@"
 }
 
 ## Color Bar
-function color-bar {
+color-bar() {
   if test "$2"; then
     for i in "$@"; do
       echo -en "$(background "$i" " ")"
@@ -95,13 +122,19 @@ function color-bar {
     done; echo
   fi
 }
-function bar {
+
+#Alises
+cb() {
+  color-bar "$@"
+}
+
+bar() {
   color-bar "$@"
 }
 
 ## Attributes
 ##
-function attribute {
+attribute() {
   local __end='\033[0m'
   local __attr=$__end # end by default
   case "$1" in
@@ -119,20 +152,20 @@ function attribute {
     echo -en "$__attr"
   fi
 }
-function a {
+a() {
   attribute "$@"
 }
 
 ## Elements
-function br {
+br() {
   echo -e "\n\r"
 }
 
-function tab {
+tab() {
   echo -e "\t"
 }
 
-function indent {
+indent() {
   local __len=4
   if test "$1"; then
     if [[ $1 =~ $re ]] ; then
@@ -144,11 +177,11 @@ function indent {
      __len=$(( $__len - 1 ))
   done
 }
-function i {
+i() {
   indent "$@"
 }
 
-function hr {
+hr() {
   local __len=60
   local __char='-'
   if ! test "$2"; then
@@ -170,62 +203,8 @@ function hr {
 
 # Icons
 ##
-declare -a entities=()
-entities[quot]='\u0022'
-entities[amp]='\u0026'
-entities[lt]='\u003C'
-entities[gt]='\u003E'
-entities[nbsp]=' '
-entities[pi]='\u03C0'
-entities[ndash]='\u2013'
-entities[mdash]='\u2014'
-entities[lsquo]='\u2018'
-entities[rsquo]='\u2019'
-entities[sbquo]='\u201A'
-entities[ldquo]='\u201C'
-entities[rdquo]='\u201D'
-entities[dagger]='\u2020'
-entities[bullet]='\u2022'
-entities[lsaquo]='\u2039'
-entities[rasquo]='\u203A'
-entities[oline]='\u203E'
-entities[frasl]='\u2044'
-entities[euro]='\u20AC'
-entities[larr]='\u2190'
-entities[uarr]='\u2191'
-entities[rarr]='\u2192'
-entities[darr]='\u2193'
-entities[harr]='\u2194'
-entities[cararr]='\u21B5'
-entities[lArr]='\u21D0'
-entities[uArr]='\u21D1'
-entities[rArr]='\u21D2'
-entities[dArr]='\u21D3'
-entities[hArr]='\u21D4'
-entities[empty]='\u2205'
-entities[sum]='\u2211'
-entities[minus]='\u2212'
-entities[spades]='\u2660'
-entities[clubs]='\u2663'
-entities[hearts]='\u2665'
-entities[diams]='\u2666'
-function _entity_list {
-  local w=0
-  for i in "${!entities[@]}"; do
-    if [ $w -lt 3 ]; then
-      printf "  %07s:  %s   " "$i" "$( echo -e "${entities[$i]}")"
-      w="$(expr $w + 1)"
-    else
-      printf "  %07s:  %s   \n" "$i" "$( echo -e "${entities[$i]}")"
-      w=0
-    fi
-  done
-  echo " "
-}
-function entity {
-  echo -ne "${entities[$1]}"
-}
-function icon {
+
+icon() {
   local i='';
   case "$1" in
     check|checkmark)       i='\xE2\x9C\x93';;
@@ -248,6 +227,61 @@ function icon {
       entity $1; return 0;;
   esac
   echo -ne "$i";
+}
+emoji() {
+  local i=""
+  case "$1" in
+
+    1F603|smiley|'=)'|':-)'|':)')    i='😃';;
+    1F607|innocent|halo)             i='😇';;
+    1F602|joy|lol|laughing)          i='😂';;
+    1F61B|tongue|'=p'|'=P')          i='😛';;
+    1F60A|blush|'^^'|blushing)       i='😊';;
+    1F61F|worried|sadface|sad)       i='😟';;
+    1F622|cry|crying|tear)           i='😢';;
+    1F621|rage|redface)              i='😡';;
+    1F44B|wave|hello|goodbye)        i='👋';;
+    1F44C|ok_hand|perfect|okay|nice) i='👌';;
+    1F44D|thumbsup|+1|like)          i='👍';;
+    1F44E|thumbsdown|-1|no|dislike)  i='👎';;
+    1F63A|smiley_cat|happycat)       i='😺';;
+    1F431|cat|kitten|:3|kitty)       i='🐱';;
+    1F436|dog|puppy)                 i='🐶';;
+    1F41D|bee|honeybee|bumblebee)    i='🐝';;
+    1F437|pig|pighead)               i='🐷';;
+    1F435|monkey_face|monkey)        i='🐵';;
+    1F42E|cow|happycow)              i='🐮';;
+    1F43C|panda_face|panda|shpanda)  i='🐼';;
+    1F363|sushi|raw|sashimi)         i='🍣';;
+    1F3E0|home|house)                i='🏠';;
+    1F453|eyeglasses|bifocals)       i='👓';;
+    1F6AC|smoking|smoke|cigarette)   i='🚬';;
+    1F525|fire|flame|hot|snapstreak) i='🔥';;
+    1F4A9|hankey|poop|shit)          i='💩';;
+    1F37A|beer|homebrew|brew)        i='🍺';;
+    1F36A|cookie|biscuit|chocolate)  i='🍪';;
+    1F512|lock|padlock|secure)       i='🔒';;
+    1F513|unlock|openpadlock)        i='🔓';;
+    2B50|star|yellowstar)            i='⭐';;
+    1F0CF|black_joker|joker|wild)    i='🃏';;
+    2705|white_check_mark|check)     i='✅';;
+    274C|x|cross|xmark)              i='❌';;
+    1F6BD|toilet|restroom|loo)       i='🚽';;
+    1F514|bell|ringer|ring)          i='🔔';;
+    1F50E|mag_right|search|magnify)  i='🔎';;
+    1F3AF|dart|bullseye|darts)       i='🎯';;
+    1F4B5|dollar|cash|cream)         i='💵';;
+    1F4AD|thought_balloon|thinking)  i='💭';;
+    1F340|four_leaf_clover|luck)     i='🍀';;
+
+    *)
+      #entity $1; return 0;;
+  esac
+  echo -ne "$i"
+}
+
+function e {
+  emoji "$@"
 }
 
 #SHML:END
@@ -280,14 +314,14 @@ $(i $I)$(color red "foo bar")
 $(i $I)\$(color blue \"foo bar\")
 $(i $I)$(color blue "foo bar")
 
-$(i $I)\$(color green)
+$(i $I)\$(fgcolor green)
 $(i $I)  >>foo bar<<
 $(i $I)  >>bah boo<<
-$(i $I)\$(color end)
-$(i $I)$(color green)
+$(i $I)\$(fgcolor end)
+$(i $I)$(fgcolor green)
 $(i $I)>>foo bar<<
 $(i $I)>>bah boo<<
-$(i $I)$(color end)
+$(i $I)$(fgcolor end)
 
 $(i $I)Short Hand: $(a underline 'c')
 
@@ -307,7 +341,7 @@ $(i $I)Default (no arg): end
 $(a bold 'Section 2: Background')
 $(hr '-')
 
-$(i $I)\$(background red \"foo bar\")
+$(i $I)\$(bgcolor red \"foo bar\")
 $(i $I)$(background red "foo bar")
 
 $(i $I)\$(background blue \"foo bar\")
@@ -404,7 +438,7 @@ $(i $I)\$(hr '#' 30)
 $(i $I)$(hr '#' 30)
 
 
-$(a bold 'Section 5: Icons / Entities')
+$(a bold 'Section 5: Icons')
 $(hr '-')
 
 $(i $I)Icons
@@ -421,43 +455,26 @@ $(i $I)darkstar, umbrella, flag, snow|snowflake, music,
 $(i $I)scissors, tm|trademark, copyright, apple,
 $(i $I):-)|:)|smile|face
 
-$(i $I)Entities
-$(i $I)$(hr '-' 10)
 
-$(i $I)A limited implementation of browser HTML Entities.
-
-$(i $I)\$(entity spades) \$(entity clubs) \$(entity hearts) \$(entity diams)
-
-$(i $I)$(entity spades) $(entity clubs) $(entity hearts) $(entity diams)
-
-$(i $I)Entities can also be referenced via 'icon':
-
-$(i $I)\$(icon spades) \$(icon clubs) \$(icon hearts) \$(icon diams)
-
-$(i $I)$(icon spades) $(icon clubs) $(icon hearts) $(icon diams)
-
-$(i $I)Argument list:
-
-$(_entity_list)
-
-
-$(a bold 'Section 6: Mixed Examples')
+$(a bold 'Section 6: Emojis')
 $(hr '-')
 
-$(i $I)\$(bg white \"\$(c black \"foo bar\")\")
-$(i $I)$(bg white "$(c black "foo bar")")
+$(i $I)Couldn't peep it with a pair of \$(emoji bifocals)
+$(i $I)Couldn't peep it with a pair of $(emoji bifocals)
 $(i $I)
-$(i $I)\$(bg green)\$(c red)\$(a bold)
-$(i $I)$(i $I)>>foo bar<<
-$(i $I)$(i $I)\$(hr \"\$(i \'darkstar\')\" 11)
-$(i $I)$(i $I)>>bah boo<<
-$(i $I)\$(a end)\$(c end)\$(bg end)
-$(bg green)$(c red)$(a bold)
-$(i $I)>>foo bar<<
-$(i $I)$(hr "$(i 'darkstar')" 11)
-$(i $I)>>bah boo<<
-$(a end)$(c end)$(bg end)
+$(i $I)I'm no \$(emoji joker) play me as a \$(emoji joker)
+$(i $I)I'm no $(emoji joker) play me as a $(emoji joker)
+$(i $I)
+$(i $I)\$(emoji bee) on you like a \$(emoji house) on \$(emoji fire), \$(emoji smoke) ya
+$(i $I)$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke) ya
+$(i $I)
+$(i $I)$(a bold 'Each Emoji has 1 or more alias')
+$(i $I)
+$(i $I)\$(emoji smiley) \$(emoji 1F603) \$(emoji '=)') \$(emoji ':-)') \$(emoji ':)')
+$(i $I)$(emoji smiley) $(emoji 1F603) $(emoji '=)') $(emoji ':-)') $(emoji ':)')
 
+$(i $I)\$(entities bullet)
+$(i $I)$(entities bullet)
 
 $(a bold 'Section 7: Color Bar')
 $(hr '-')
@@ -476,7 +493,8 @@ $(i $I)$(color-bar red green yellow blue magenta \
 
 $(i $I)Short Hand: $(a underline 'bar')
 $(i $I)
-$(i $I)\$(bar red red red red)
+$(i $I)\$(bar black yellow black yellow black yellow)
+$(i $I)$(bar black yellow black yellow black yellow)
 
 " | less -r
 fi

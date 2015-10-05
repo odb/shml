@@ -8,16 +8,7 @@
 #        by Justin Dorfman - @jdorfman
 #        && Joshua Mervine - @mervinej
 #
-<<<<<<< HEAD
-#               Inspired by:
-#
-#      Kiyor Cia, Jeff Foard FLOZz' MISC,
-#           Mark Otto & Dave Gandy
-#
-#          https://github.com/MaxCDN/shml
-=======
 #        https://maxcdn.github.io/shml/
->>>>>>> jd-v1.0.0
 #************************************************#
 
 # Foreground (Text)

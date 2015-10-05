@@ -2,13 +2,12 @@
 
 source "$(which shml)"
 
-echo "$(background red) I'm the O-D-B... $(background end)"
-
+echo ""
+echo "$(bgcolor green "THE RZA THE GZA") $(color end)"
 echo "
-$(background cyan)
- ...as you can see
- F.B.I. don't you be watching me
-$(background end)
+$(bgcolor blue)
+Ol' Dirty Bastard, Inspectah Deck
+Raekwon the Chef, U-God, Ghostface Killah and$(bgcolor end)
 "
-
-echo "$(bg green) NUH you know my name, now give me my money! $(bg end)"
+echo "$(bgc red "M-E-T, H-O-D, Man") $(c end)"
+echo ""

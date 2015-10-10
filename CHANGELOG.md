@@ -1,3 +1,8 @@
+## [1.0.1] - 2015-10-09
+
+#### Removed
+- Bullet Entity reference ([Reported on Reddit](https://www.reddit.com/r/bash/comments/3nps8x/shml_shell_markup_language/cvr3gm2))
+
 ## [1.0.0] - 2015-10-05
 
 #### Added

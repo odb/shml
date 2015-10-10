@@ -464,9 +464,6 @@ $(i $I)
 $(i $I)\$(emoji smiley) \$(emoji 1F603) \$(emoji '=)') \$(emoji ':-)') \$(emoji ':)')
 $(i $I)$(emoji smiley) $(emoji 1F603) $(emoji '=)') $(emoji ':-)') $(emoji ':)')
 
-$(i $I)\$(entities bullet)
-$(i $I)$(entities bullet)
-
 $(a bold 'Section 7: Color Bar')
 $(hr '-')
 

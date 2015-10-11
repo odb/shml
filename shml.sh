@@ -3,7 +3,7 @@
 #SHML:START
 #************************************************#
 #    SHML - Shell Markup Language Framework
-#                   v1.0.0
+#                   v1.0.2
 #                    (MIT)
 #        by Justin Dorfman - @jdorfman
 #        && Joshua Mervine - @mervinej

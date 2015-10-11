@@ -1,3 +1,6 @@
 .DS_Store
 test/shunt.sh
 example.sh
+npm-debug.log
+FEEDBACK.md
+TODO.md

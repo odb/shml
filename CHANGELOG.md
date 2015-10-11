@@ -1,3 +1,9 @@
+## [1.0.2] - 2015-10-11
+
+#### Fixed
+- `.gitignore`
+- Version Bump on Documentation/Chagelog/Readme
+
 ## [1.0.1] - 2015-10-09
 
 #### Removed

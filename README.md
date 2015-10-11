@@ -1,4 +1,4 @@
-SHML v.1.0.0
+SHML v.1.0.2
 ====
 
 SHML is a shell framework for faster and easier script development.

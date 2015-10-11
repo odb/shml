@@ -11,7 +11,7 @@ HTML has CSS, Unix-like shells have ANSI/VT100 Control Sequences. SHML makes is 
 $ curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
 ```
 <div align="center">
-<small>Currently v1.0.0
+<small>Currently v1.0.2
 <br><a href="getting-started/">Please be responsible &amp; RTFM</a>
 </small>
 <br><br>

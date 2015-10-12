@@ -8,7 +8,7 @@ To set the foreground color of any string or object you need to call the `fgcolo
 
 #### Colors
 
-Fifteen different colors to choose from:
+Fifteen different colors to choose from:<br>
 <code class="color-box-black"       >black</code>
 <code class="color-box-red"         >red</code>
 <code class="color-box-green"       >green</code>

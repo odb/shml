@@ -9,11 +9,21 @@ To set the foreground color of any string or object you need to call the `fgcolo
 #### Colors
 
 Fifteen different colors to choose from:
-
-`black` `red` `green` `yellow` `blue` `magenta` `cyan` `gray`
-`white` `darkgray` `lightgreen` `lightyellow` `lightblue`
-`lightmagenta` `lightcyan`
-
+<code class="color-box-black"       >black</code>
+<code class="color-box-red"         >red</code>
+<code class="color-box-green"       >green</code>
+<code class="color-box-yellow"      >yellow</code>
+<code class="color-box-blue"        >blue</code>
+<code class="color-box-magenta"     >magenta</code>
+<code class="color-box-cyan"       >cyan</code>
+<code class="color-box-gray"        >gray</code>
+<code class="color-box-white"       >white</code>
+<code class="color-box-darkgray"    >darkgray</code>
+<code class="color-box-lightgreen"  >lightgreen</code>
+<code class="color-box-lightyellow" >lightyellow</code>
+<code class="color-box-lightblue"   >lightblue</code>
+<code class="color-box-lightmagenta">lightmagenta</code>
+<code class="color-box-lightcyan"   >lightcyan</code>
 
 #### Termination
 Following a string or object you must terminate the `fgcolor` method to ensure color doesn't bleed.  You can use any of the following termination arguments:

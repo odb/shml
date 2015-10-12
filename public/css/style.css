@@ -1,0 +1,25 @@
+/**
+ * Demo color boxes.
+ */
+code.color-box-black {
+    color: black;
+    background-color: white;
+
+    padding: 2px;
+    border: 2px solid black;
+}
+
+code.color-box-red          { color: #cc0000; }
+code.color-box-green        { color: #4e9a06; }
+code.color-box-yellow       { color: #c4a000; }
+code.color-box-blue         { color: #3465a4; }
+code.color-box-magenta      { color: #75507b; }
+code.color-box-cyan         { color: #0b939b; }
+code.color-box-gray         { color: #555753; }
+code.color-box-white        { color: #EEEEEC; }
+code.color-box-darkgray     { color: #555753; }
+code.color-box-lightgreen   { color: #8ae234; }
+code.color-box-lightyellow  { color: #fce94f; }
+code.color-box-lightblue    { color: #729fcf; }
+code.color-box-lightmagenta { color: #ad7fa8; }
+code.color-box-lightcyan    { color: #00f5e9; }

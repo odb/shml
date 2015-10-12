@@ -6,7 +6,11 @@ The `attribute` method lets you stylize your text in 5 different ways.
 
 ### Arguments
 
-`bold` `dim` `underline` `invert` `hidden`
+<code><span style="font-weight: bold">bold</span></code>
+<code><span style="color: gray">dim</span></code>
+<code><span style="text-decoration: underline">underline</span></code>
+<code><span style="color: black; background-color: white">invert</span></code>
+`hidden`
 
 #### Termination
 

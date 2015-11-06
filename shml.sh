@@ -278,6 +278,12 @@ function e {
 #SHML:END
 
 
+# Allow standalone usage
+if [ $# -gt 0 ] ; then
+  "$@"
+  exit
+fi
+
 # Usage / Examples
 ##
 if [[ "$(basename -- "$0")" = "shml.sh" ]]; then

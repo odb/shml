@@ -1,0 +1,36 @@
+<hr>
+<a name="Icons"></a>
+# Icons
+Icons are flat ascii characters that are supported by most unix-like systems.  If you run into compatibility issues please [report it here](https://github.com/MaxCDN/shml/issues).
+
+### Arguments
+
+`checkmark` `xmark` `heart` `sun` `star`
+`darkstar` `umbrella` `flag` `snowflake` `music`
+`scissors` `trademark` `copyright` `apple` `smile`
+
+### Code Samples
+
+Peter, a software engineer likes to use the `xmark` icon in his programs:
+
+```bash
+echo "$(icon xmark)TPS Reports $(icon xmark)Lumbergh $(icon xmark)Working"
+```
+
+When he is in a better mood, he tends to use the `check` icon:
+
+```bash
+echo "$(icon check)Kung Fu $(icon check)Fishing $(icon check)Sleep"
+```
+
+Sometimes he even uses the foreground `color` method to add some emphasis:
+
+```bash
+echo "$(color red)$(icon xmark)$(color end)TPS Reports $(color green)$(icon check)$(color end)Fishing"
+```
+
+### Results
+<center>
+![Icons Demo](../public/images/icons-demo.png)
+</center>
+<center><a href="http://code.runnable.com/Viu2IIDNOkszAHQg/shml-icons-for-shell-and-bash" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

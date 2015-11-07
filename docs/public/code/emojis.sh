@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+source "$(which shml)"
+
+echo ""
+echo " Couldn't peep it with a pair of $(emoji bifocals)"
+echo ""
+echo " I'm no $(emoji joker) play me as a $(emoji joker)"
+echo ""
+echo " $(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke) ya"
+echo ""
+echo "$(hr)"
+echo ""
+echo "$(a bold 'Faces:')   $(emoji '=)') $(emoji halo) $(emoji tongue) $(emoji blush) $(emoji worried) $(emoji cry) $(emoji rage)"
+echo ""
+echo "$(a bold 'Hands:')   $(emoji hello) $(emoji nice) $(emoji like) $(emoji dislike)"
+echo ""
+echo "$(a bold 'Animals:') $(emoji happycat) $(emoji cat) $(emoji dog) $(emoji 'bee') $(emoji pig) $(emoji monkey) $(emoji cow) $(emoji panda)"
+echo ""
+echo "$(a bold 'Misc:')    $(emoji sushi) $(emoji hankey) $(emoji brew) $(emoji lock) $(emoji star) $(emoji check) $(emoji xmark) $(emoji ring)"
+echo ""
+echo "$(ascii a) $(ascii b) $(ascii c)"

@@ -1,0 +1,27 @@
+# Dependencies - "fenced_code_blocks" is automatically enabled
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "autolink", "tables", "with_toc_data"]
+highlighter: pygments
+
+# Permalinks
+permalink: pretty
+relative_permalinks: true
+
+# Setup
+title: SHML
+tagline: '$(shell markup language)'
+description: 'SHML is a shell framework for faster and easier script development.'
+url: https://github.com/maxcdn/shml/
+baseurl: /shml/
+
+authors:
+  name: 'Justin Dorfman'
+  twitter: jdorfman
+  name: 'Josh Mervine'
+  twitter: mervinej
+
+paginate: 1
+
+# Custom vars
+version: 1.0.2

@@ -1,5 +1,7 @@
-SHML v.1.0.2
+SHML v.1.0.3
 ====
+
+[![Build Status](https://travis-ci.org/MaxCDN/shml.svg)](https://travis-ci.org/MaxCDN/shml)
 
 SHML is a shell framework for faster and easier script development.
 

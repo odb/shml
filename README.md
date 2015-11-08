@@ -29,13 +29,13 @@ In order to use SHML you must tell your shell environment where it is located. L
 
 If you installed in using the 1-liner above you would do:
 
-```
+```bash
 #!/usr/bin/env bash
 source $(which shml)
 ```
 If you downloaded SHML using git or wget you would do:
 
-```
+```bash
 #!/usr/bin/env bash
 source ./shml.sh
 ```
@@ -53,6 +53,7 @@ $(fgcolor end)
 ```
 
 View all examples: [https://maxcdn.github.io/shml/getting-started/](https://maxcdn.github.io/shml/getting-started/)
+<center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="https://maxcdn.github.io/shml/public/images/demo-on-runnable.png" border="0"></a></center>
 
 ### Contributing
 

@@ -2,6 +2,7 @@
 
 #### Added
 - `docs/`
+- `.travis.yml` (PR #18) & badge to `README.md`
 - New Makefile commands: `docs-serve`, `docs-build` & `docs-deploy`
 
 #### Removed

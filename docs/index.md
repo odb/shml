@@ -11,13 +11,13 @@ HTML has CSS, Unix-like shells have ANSI/VT100 Control Sequences. SHML makes is 
 $ curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
 ```
 <div align="center">
-<small>Currently v1.0.2
+<small>Currently v{{site.version}}
 <br><a href="getting-started/">Please be responsible &amp; RTFM</a>
 </small>
 <br><br>
 <iframe src="slideshow.html" width="100%" height="250" frameborder="0"></iframe>
+<center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="public/images/demo-on-runnable.png" border="0"></a></center>
 </div>
-
 <hr>
 <div align="center">
 <small>

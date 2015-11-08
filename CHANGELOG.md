@@ -7,6 +7,9 @@
 #### Removed
 - 2 invalid tests: `$(indent 2)`, `$(i 2)`
 
+#### Updated
+- Documentation (minor config issues & bug fixing)
+
 ## [1.0.2] - 2015-10-11
 
 #### Fixed

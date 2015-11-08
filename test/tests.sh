@@ -89,9 +89,7 @@ function run_tests {
 
   assert_equal "$(tab)" "$(echo -e '\t')" "should tab"
 
-  assert_equal "$(indent)" "    " "should tab"
-  assert_equal "$(indent 2)" "  " "should tab"
-  assert_equal "$(i 2)" "  " "should tab"
+  assert_equal "$(indent)" "    " "should indent"
 
   assert_equal "$(hr)" "------------------------------------------------------------" \
                 "should draw default hr"

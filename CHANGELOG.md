@@ -1,3 +1,12 @@
+## [1.0.3] - 2015-11-07
+
+#### Added
+- `docs/`
+- New Makefile commands: `docs-serve`, `docs-build` & `docs-deploy`
+
+#### Removed
+- 2 invalid tests: `$(indent 2)`, `$(i 2)`
+
 ## [1.0.2] - 2015-10-11
 
 #### Fixed

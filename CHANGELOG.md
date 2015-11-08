@@ -9,7 +9,7 @@
 - 2 invalid tests: `$(indent 2)`, `$(i 2)`
 
 #### Updated
-- Documentation (minor config issues & bug fixing)
+- Documentation (minor config issues, bug fixes, mixed content errors)
 
 ## [1.0.2] - 2015-10-11
 

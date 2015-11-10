@@ -280,7 +280,7 @@ function e {
 
 # Usage / Examples
 ##
-if [[ "$(basename -- "$0")" = "shml.sh" ]]; then
+if [ "$0" == "$BASH_SOURCE" ]; then
 I=2
 echo -e "
 

@@ -158,8 +158,9 @@ tab() {
 
 indent() {
   local __len=4
+  local __int='^[0-9]+$'
   if test "$1"; then
-    if [[ $1 =~ $re ]] ; then
+    if [[ $1 =~ $__int ]] ; then
       __len=$1
     fi
   fi
@@ -175,9 +176,9 @@ i() {
 hr() {
   local __len=60
   local __char='-'
+  local __int='^[0-9]+$'
   if ! test "$2"; then
-    re='^[0-9]+$'
-    if [[ $1 =~ $re ]] ; then
+    if [[ $1 =~ $__int ]] ; then
       __len=$1
     elif test "$1"; then
       __char=$1

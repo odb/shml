@@ -215,15 +215,12 @@ icon() {
     apple)                 i='\xEF\xA3\xBF';;
     skull|bones)           i='\xE2\x98\xA0';;
     ':-)'|':)'|smile|face) i='\xE2\x98\xBA';;
-    *)
-      entity $1; return 0;;
   esac
   echo -ne "$i";
 }
 emoji() {
   local i=""
   case "$1" in
-
     1F603|smiley|'=)'|':-)'|':)')    i='😃';;
     1F607|innocent|halo)             i='😇';;
     1F602|joy|lol|laughing)          i='😂';;
@@ -265,9 +262,6 @@ emoji() {
     1F4B5|dollar|cash|cream)         i='💵';;
     1F4AD|thought_balloon|thinking)  i='💭';;
     1F340|four_leaf_clover|luck)     i='🍀';;
-
-    *)
-      #entity $1; return 0;;
   esac
   echo -ne "$i"
 }

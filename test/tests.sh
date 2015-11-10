@@ -15,7 +15,6 @@ function run_tests {
   test_color_foreground
   test_elements
   test_emojis
-  test_entities
   test_icons
 
   # Mixed

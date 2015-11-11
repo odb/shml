@@ -1,4 +1,6 @@
-function test_icons {
+source ./shml.sh
+
+function run_tests {
   # Icons
   ##
   assert_equal "$(icon smile)" '☺' \

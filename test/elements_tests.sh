@@ -1,4 +1,6 @@
-function test_elements {
+source ./shml.sh
+
+function run_tests {
   # Elements
   ##
   assert_equal "$(br)" "$(echo -ne "\n\r")" "should line break"

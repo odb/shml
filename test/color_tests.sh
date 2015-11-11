@@ -1,4 +1,6 @@
-function test_color_background {
+source ./shml.sh
+
+function run_tests {
   # Background
   ##
   assert_equal "$(background white 'foo')" \

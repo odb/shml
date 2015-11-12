@@ -7,9 +7,9 @@ function run_tests {
 
   assert_equal "$(tab)" "$(echo -e '\t')" "should tab"
 
-  assert_equal "$(indent)" "    " "should tab"
-  assert_equal "$(indent 2)" "  " "should tab"
-  assert_equal "$(i 2)" "  " "should tab"
+  assert_equal "$(indent)" "    " "should indent 4 spaces"
+  assert_equal "$(indent 2)" "  " "should indent 2 spaces"
+  assert_equal "$(i 2)" "  " "'i' alias should work"
 
   assert_equal "$(hr)" "------------------------------------------------------------" \
                 "should draw default hr"

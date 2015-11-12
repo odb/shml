@@ -18,7 +18,7 @@ fgcolor() {
   local __color=$__end # end by default
   case "$1" in
     end|off|reset)       __color=$__end;;
-    black|000000)        __color='\033[30m';;
+    black|000000|000)    __color='\033[30m';;
     red|F00BAF)          __color='\033[31m';;
     green|00CD00)        __color='\033[32m';;
     yellow|CDCD00)       __color='\033[33m';;
@@ -32,7 +32,7 @@ fgcolor() {
     lightblue|3a80b5)    __color='\033[94m';;
     lightmagenta|fe00fe) __color='\033[95m';;
     lightcyan|00fefe)    __color='\033[96m';;
-    white|ffffff)        __color='\033[97m';;
+    white|ffffff|fff)    __color='\033[97m';;
   esac
   if test "$2"; then
     echo -en "$__color$2$__end"
@@ -62,7 +62,7 @@ bgcolor() {
   local __color=$__end # end by default
   case "$1" in
     end|off|reset)       __color=$__end;;
-    black|000000)        __color='\033[40m';;
+    black|000000|000)    __color='\033[40m';;
     red|F00BAF)          __color='\033[41m';;
     green|00CD00)        __color='\033[42m';;
     yellow|CDCD00)       __color='\033[43m';;
@@ -77,7 +77,7 @@ bgcolor() {
     lightblue|3a80b5)    __color='\033[104m';;
     lightmagenta|fe00fe) __color='\033[105m';;
     lightcyan|00fefe)    __color='\033[106m';;
-    white|fffff)         __color='\033[107m';;
+    white|fffff|fff)     __color='\033[107m';;
   esac
 
   if test "$2"; then

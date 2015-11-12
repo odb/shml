@@ -196,7 +196,6 @@ hr() {
 
 # Icons
 ##
-
 icon() {
   local i='';
   case "$1" in
@@ -219,50 +218,53 @@ icon() {
   esac
   echo -ne "$i";
 }
+
+# Emojis
+##
 emoji() {
   local i=""
   case "$1" in
-    1F603|smiley|'=)'|':-)'|':)')    i='😃';;
-    1F607|innocent|halo)             i='😇';;
-    1F602|joy|lol|laughing)          i='😂';;
-    1F61B|tongue|'=p'|'=P')          i='😛';;
-    1F60A|blush|'^^'|blushing)       i='😊';;
-    1F61F|worried|sadface|sad)       i='😟';;
-    1F622|cry|crying|tear)           i='😢';;
-    1F621|rage|redface)              i='😡';;
-    1F44B|wave|hello|goodbye)        i='👋';;
-    1F44C|ok_hand|perfect|okay|nice) i='👌';;
-    1F44D|thumbsup|+1|like)          i='👍';;
-    1F44E|thumbsdown|-1|no|dislike)  i='👎';;
-    1F63A|smiley_cat|happycat)       i='😺';;
-    1F431|cat|kitten|:3|kitty)       i='🐱';;
-    1F436|dog|puppy)                 i='🐶';;
-    1F41D|bee|honeybee|bumblebee)    i='🐝';;
-    1F437|pig|pighead)               i='🐷';;
-    1F435|monkey_face|monkey)        i='🐵';;
-    1F42E|cow|happycow)              i='🐮';;
-    1F43C|panda_face|panda|shpanda)  i='🐼';;
-    1F363|sushi|raw|sashimi)         i='🍣';;
-    1F3E0|home|house)                i='🏠';;
-    1F453|eyeglasses|bifocals)       i='👓';;
-    1F6AC|smoking|smoke|cigarette)   i='🚬';;
-    1F525|fire|flame|hot|snapstreak) i='🔥';;
-    1F4A9|hankey|poop|shit)          i='💩';;
-    1F37A|beer|homebrew|brew)        i='🍺';;
-    1F36A|cookie|biscuit|chocolate)  i='🍪';;
-    1F512|lock|padlock|secure)       i='🔒';;
-    1F513|unlock|openpadlock)        i='🔓';;
-    2B50|star|yellowstar)            i='⭐';;
-    1F0CF|black_joker|joker|wild)    i='🃏';;
-    2705|white_check_mark|check)     i='✅';;
-    274C|x|cross|xmark)              i='❌';;
-    1F6BD|toilet|restroom|loo)       i='🚽';;
-    1F514|bell|ringer|ring)          i='🔔';;
-    1F50E|mag_right|search|magnify)  i='🔎';;
-    1F3AF|dart|bullseye|darts)       i='🎯';;
-    1F4B5|dollar|cash|cream)         i='💵';;
-    1F4AD|thought_balloon|thinking)  i='💭';;
-    1F340|four_leaf_clover|luck)     i='🍀';;
+    1F603|smiley|'=)'|':-)'|':)')       i='😃';;
+    1F607|innocent|halo)                i='😇';;
+    1F602|joy|lol|laughing)             i='😂';;
+    1F61B|tongue|'=p'|'=P')             i='😛';;
+    1F60A|blush|'^^'|blushing)          i='😊';;
+    1F61F|worried|sadface|sad)          i='😟';;
+    1F622|cry|crying|tear)              i='😢';;
+    1F621|rage|redface)                 i='😡';;
+    1F44B|wave|hello|goodbye)           i='👋';;
+    1F44C|ok_hand|perfect|okay|nice|ok) i='👌';;
+    1F44D|thumbsup|+1|like)             i='👍';;
+    1F44E|thumbsdown|-1|no|dislike)     i='👎';;
+    1F63A|smiley_cat|happycat)          i='😺';;
+    1F431|cat|kitten|:3|kitty)          i='🐱';;
+    1F436|dog|puppy)                    i='🐶';;
+    1F41D|bee|honeybee|bumblebee)       i='🐝';;
+    1F437|pig|pighead)                  i='🐷';;
+    1F435|monkey_face|monkey)           i='🐵';;
+    1F42E|cow|happycow)                 i='🐮';;
+    1F43C|panda_face|panda|shpanda)     i='🐼';;
+    1F363|sushi|raw|sashimi)            i='🍣';;
+    1F3E0|home|house)                   i='🏠';;
+    1F453|eyeglasses|bifocals)          i='👓';;
+    1F6AC|smoking|smoke|cigarette)      i='🚬';;
+    1F525|fire|flame|hot|snapstreak)    i='🔥';;
+    1F4A9|hankey|poop|poo|shit)         i='💩';;
+    1F37A|beer|homebrew|brew)           i='🍺';;
+    1F36A|cookie|biscuit|chocolate)     i='🍪';;
+    1F512|lock|padlock|secure)          i='🔒';;
+    1F513|unlock|openpadlock)           i='🔓';;
+    2B50|star|yellowstar)               i='⭐';;
+    1F0CF|black_joker|joker|wild)       i='🃏';;
+    2705|white_check_mark|check)        i='✅';;
+    274C|x|cross|xmark)                 i='❌';;
+    1F6BD|toilet|restroom|loo)          i='🚽';;
+    1F514|bell|ringer|ring)             i='🔔';;
+    1F50E|mag_right|search|magnify)     i='🔎';;
+    1F3AF|dart|bullseye|darts)          i='🎯';;
+    1F4B5|dollar|cash|cream)            i='💵';;
+    1F4AD|thought_balloon|thinking)     i='💭';;
+    1F340|four_leaf_clover|luck)        i='🍀';;
   esac
   echo -ne "$i"
 }

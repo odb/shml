@@ -1,5 +1,5 @@
 test: test/shunt.sh .PHONY
-	./test/shunt.sh --plain ./test/*_tests.sh
+	./test/shunt.sh --plain --verbose ./test/*_tests.sh
 
 clean:
 	rm test/shunt.sh

@@ -1,4 +1,6 @@
-function test_attributes {
+source ./shml.sh
+
+function run_tests {
   # Attribute
   ##
   assert_equal "$(attribute bold)foo$(attribute end)" \

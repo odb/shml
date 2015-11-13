@@ -92,8 +92,12 @@
 
 <h1 id="install">Install</h1>
 
-<h4 id="1-liner">1-liner</h4>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml <span class="o">&amp;&amp;</span> chmod +x /usr/local/bin/shml
+<h3 id="1-liners">1-liners</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Linux or Darwin w/o Homebrew installed</span>
+<span class="nv">$ </span>sudo bash -c <span class="s1">&#39;curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml &amp;&amp; chmod +x /usr/local/bin/shml&#39;</span>
+
+<span class="c"># Darwin with Homebrew installed</span>
+<span class="nv">$ </span>curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml <span class="o">&amp;&amp;</span> chmod +x /usr/local/bin/shml
 </code></pre></div>
 <p class="message">
 You can also just download SHML without installing it...
@@ -105,6 +109,13 @@ You can also just download SHML without installing it...
 <h4 id="wget">Wget</h4>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wget https://github.com/MaxCDN/shml/archive/master.zip
 </code></pre></div>
+<h4 id="coming-soon">Coming soon</h4>
+
+<ul>
+<li>NPM</li>
+<li>Homebrew</li>
+</ul>
+
 <p><hr>
 <a name="Sourcing"></a></p>
 

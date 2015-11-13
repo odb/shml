@@ -8,7 +8,11 @@ HTML has CSS, Unix-like shells have ANSI/VT100 Control Sequences. SHML makes is 
 
 ### 1-liner Install
 ```bash
-$ curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
+# Linux or Darwin w/o Homebrew installed
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
+
+# Darwin with Homebrew installed
+$ curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
 ```
 <div align="center">
 <small>Currently v{{site.version}}

@@ -2,11 +2,14 @@
 <a name="Install"></a>
 # Install
 
-#### 1-liner
+### 1-liners
 ```bash
-$ curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
-```
+# Linux or Darwin w/o Homebrew installed
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 
+# Darwin with Homebrew installed
+$ curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
+```
 <p class="message">
 You can also just download SHML without installing it...
 </p>
@@ -20,3 +23,6 @@ $ git clone git@github.com:MaxCDN/shml.git
 ```bash
 $ wget https://github.com/MaxCDN/shml/archive/master.zip
 ```
+#### Coming soon
+- NPM
+- Homebrew

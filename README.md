@@ -11,20 +11,27 @@ HTML has CSS, terminals have "ANSI/VT100 Control Sequences". SHML makes is easy 
 
 ### 1-liner Install
 ```bash
-$ curl -s https://raw.githubusercontent.com/maxcdn/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
+# Linux or Darwin w/o Homebrew installed
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
+
+# Darwin with Homebrew installed
+$ curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
 ```
 
-> You can also just download SHML without installing it...
+### Other Install Options
+
+> You can just download SHML without installing it...
 
 #### Git
 
-`$ git clone git@github.com:MaxCDN/shml.git`
+`$ git clone https://github.com/MaxCDN/shml.git`
 
-#### Wget
+#### wget
 
-`$ wget https://github.com/MaxCDN/shml/archive/master.zip`
+`$ wget https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh`
 
 ### Sourcing
+
 In order to use SHML you must tell your shell environment where it is located. Lets assume that we are writing a BASH script and want to use SHML.
 
 If you installed in using the 1-liner above you would do:

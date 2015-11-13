@@ -1,11 +1,11 @@
 test: test/shunt.sh .PHONY
-	./test/shunt.sh --plain --verbose ./test/*_tests.sh
+	./test/shunt.sh --verbose ./test/*_tests.sh
 
 clean:
-	rm test/shunt.sh
+	-rm test/shunt.sh
 
 test/shunt.sh:
-	cd test && curl -L https://raw.githubusercontent.com/odb/shunt/master/install.sh | bash -s local
+	cd test && curl -L https://raw.githubusercontent.com/odb/shunt/latest/install.sh | bash -s latest local
 
 BRANCH=master
 

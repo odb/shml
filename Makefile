@@ -1,3 +1,6 @@
+# By default 'bump' does nothing.
+VERSION?=$(shell cat VERSION)
+
 test: test/shunt.sh .PHONY
 	./test/shunt.sh --verbose ./test/*_tests.sh
 
@@ -30,6 +33,17 @@ docs-deploy:
 	git commit -m "Deploying Docs to gh-pages."
 	git push origin gh-pages --force
 	git checkout $(BRANCH)
+
+# Usage: make bump VERSION=<new_version>
+bump:
+	# Updating $(shell cat VERSION) to $(VERSION)
+	find . -type f | grep -v ".git\|CHANGELOG" | xargs grep -l $(shell cat VERSION) | xargs sed -i -e "s/$(shell cat VERSION)/$(VERSION)/g"
+
+publish: publish/npm
+
+publish/npm:
+	npm publish
+
 
 .PHONY:
 

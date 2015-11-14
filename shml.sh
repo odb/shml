@@ -10,6 +10,7 @@
 #
 #        https://maxcdn.github.io/shml/
 #************************************************#
+SHML_VERSION="1.0.4"
 
 # Foreground (Text)
 ##
@@ -279,8 +280,25 @@ function e {
 # Usage / Examples
 ##
 if [ "$0" == "$BASH_SOURCE" ]; then
+
+if [[ $@ =~ .*-v.* ]]; then
+  echo "shml version ${SHML_VERSION}"
+  exit 0
+fi
+
 I=2
 echo -e "
+$(color "lightblue")
+#$(hr "*" 48)#
+#    SHML - Shell Markup Language Framework
+#                   v${SHML_VERSION}
+#                    (MIT)
+#        by Justin Dorfman - @jdorfman
+#        && Joshua Mervine - @mervinej
+#
+#        https://maxcdn.github.io/shml/
+#$(hr "*" 48)#
+$(color "end")
 
 $(a bold 'SHML Usage / Help')
 $(hr '=')

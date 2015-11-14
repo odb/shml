@@ -1,0 +1,29 @@
+{
+  "name": "shml",
+  "version": "1.0.3",
+  "description": "SHML is a shell framework for faster and easier script development.",
+  "bin": { "shml": "shml.sh" },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxCDN/shml.git"
+  },
+  "keywords": [
+    "sh",
+    "color",
+    "bash",
+    "linux",
+    "darwin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxCDN/shml/issues"
+  },
+  "homepage": "http://maxcdn.github.io/shml/"
+}

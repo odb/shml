@@ -581,10 +581,11 @@ $(i $I)$(bar black yellow black yellow black yellow)
 $(a bold 'Section 8: Progress Bar')
 $(hr '-')
 
-$(i $I)Usage: progress [title] [steps]
+$(i $I)Usage: progress [title] [steps] [char]
 
 $(i $I) - 'title' defines the progress bar title
 $(i $I) - 'steps' defines the number of steps for the progress bar to act upon
+$(i $I) - 'char' defines the character to be displayed in the progress bar
 
 $(i $I)echo "\$\(color green\)"
 $(i $I)for i in \$(seq 0 10); do echo \$i; sleep .25; done | progress
@@ -597,7 +598,6 @@ $(color end)
 $(i $I)'progress' supports overriding default values by setting the following
 $(i $I)variables:
 
-$(i $I) - SHML_PROGRESS_CHAR     - width of progress bar, default '#'
 $(i $I) - SHML_PROGRESS_WIDTH    - width of progress bar, default 60
 $(i $I) - SHML_PROGRESS_BREAK    - put a new line at the end of the output, default 'true'
 $(i $I) - SHML_PROGRESS_CLEAR    - clear line at the end of the output, default 'false'

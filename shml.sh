@@ -586,9 +586,13 @@ $(i $I)Usage: progress [title] [steps]
 $(i $I) - 'title' defines the progress bar title
 $(i $I) - 'steps' defines the number of steps for the progress bar to act upon
 
-$(i $I)\$(for i in \$( seq 0 10 ); do echo -n \$i; done | progress \"Example\" 10)
+$(i $I)echo "\$\(color green\)"
+$(i $I)for i in \$(seq 0 10); do echo \$i; sleep .25; done | progress
+$(i $I)echo "\$\(color end\)"
 
+$(color green)
 $(i $I)Example  [####################                    ] (50%)
+$(color end)
 
 $(i $I)'progress' supports overriding default values by setting the following
 $(i $I)variables:

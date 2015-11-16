@@ -94,10 +94,11 @@ progress() {
 ##
 __default_confirm_success_input="y Y yes Yes YES ok OK Ok okay Okay OKAY k K continue Continue CONTINUE proceed Proceed PROCEED success Success SUCCESS successful Successful SUCCESSFUL good Good GOOD"
 confirm() {
-  # space delimited list of acceptable answers to return true
+  [[ -z $1 ]] && return 127
+
   [[ -z $SHML_CONFIRM_SUCCESS ]] && SHML_CONFIRM_SUCCESS=$__default_confirm_success_input
 
-  echo -ne "$1"
+  echo -ne "$1 "
   local found=false
   while read __input; do
     for str in $(echo $SHML_CONFIRM_SUCCESS); do
@@ -116,9 +117,12 @@ confirm() {
 }
 
 dialog() {
-  echo -ne "$1"
+  [[ -z $1 ]] && return 127
+  [[ -z $2 ]] && return 127
+
+  echo -en "$1 "
   while read __input; do
-    echo -ne $__input
+    eval "$2 $__input"
     break
   done
 }

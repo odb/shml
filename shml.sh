@@ -115,6 +115,13 @@ confirm() {
   fi
 }
 
+dialog() {
+  echo -ne "$1"
+  while read __input; do
+    echo -ne $__input
+    break
+  done
+}
 
 # Foreground (Text)
 ##

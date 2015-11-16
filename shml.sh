@@ -12,84 +12,6 @@
 #************************************************#
 SHML_VERSION="1.0.4"
 
-# Progress Bar
-##
-# options:
-# SHML_PROGRESS_CHAR     - width of progress bar, default '#'
-# SHML_PROGRESS_WIDTH    - width of progress bar, default 60
-# SHML_PROGRESS_MAX      - maximum progress value, default 100
-# SHML_PROGRESS_BREAK    - put a new line at the end of the output, default 'true'
-# SHML_PROGRESS_CLEAR    - clear line at the end of the output, default 'false'
-# SHML_PGOGRESS_NOCURSOR - hide the cursor, default 'true'
-
-progress() {
-  [[ -z $SHML_PROGRESS_WIDTH ]]    && SHML_PROGRESS_WIDTH=60
-  [[ -z $SHML_PROGRESS_BREAK ]]    && SHML_PROGRESS_BREAK=true
-  [[ -z $SHML_PROGRESS_CLEAR ]]    && SHML_PROGRESS_CLEAR=false
-  [[ -z $SHML_PROGRESS_NOCURSOR ]] && SHML_PROGRESS_NOCURSOR=true
-  # defaults
-  local __title="Progress"
-  local __steps=10
-  local __char="#"
-
-  # arg parser
-  [[ ! -z $1 ]] && __title=$1
-  [[ ! -z $2 ]] && __steps=$2
-  [[ ! -z $3 ]] && __char="$3"
-
-  local __width=${SHML_PROGRESS_WIDTH}
-  local __break=${SHML_PROGRESS_BREAK}
-  local __clear=${SHML_PROGRESS_CLEAR}
-  local __ncursor=${SHML_PROGRESS_NOCURSOR}
-  local __pct=0
-  local __num=0
-  local __len=0
-  local __bar=''
-  local __line=''
-
-  # ensure terminal
-  [[ -t 1 ]] || return 1
-
-  # ensure tput
-  if test "$(which tput)"; then
-    if $__ncursor; then
-      # hide cursor
-      tput civis
-      trap 'tput cnorm; exit 1' SIGINT
-    fi
-  fi
-
-  while read __value; do
-    # compute pct
-    __pct=$(( __value * 100 / __steps ))
-
-    # compute number of blocks to display
-    __num=$(( __value * __width / __steps ))
-
-    # create bar string
-    if [ $__num -gt 0 ]; then
-      __bar=$(printf "%0.s${__char}" $(seq 1 $__num))
-    fi
-
-    __line=$(printf "%s [%-${__witdth}s] (%d%%)" "$__title" "$__bar" "$__pct")
-
-    # print bar
-    echo -en "${__line}\r"
-  done
-
-  # clear line if requested
-  if $__clear; then
-    __len=$(echo -en "$__line" | wc -c)
-    printf "%$((__len + 1))s\r" " "
-  fi
-
-  # new line if requested
-  $__break && echo
-
-  # show cursor again
-  test "$(which tput)" && $__ncursor && tput cnorm
-}
-
 # Foreground (Text)
 ##
 fgcolor() {
@@ -303,7 +225,7 @@ icon() {
 emoji() {
   local i=""
   case "$1" in
-    1F603|smile|smiley|'=)'|':-)'|':)') i='😃';;
+    1F603|smiley|'=)'|':-)'|':)')       i='😃';;
     1F607|innocent|halo)                i='😇';;
     1F602|joy|lol|laughing)             i='😂';;
     1F61B|tongue|'=p'|'=P')             i='😛';;
@@ -577,33 +499,6 @@ $(i $I)Short Hand: $(a underline 'bar')
 $(i $I)
 $(i $I)\$(bar black yellow black yellow black yellow)
 $(i $I)$(bar black yellow black yellow black yellow)
-
-$(a bold 'Section 8: Progress Bar')
-$(hr '-')
-
-$(i $I)Usage: progress [title] [steps] [char]
-
-$(i $I) - 'title' defines the progress bar title
-$(i $I) - 'steps' defines the number of steps for the progress bar to act upon
-$(i $I) - 'char' defines the character to be displayed in the progress bar
-
-$(i $I)echo "\$\(color green\)"
-$(i $I)for i in \$(seq 0 10); do echo \$i; sleep .25; done | progress
-$(i $I)echo "\$\(color end\)"
-
-$(color green)
-$(i $I)Example  [####################                    ] (50%)
-$(color end)
-
-$(i $I)'progress' supports overriding default values by setting the following
-$(i $I)variables:
-
-$(i $I) - SHML_PROGRESS_WIDTH    - width of progress bar, default 60
-$(i $I) - SHML_PROGRESS_BREAK    - put a new line at the end of the output, default 'true'
-$(i $I) - SHML_PROGRESS_CLEAR    - clear line at the end of the output, default 'false'
-$(i $I) - SHML_PGOGRESS_NOCURSOR - hide the cursor, default 'true'
-
-$(i $I)NOTE: These variables $(a bold 'must') be defined before sourcing 'shml'!
 
 " | less -r
 fi

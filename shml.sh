@@ -90,6 +90,32 @@ progress() {
   test "$(which tput)" && $__ncursor && tput cnorm
 }
 
+# Confirm / Dialog
+##
+__default_confirm_success_input="y Y yes Yes YES ok OK Ok okay Okay OKAY continue Continue CONTINUE proceed Proceed PROCEED success Success SUCCESS successful Successful SUCCESSFUL good Good GOOD"
+confirm() {
+  # space delimited list of acceptable answers to return true
+  [[ -z $SHML_CONFIRM_SUCCESS ]] && SHML_CONFIRM_SUCCESS=$__default_confirm_success_input
+
+  echo -ne "$1"
+  local found=false
+  while read __input; do
+    for str in $(echo $SHML_CONFIRM_SUCCESS); do
+      [[ "$str" == "$__input" ]] && found=true
+    done
+    break
+  done
+
+  if $found; then
+    [[ ! -z $2 ]] && eval $2
+    return 0
+  else
+    [[ ! -z $3 ]] && eval $3
+    return 1
+  fi
+}
+
+
 # Foreground (Text)
 ##
 fgcolor() {

@@ -1,4 +1,4 @@
-SHML v.1.0.3
+SHML v.1.0.4
 ====
 
 [![Build Status](https://travis-ci.org/MaxCDN/shml.svg)](https://travis-ci.org/MaxCDN/shml)

@@ -92,7 +92,7 @@ progress() {
 
 # Confirm / Dialog
 ##
-__default_confirm_success_input="y Y yes Yes YES ok OK Ok okay Okay OKAY continue Continue CONTINUE proceed Proceed PROCEED success Success SUCCESS successful Successful SUCCESSFUL good Good GOOD"
+__default_confirm_success_input="y Y yes Yes YES ok OK Ok okay Okay OKAY k K continue Continue CONTINUE proceed Proceed PROCEED success Success SUCCESS successful Successful SUCCESSFUL good Good GOOD"
 confirm() {
   # space delimited list of acceptable answers to return true
   [[ -z $SHML_CONFIRM_SUCCESS ]] && SHML_CONFIRM_SUCCESS=$__default_confirm_success_input

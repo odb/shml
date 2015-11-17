@@ -37,13 +37,21 @@ docs-deploy:
 # Usage: make bump VERSION=<new_version>
 bump:
 	# Updating $(shell cat VERSION) to $(VERSION)
-	find . -type f | grep -v ".git\|CHANGELOG" | xargs grep -l $(shell cat VERSION) | xargs sed -i -e "s/$(shell cat VERSION)/$(VERSION)/g"
+	find . -type f | grep -v ".git\|CHANGELOG" | xargs grep -l $(shell cat VERSION) | xargs sed -i '' -e "s/$(shell cat VERSION)/$(VERSION)/g"
 
 publish: publish/npm
 
 publish/npm:
 	npm publish
 
+# support a single make command from brew
+install:
+	cp shml.sh /usr/local/bin/shml.sh
+	chmod +x /usr/local/bin/shml.sh
+	ln -s /usr/local/bin/shml.sh /usr/local/bin/shml
+
+remove:
+	rm -f /usr/local/bin/shml.sh /usr/local/bin/shml
 
 .PHONY:
 

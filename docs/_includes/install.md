@@ -10,6 +10,13 @@ $ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shm
 # Darwin with Homebrew installed
 $ curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
 ```
+#### Npm
+```bash
+$ npm install -g shml
+```
+#### Homebrew
+- Coming soon
+
 <p class="message">
 You can also just download SHML without installing it...
 </p>
@@ -23,6 +30,3 @@ $ git clone git@github.com:MaxCDN/shml.git
 ```bash
 $ wget https://github.com/MaxCDN/shml/archive/master.zip
 ```
-#### Coming soon
-- NPM
-- Homebrew

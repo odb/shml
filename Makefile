@@ -20,7 +20,7 @@ docs-serve:
 
 docs-deploy:
 	@git status | grep "working directory clean" || (echo "ERROR: You have uncommitted changes!"; git status; exit 1)
-	git branch -D gh-pages
+	-git branch -D gh-pages
 	git checkout -b gh-pages $(BRANCH)
 	git rm -rf CHANGELOG.md CONTRIBUTING.md LICENSE Makefile README.md shml.sh test/ .travis.yml
 	@for dir in $$(find docs -type d); do \

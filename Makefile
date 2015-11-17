@@ -46,9 +46,8 @@ publish/npm:
 
 # support a single make command from brew
 install:
-	cp shml.sh /usr/local/bin/shml.sh
-	chmod +x /usr/local/bin/shml.sh
-	ln -s /usr/local/bin/shml.sh /usr/local/bin/shml
+	install -C -m 0755 shml.sh /usr/local/bin
+	install -C -T -m 0755 shml.sh /usr/local/bin/shml
 
 remove:
 	rm -f /usr/local/bin/shml.sh /usr/local/bin/shml

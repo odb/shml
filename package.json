@@ -2,7 +2,10 @@
   "name": "shml",
   "version": "1.0.4",
   "description": "SHML is a shell framework for faster and easier script development.",
-  "bin": { "shml": "shml.sh" },
+  "bin": {
+      "shml": "shml.sh",
+      "shml.sh": "shml.sh"
+  },
   "directories": {
     "doc": "docs",
     "test": "test"

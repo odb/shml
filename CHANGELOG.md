@@ -1,4 +1,27 @@
-## [1.0.3] - 2015-11-07
+## [1.0.4] - 2015-11-16 (Sewed Up)
+
+#### Added
+- Better Source Detect (PR #15)
+- `package.json` for NPM
+- Broke tests out in to their own files (PR #19)
+ - `112` new tests, `137` in total (PR #26)
+- `VERSION` (PR #27 & #28)
+
+#### Updated
+- `Makefile`
+ - `bump` (version bumper)
+ - `publish` (NPM Publish)
+ - `install` (shml binary)
+ - `remove` (shml binary)
+- Documentation
+ - `index.md`
+ - `install.md`
+
+#### Removed
+- Entity mentions (PR #20)
+
+
+## [1.0.3] - 2015-11-07 (Almost Famous)
 
 #### Added
 - `docs/`

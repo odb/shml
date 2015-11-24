@@ -2,21 +2,18 @@
 <a name="Install"></a>
 # Install
 
-### 1-liners
+#### Unix-like
 ```bash
-# Linux or Darwin w/o Homebrew installed
 $ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
-
-# Darwin with Homebrew installed
-$ curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
 ```
 #### Npm
 ```bash
 $ npm install -g shml
 ```
 #### Homebrew
-- Coming soon
-
+```bash
+$ brew install shml
+```
 <p class="message">
 You can also just download SHML without installing it...
 </p>

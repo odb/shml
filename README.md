@@ -11,14 +11,17 @@ HTML has CSS, terminals have "ANSI/VT100 Control Sequences". SHML makes is easy 
 
 ### 1-liner Install
 ```bash
-# Linux or Darwin w/o Homebrew installed
+# Unix-like
 $ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 
-# Darwin with Homebrew installed
-$ curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml
+# Darwin (Homebrew)
+$ brew install shml
+
+# NPM
+$ npm install -g shml
 ```
 
-### Other Install Options
+### Download
 
 > You can just download SHML without installing it...
 

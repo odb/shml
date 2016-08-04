@@ -27,11 +27,11 @@ $ npm install -g shml
 
 #### Git
 
-`$ git clone https://github.com/MaxCDN/shml.git`
+`$ git clone https://github.com/odb/shml.git`
 
 #### wget
 
-`$ wget https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh`
+`$ wget https://raw.githubusercontent.com/odb/shml/latest/shml.sh`
 
 ### Sourcing
 
@@ -62,15 +62,13 @@ $(fgcolor end)
 "
 ```
 
-View all examples: [https://maxcdn.github.io/shml/getting-started/](https://maxcdn.github.io/shml/getting-started/)
-<center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="https://maxcdn.github.io/shml/public/images/demo-on-runnable.png" border="0"></a></center>
+View all examples: [https://odb.github.io/shml/getting-started/](https://odb.github.io/shml/getting-started/)
+<center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="https://odb.github.io/shml/public/images/demo-on-runnable.png" border="0"></a></center>
 
 ### Contributing
 
-Contributions are more than welcome. Before submitting ANY new features please read the [Contribution Guidelines](https://github.com/MaxCDN/shml/blob/master/CONTRIBUTING.md).
+Contributions are more than welcome. Before submitting ANY new features please read the [Contribution Guidelines](https://github.com/odb/shml/blob/master/CONTRIBUTING.md).
 
-To report any bugs or if you have a feature request feel free to [open an issue](https://github.com/MaxCDN/shml/issues).
-
-You can also email: **jdorfman at maxcdn dot com** with any questions, suggestion or concerns.
+To report any bugs or if you have a feature request feel free to [open an issue](https://github.com/odb/shml/issues).
 
 Thanks!

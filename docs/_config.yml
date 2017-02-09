@@ -11,7 +11,7 @@ permalink: pretty
 title: SHML
 tagline: '$(shell markup language)'
 description: 'SHML is a shell framework for faster and easier script development.'
-url: https://github.com/maxcdn/shml/
+url: https://github.com/odb/shml/
 baseurl: /shml/
 
 # paginate: 1

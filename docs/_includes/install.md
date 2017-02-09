@@ -4,9 +4,9 @@
 
 #### Unix-like
 ```bash
-$ sudo bash -c 'curl -L https://raw.githubusercontent.com/maxcdn/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 ```
-#### Npm
+#### npm
 ```bash
 $ npm install -g shml
 ```
@@ -20,10 +20,10 @@ You can also just download SHML without installing it...
 
 #### Git
 ```bash
-$ git clone git@github.com:MaxCDN/shml.git
+$ git clone git@github.com:odb/shml.git
 ```
 
 #### Wget
 ```bash
-$ wget https://github.com/MaxCDN/shml/archive/master.zip
+$ wget https://github.com/odb/shml/archive/master.zip
 ```

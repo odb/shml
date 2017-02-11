@@ -1,5 +1,6 @@
 <hr>
 <a name="Background"></a>
+
 # Background
 To set the background color of any string or object you need to call the `bgcolor` method followed by an argument.
 
@@ -58,6 +59,6 @@ echo "$(bgc green)NUH you know name, now give me my money!$(bgc end)"
 
 Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.
 <center>
-![Foreground Demo](../public/images/background-demo.png)
+<img src="../public/images/background-demo.png">
 </center>
 <center><a href="http://code.runnable.com/ViG7cr3G56p074rT/shml-background-for-shell-bash-and-color" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

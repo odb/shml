@@ -19,12 +19,6 @@ $ npm install -g shml
 source $(which shml)
 ~~~
 
-~~~ ruby
-def what?
-  42
-end
-~~~
-
 #### Homebrew
 ```bash
 $ brew install shml

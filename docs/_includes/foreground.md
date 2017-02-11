@@ -1,5 +1,6 @@
 <hr>
 <a name="Foreground"></a>
+
 # Foreground
 
 To set the foreground color of any string or object you need to call the `fgcolor` method followed by an argument.

@@ -1,5 +1,6 @@
 <hr>
 <a name="Icons"></a>
+
 # Icons
 Icons are flat ascii characters that are supported by most unix-like systems.  If you run into compatibility issues please [report it here](https://github.com/MaxCDN/shml/issues).
 
@@ -31,6 +32,6 @@ echo "$(color red)$(icon xmark)$(color end)TPS Reports $(color green)$(icon chec
 
 ### Results
 <center>
-![Icons Demo](../public/images/icons-demo.png)
+<img src="../public/images/icons-demo.png">
 </center>
 <center><a href="http://code.runnable.com/Viu2IIDNOkszAHQg/shml-icons-for-shell-and-bash" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

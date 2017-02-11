@@ -29,7 +29,7 @@ $ npm install -g shml
 <hr>
 <div align="center">
 <small>
-Designed and built by [@jdorfman](https://twitter.com/jdorfman) and [@mervinej](https://twitter.com/mervinej).<br>
-Code licensed under [MIT](https://github.com/MaxCDN/shml/blob/master/LICENSE), documentation under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Designed and built by <a href="https://twitter.com/jdorfman">@jdorfman</a> and <a href="https://twitter.com/mervinej">mervinej</a>.<br>
+Code licensed under <a href="https://github.com/odb/shml/blob/master/LICENSE">MIT</a>, documentation under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
 </small>
 </div>

@@ -27,9 +27,5 @@ $ npm install -g shml
 <br><br><center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="public/images/demo-on-runnable.png" border="0"></a></center>
 </div>
 <hr>
-<div align="center">
-<small>
-Designed and built by <a href="https://twitter.com/jdorfman">@jdorfman</a> and <a href="https://twitter.com/mervinej">mervinej</a>.<br>
-Code licensed under <a href="https://github.com/odb/shml/blob/master/LICENSE">MIT</a>, documentation under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-</small>
-</div>
+
+{% include footer.html %}

@@ -20,9 +20,5 @@ To use SHML you must have unix-like (Darwin/OS X, Linux, etc.) POSIX-compliant o
 {% include color-bar.md %}
 
 <hr>
-<div align="center">
-<small>
-Designed and built by [@jdorfman](https://twitter.com/jdorfman) and [@mervinej](https://twitter.com/mervinej).<br>
-Code licensed under [MIT](https://github.com/odb/shml/blob/master/LICENSE), documentation under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-</small>
-</div>
+
+{% include footer.html %}

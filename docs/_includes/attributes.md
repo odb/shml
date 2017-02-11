@@ -1,5 +1,6 @@
 <hr>
 <a name="Attributes"></a>
+
 # Attributes
 
 The `attribute` method lets you stylize your text in 5 different ways.
@@ -45,6 +46,6 @@ echo "$(a bold "such BOLD shorter") $(a end)"
 Here is what the output should look like. Style may differ slightly depending on your terminal emulator settings.
 
 <center>
-![Attributes Demo](../public/images/attributes-demo.png)
+<img src="../public/images/attributes-demo.png">
 </center>
 <center><a href="http://code.runnable.com/ViG-mVKrgKR0rUIS/shml-attributes-for-shell-bash-bold-underline-and-invert" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

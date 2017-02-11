@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>SHML</title>
- <link href="https://github.com/odb/shml//atom.xml" rel="self"/>
- <link href="https://github.com/odb/shml//"/>
- <updated>2017-02-10T22:05:56-08:00</updated>
- <id>https://github.com/odb/shml/</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2017-02-11T07:43:58-08:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>

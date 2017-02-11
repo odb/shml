@@ -2,20 +2,16 @@ markdown: kramdown
 highlighter: rouge
 
 kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  # auto_ids:       true
+  # footnote_nr:    1
+  # entity_output:  as_char
+  # toc_levels:     1..6
+  # smart_quotes:   lsquo,rsquo,ldquo,rdquo
   input:          GFM
   hard_wrap:      false
-  footnote_nr:    1
-  fenced_code_blocks: true
+  # footnote_nr:    1
+  # fenced_code_blocks: true
   syntax_highlighter: rouge
-
-#
-# highlighter: rouge
-#highlighter: pygments
 
 # Permalinks
 permalink: pretty

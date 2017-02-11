@@ -94,37 +94,44 @@
 <h1 id="install">Install</h1>
 
 <h4 id="unix-like">Unix-like</h4>
-<pre><code class="language-bash">$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.sh -o /usr/local/bin/shml &amp;&amp; chmod +x /usr/local/bin/shml'
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo bash -c <span class="s1">'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.sh -o /usr/local/bin/shml &amp;&amp; chmod +x /usr/local/bin/shml'</span>
 </code></pre>
+</div>
 
 <h4 id="npm">npm</h4>
 
-<pre><code class="language-shell">$ npm install -g shml
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>npm install -g shml
 </code></pre>
+</div>
 
-<pre><code class="language-bash">#!/usr/bin/env bash
-source $(which shml)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">source</span> <span class="k">$(</span>which shml<span class="k">)</span>
 </code></pre>
+</div>
 
-<pre><code class="language-ruby">def what?
-  42
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">what?</span>
+  <span class="mi">42</span>
+<span class="k">end</span>
 </code></pre>
+</div>
 
 <h4 id="homebrew">Homebrew</h4>
-<pre><code class="language-bash">$ brew install shml
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install shml
 </code></pre>
+</div>
 <p class="message">
 You can also just download SHML without installing it...
 </p>
 
 <h4 id="git">Git</h4>
-<pre><code class="language-bash">$ git clone git@github.com:odb/shml.git
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone git@github.com:odb/shml.git
 </code></pre>
+</div>
 
 <h4 id="wget">Wget</h4>
-<pre><code class="language-bash">$ wget https://github.com/odb/shml/archive/master.zip
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>wget https://github.com/odb/shml/archive/master.zip
 </code></pre>
+</div>
 
 <hr />
 
@@ -134,22 +141,24 @@ In order to use SHML you must tell your shell environment where it is located.  
 
 <p>If you installed in using the 1-liner above you would do:</p>
 
-<pre><code class="language-bash">#!/usr/bin/env bash
-source $(which shml)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">source</span> <span class="k">$(</span>which shml<span class="k">)</span>
 </code></pre>
+</div>
 
 <p>If you downloaded SHML using git or wget you would do:</p>
 
-<pre><code class="language-bash">#!/usr/bin/env bash
-source ./shml.sh
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">source</span> ./shml.sh
 </code></pre>
+</div>
 
 <hr />
 
 <p><a name="Foreground"></a>
 # Foreground</p>
 
-<p>To set the foreground color of any string or object you need to call the <code>fgcolor</code> method followed by an argument.</p>
+<p>To set the foreground color of any string or object you need to call the <code class="highlighter-rouge">fgcolor</code> method followed by an argument.</p>
 
 <h3 id="arguments">Arguments</h3>
 
@@ -173,30 +182,33 @@ source ./shml.sh
 <code class="color-box-lightcyan">lightcyan</code></p>
 
 <h4 id="termination">Termination</h4>
-<p>Following a string or object you must terminate the <code>fgcolor</code> method to ensure color doesn’t bleed.  You can use any of the following termination arguments:</p>
+<p>Following a string or object you must terminate the <code class="highlighter-rouge">fgcolor</code> method to ensure color doesn’t bleed.  You can use any of the following termination arguments:</p>
 
-<p><code>end</code> <code>off</code> or <code>reset</code></p>
+<p><code class="highlighter-rouge">end</code> <code class="highlighter-rouge">off</code> or <code class="highlighter-rouge">reset</code></p>
 
 <h3 id="code-samples">Code Samples</h3>
 
-<p>Here we will demonstrate how the <code>fgcolor</code> method can be used on a single line.</p>
+<p>Here we will demonstrate how the <code class="highlighter-rouge">fgcolor</code> method can be used on a single line.</p>
 
-<pre><code class="language-bash">echo $(fgcolor green "RZA GZA") $(fgcolor end)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="k">$(</span>fgcolor green <span class="s2">"RZA GZA"</span><span class="k">)</span> <span class="k">$(</span>fgcolor end<span class="k">)</span>
 </code></pre>
+</div>
 <p>Some times one-line is not enough.</p>
 
-<pre><code class="language-bash">echo "
-$(fgcolor yellow)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"
+</span><span class="k">$(</span>fgcolor yellow<span class="k">)</span><span class="s2">
 Inspectah Deck
 Ghostface Killah
-$(fgcolor end)
-"
+</span><span class="k">$(</span>fgcolor end<span class="k">)</span><span class="s2">
+"</span>
 </code></pre>
+</div>
 
-<p>You can also use <code>fgc</code> as an alias for <code>fgcolor</code>.</p>
+<p>You can also use <code class="highlighter-rouge">fgc</code> as an alias for <code class="highlighter-rouge">fgcolor</code>.</p>
 
-<pre><code class="language-bash">echo $(fgc red "Killa Beez on a swarm") $(fgc end)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="k">$(</span>fgc red <span class="s2">"Killa Beez on a swarm"</span><span class="k">)</span> <span class="k">$(</span>fgc end<span class="k">)</span>
 </code></pre>
+</div>
 
 <h3 id="results">Results</h3>
 <p>Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.</p>
@@ -209,7 +221,7 @@ $(fgcolor end)
 
 <p><a name="Background"></a>
 # Background
-To set the background color of any string or object you need to call the <code>bgcolor</code> method followed by an argument.</p>
+To set the background color of any string or object you need to call the <code class="highlighter-rouge">bgcolor</code> method followed by an argument.</p>
 
 <h3 id="arguments-1">Arguments</h3>
 
@@ -234,30 +246,33 @@ To set the background color of any string or object you need to call the <code>b
 
 <h4 id="termination-1">Termination</h4>
 
-<p>Following a string or object you must terminate the <code>background</code> method to ensure color doesn’t bleed.  You can use any of the following termination arguments:</p>
+<p>Following a string or object you must terminate the <code class="highlighter-rouge">background</code> method to ensure color doesn’t bleed.  You can use any of the following termination arguments:</p>
 
-<p><code>end</code> <code>off</code> <code>reset</code></p>
+<p><code class="highlighter-rouge">end</code> <code class="highlighter-rouge">off</code> <code class="highlighter-rouge">reset</code></p>
 
 <h3 id="code-samples-1">Code Samples</h3>
 
-<p>Here we will demonstrate how the <code>background</code> method can be used on a single line.</p>
+<p>Here we will demonstrate how the <code class="highlighter-rouge">background</code> method can be used on a single line.</p>
 
-<pre><code class="language-shell">echo $(bgcolor red "I'm the O-D-B") $(bgcolor end)
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="k">$(</span>bgcolor red <span class="s2">"I'm the O-D-B"</span><span class="k">)</span> <span class="k">$(</span>bgcolor end<span class="k">)</span>
 </code></pre>
+</div>
 <p>Some times one-line is not enough.</p>
 
-<pre><code class="language-bash">echo "
-$(bgcolor cyan)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"
+</span><span class="k">$(</span>bgcolor cyan<span class="k">)</span><span class="s2">
 ...as you can see
 F.B.I. don't you be watching me
-$(bgcolor end)
-"
+</span><span class="k">$(</span>bgcolor end<span class="k">)</span><span class="s2">
+"</span>
 </code></pre>
+</div>
 
-<p>You can also use <code>bgc</code> as an alias for <code>bgcolor</code></p>
+<p>You can also use <code class="highlighter-rouge">bgc</code> as an alias for <code class="highlighter-rouge">bgcolor</code></p>
 
-<pre><code class="language-bash">echo "$(bgc green)NUH you know name, now give me my money!$(bgc end)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>bgc green<span class="k">)</span><span class="s2">NUH you know name, now give me my money!</span><span class="k">$(</span>bgc end<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
 <h3 id="results-1">Results</h3>
 
@@ -272,7 +287,7 @@ $(bgcolor end)
 <p><a name="Attributes"></a>
 # Attributes</p>
 
-<p>The <code>attribute</code> method lets you stylize your text in 5 different ways.</p>
+<p>The <code class="highlighter-rouge">attribute</code> method lets you stylize your text in 5 different ways.</p>
 
 <h3 id="arguments-2">Arguments</h3>
 
@@ -280,32 +295,36 @@ $(bgcolor end)
 <code><span style="color: gray">dim</span></code>
 <code><span style="text-decoration: underline">underline</span></code>
 <code><span style="color: black; background-color: white">invert</span></code>
-<code>hidden</code></p>
+<code class="highlighter-rouge">hidden</code></p>
 
 <h4 id="termination-2">Termination</h4>
 
 <p>You can use any of the following termination arguments:</p>
 
-<p><code>end</code> <code>off</code> <code>reset</code></p>
+<p><code class="highlighter-rouge">end</code> <code class="highlighter-rouge">off</code> <code class="highlighter-rouge">reset</code></p>
 
-<p>Following a string or object you must terminate the <code>attribute</code> method.
-Typing <code>$(attribute end)</code> turns off everything, including <code>foreground</code> and <code>background</code> color methods.</p>
+<p>Following a string or object you must terminate the <code class="highlighter-rouge">attribute</code> method.
+Typing <code class="highlighter-rouge">$(attribute end)</code> turns off everything, including <code class="highlighter-rouge">foreground</code> and <code class="highlighter-rouge">background</code> color methods.</p>
 
 <h3 id="code-samples-2">Code Samples</h3>
 
-<pre><code class="language-bash">echo "$(attribute underline "So Underlined") $(attribute end)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>attribute underline <span class="s2">"So Underlined"</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>attribute end<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
-<pre><code class="language-bash">echo "$(attribute bold "Such Bold") $(attribute end)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>attribute bold <span class="s2">"Such Bold"</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>attribute end<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
-<pre><code class="language-bash">echo "$(attribute invert "Why this inverted?") $(attribute end)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>attribute invert <span class="s2">"Why this inverted?"</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>attribute end<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
-<p>You can also use <code>a</code> as an alias for <code>attribute</code></p>
+<p>You can also use <code class="highlighter-rouge">a</code> as an alias for <code class="highlighter-rouge">attribute</code></p>
 
-<pre><code class="language-bash">echo "$(a bold "such BOLD shorter") $(a end)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>a bold <span class="s2">"such BOLD shorter"</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>a end<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
 <h3 id="results-2">Results</h3>
 <p>Here is what the output should look like. Style may differ slightly depending on your terminal emulator settings.</p>
@@ -320,27 +339,33 @@ Typing <code>$(attribute end)</code> turns off everything, including <code>foreg
 <p><a name="Elements"></a>
 # Elements</p>
 
-<p>Elements are methods that work a lot like <code>&lt;hr&gt;</code> &amp; <code>&lt;br&gt;</code> HTML element tags. There is also a <code>tab</code> &amp; <code>indent</code> method that acts like a <code>&amp;nbsp;</code> character entity. They are empty which means that they have no termination ends like the foreground <code>color</code>, <code>background</code> and <code>attribute</code> methods.</p>
+<p>Elements are methods that work a lot like <code class="highlighter-rouge">&lt;hr&gt;</code> &amp; <code class="highlighter-rouge">&lt;br&gt;</code> HTML element tags. There is also a <code class="highlighter-rouge">tab</code> &amp; <code class="highlighter-rouge">indent</code> method that acts like a <code class="highlighter-rouge">&amp;nbsp;</code> character entity. They are empty which means that they have no termination ends like the foreground <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">background</code> and <code class="highlighter-rouge">attribute</code> methods.</p>
 
 <h3 id="arguments-3">Arguments</h3>
 
-<p>The only method that allows arguments is <code>hr</code>:</p>
+<p>The only method that allows arguments is <code class="highlighter-rouge">hr</code>:</p>
 
-<p><code>~</code> <code>#</code> <code>*</code> <code>+</code> and/or any number e.g. <code>50</code></p>
+<p><code class="highlighter-rouge">~</code> <code class="highlighter-rouge">#</code> <code class="highlighter-rouge">*</code> <code class="highlighter-rouge">+</code> and/or any number e.g. <code class="highlighter-rouge">50</code></p>
 
 <h3 id="code-samples-hr">Code Samples (hr)</h3>
-<pre><code class="language-bash">echo "$(hr)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>hr<span class="k">)</span><span class="s2">"</span>
 </code></pre>
-<pre><code class="language-bash">echo "$(hr 40)"
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>hr 40<span class="k">)</span><span class="s2">"</span>
 </code></pre>
-<pre><code class="language-bash">echo "$(hr '~' 30)"
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>hr <span class="s1">'~'</span> 30<span class="k">)</span><span class="s2">"</span>
 </code></pre>
-<pre><code class="language-bash">echo "$(hr '#' 20)"
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>hr <span class="s1">'#'</span> 20<span class="k">)</span><span class="s2">"</span>
 </code></pre>
-<pre><code class="language-bash">echo "$(hr '*' 10)"
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>hr <span class="s1">'*'</span> 10<span class="k">)</span><span class="s2">"</span>
 </code></pre>
-<pre><code class="language-bash">echo "$(hr '+' 5)"
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>hr <span class="s1">'+'</span> 5<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 <p>### Results (hr)</p>
 <center>
 ![HR Demo](../public/images/elements-hr-demo.png)
@@ -350,22 +375,26 @@ Typing <code>$(attribute end)</code> turns off everything, including <code>foreg
 
 <p>Break Line</p>
 
-<pre><code class="language-bash">echo "Wu$(br)Wu Tang$(br)Wu Tang$(br)Killah Beez$(br)We on a swarm"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Wu</span><span class="k">$(</span>br<span class="k">)</span><span class="s2">Wu Tang</span><span class="k">$(</span>br<span class="k">)</span><span class="s2">Wu Tang</span><span class="k">$(</span>br<span class="k">)</span><span class="s2">Killah Beez</span><span class="k">$(</span>br<span class="k">)</span><span class="s2">We on a swarm"</span>
 </code></pre>
+</div>
 <p>Indent</p>
 
-<pre><code class="language-bash">echo "W$(indent)U$(indent)T$(indent)A$(indent)N$(indent)G"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"W</span><span class="k">$(</span>indent<span class="k">)</span><span class="s2">U</span><span class="k">$(</span>indent<span class="k">)</span><span class="s2">T</span><span class="k">$(</span>indent<span class="k">)</span><span class="s2">A</span><span class="k">$(</span>indent<span class="k">)</span><span class="s2">N</span><span class="k">$(</span>indent<span class="k">)</span><span class="s2">G"</span>
 </code></pre>
+</div>
 
-<p>You can also use <code>i</code> as an alias for <code>indent</code></p>
+<p>You can also use <code class="highlighter-rouge">i</code> as an alias for <code class="highlighter-rouge">indent</code></p>
 
-<pre><code class="language-bash">echo "F$(i)O$(i)R$(i)E$(i)V$(i)A"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"F</span><span class="k">$(</span>i<span class="k">)</span><span class="s2">O</span><span class="k">$(</span>i<span class="k">)</span><span class="s2">R</span><span class="k">$(</span>i<span class="k">)</span><span class="s2">E</span><span class="k">$(</span>i<span class="k">)</span><span class="s2">V</span><span class="k">$(</span>i<span class="k">)</span><span class="s2">A"</span>
 </code></pre>
+</div>
 
 <p>Tab</p>
 
-<pre><code class="language-bash">echo "W$(tab)U$(tab)T$(tab)A$(tab)N$(tab)G"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"W</span><span class="k">$(</span>tab<span class="k">)</span><span class="s2">U</span><span class="k">$(</span>tab<span class="k">)</span><span class="s2">T</span><span class="k">$(</span>tab<span class="k">)</span><span class="s2">A</span><span class="k">$(</span>tab<span class="k">)</span><span class="s2">N</span><span class="k">$(</span>tab<span class="k">)</span><span class="s2">G"</span>
 </code></pre>
+</div>
 
 <h3 id="results-br-indent-tab">Results (br, indent, tab)</h3>
 <center>
@@ -381,26 +410,29 @@ Icons are flat ascii characters that are supported by most unix-like systems.  I
 
 <h3 id="arguments-4">Arguments</h3>
 
-<p><code>checkmark</code> <code>xmark</code> <code>heart</code> <code>sun</code> <code>star</code>
-<code>darkstar</code> <code>umbrella</code> <code>flag</code> <code>snowflake</code> <code>music</code>
-<code>scissors</code> <code>trademark</code> <code>copyright</code> <code>apple</code> <code>smile</code></p>
+<p><code class="highlighter-rouge">checkmark</code> <code class="highlighter-rouge">xmark</code> <code class="highlighter-rouge">heart</code> <code class="highlighter-rouge">sun</code> <code class="highlighter-rouge">star</code>
+<code class="highlighter-rouge">darkstar</code> <code class="highlighter-rouge">umbrella</code> <code class="highlighter-rouge">flag</code> <code class="highlighter-rouge">snowflake</code> <code class="highlighter-rouge">music</code>
+<code class="highlighter-rouge">scissors</code> <code class="highlighter-rouge">trademark</code> <code class="highlighter-rouge">copyright</code> <code class="highlighter-rouge">apple</code> <code class="highlighter-rouge">smile</code></p>
 
 <h3 id="code-samples-3">Code Samples</h3>
 
-<p>Peter, a software engineer likes to use the <code>xmark</code> icon in his programs:</p>
+<p>Peter, a software engineer likes to use the <code class="highlighter-rouge">xmark</code> icon in his programs:</p>
 
-<pre><code class="language-bash">echo "$(icon xmark)TPS Reports $(icon xmark)Lumbergh $(icon xmark)Working"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>icon xmark<span class="k">)</span><span class="s2">TPS Reports </span><span class="k">$(</span>icon xmark<span class="k">)</span><span class="s2">Lumbergh </span><span class="k">$(</span>icon xmark<span class="k">)</span><span class="s2">Working"</span>
 </code></pre>
+</div>
 
-<p>When he is in a better mood, he tends to use the <code>check</code> icon:</p>
+<p>When he is in a better mood, he tends to use the <code class="highlighter-rouge">check</code> icon:</p>
 
-<pre><code class="language-bash">echo "$(icon check)Kung Fu $(icon check)Fishing $(icon check)Sleep"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>icon check<span class="k">)</span><span class="s2">Kung Fu </span><span class="k">$(</span>icon check<span class="k">)</span><span class="s2">Fishing </span><span class="k">$(</span>icon check<span class="k">)</span><span class="s2">Sleep"</span>
 </code></pre>
+</div>
 
-<p>Sometimes he even uses the foreground <code>color</code> method to add some emphasis:</p>
+<p>Sometimes he even uses the foreground <code class="highlighter-rouge">color</code> method to add some emphasis:</p>
 
-<pre><code class="language-bash">echo "$(color red)$(icon xmark)$(color end)TPS Reports $(color green)$(icon check)$(color end)Fishing"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>color red<span class="k">)$(</span>icon xmark<span class="k">)$(</span>color end<span class="k">)</span><span class="s2">TPS Reports </span><span class="k">$(</span>color green<span class="k">)$(</span>icon check<span class="k">)$(</span>color end<span class="k">)</span><span class="s2">Fishing"</span>
 </code></pre>
+</div>
 
 <h3 id="results-3">Results</h3>
 <center>
@@ -413,7 +445,7 @@ Icons are flat ascii characters that are supported by most unix-like systems.  I
 <p><a name="Emojis"></a>
 # Emojis</p>
 
-<p>To add an emoji you need to call the <code>emoji</code> method followed by an argument. Each emoji added to SHML was approved as part of <a href="http://unicode.org/versions/Unicode6.0.0/">Unicode® 6.0.0 Standard</a> in 2010.</p>
+<p>To add an emoji you need to call the <code class="highlighter-rouge">emoji</code> method followed by an argument. Each emoji added to SHML was approved as part of <a href="http://unicode.org/versions/Unicode6.0.0/">Unicode® 6.0.0 Standard</a> in 2010.</p>
 
 <h3 id="arguments-5">Arguments</h3>
 
@@ -430,203 +462,203 @@ Icons are flat ascii characters that are supported by most unix-like systems.  I
       <td>—</td>
     </tr>
     <tr>
-      <td><code>smiley</code></td>
-      <td><code>1F603</code> <code>'=)'</code> <code>':-)'</code> <code>':)'</code></td>
+      <td><code class="highlighter-rouge">smiley</code></td>
+      <td><code class="highlighter-rouge">1F603</code> <code class="highlighter-rouge">'=)'</code> <code class="highlighter-rouge">':-)'</code> <code class="highlighter-rouge">':)'</code></td>
       <td>😄</td>
     </tr>
     <tr>
-      <td><code>innocent</code></td>
-      <td><code>1F607</code> <code>halo</code></td>
+      <td><code class="highlighter-rouge">innocent</code></td>
+      <td><code class="highlighter-rouge">1F607</code> <code class="highlighter-rouge">halo</code></td>
       <td>😇</td>
     </tr>
     <tr>
-      <td><code>joy</code></td>
-      <td><code>1F602</code> <code>lol</code> <code>laughing</code></td>
+      <td><code class="highlighter-rouge">joy</code></td>
+      <td><code class="highlighter-rouge">1F602</code> <code class="highlighter-rouge">lol</code> <code class="highlighter-rouge">laughing</code></td>
       <td>😂</td>
     </tr>
     <tr>
-      <td><code>=p</code></td>
-      <td><code>1F61B</code> <code>stuck_out_tongue</code> <code>=P</code></td>
+      <td><code class="highlighter-rouge">=p</code></td>
+      <td><code class="highlighter-rouge">1F61B</code> <code class="highlighter-rouge">stuck_out_tongue</code> <code class="highlighter-rouge">=P</code></td>
       <td>😛</td>
     </tr>
     <tr>
-      <td><code>worried</code></td>
-      <td><code>1F61F</code> <code>sadface</code> <code>sad</code></td>
+      <td><code class="highlighter-rouge">worried</code></td>
+      <td><code class="highlighter-rouge">1F61F</code> <code class="highlighter-rouge">sadface</code> <code class="highlighter-rouge">sad</code></td>
       <td>😟</td>
     </tr>
     <tr>
-      <td><code>cry</code></td>
-      <td><code>1F622</code> <code>crying</code> <code>tear</code></td>
+      <td><code class="highlighter-rouge">cry</code></td>
+      <td><code class="highlighter-rouge">1F622</code> <code class="highlighter-rouge">crying</code> <code class="highlighter-rouge">tear</code></td>
       <td>😢</td>
     </tr>
     <tr>
-      <td><code>rage</code></td>
-      <td><code>1F621</code> <code>redface</code></td>
+      <td><code class="highlighter-rouge">rage</code></td>
+      <td><code class="highlighter-rouge">1F621</code> <code class="highlighter-rouge">redface</code></td>
       <td>😡</td>
     </tr>
     <tr>
-      <td><code>wave</code></td>
-      <td><code>1F44B</code> <code>hello</code> <code>goodbye</code></td>
+      <td><code class="highlighter-rouge">wave</code></td>
+      <td><code class="highlighter-rouge">1F44B</code> <code class="highlighter-rouge">hello</code> <code class="highlighter-rouge">goodbye</code></td>
       <td>👋</td>
     </tr>
     <tr>
-      <td><code>ok_hand</code></td>
-      <td><code>1F44C</code> <code>perfect</code> <code>okay</code> <code>nice</code></td>
+      <td><code class="highlighter-rouge">ok_hand</code></td>
+      <td><code class="highlighter-rouge">1F44C</code> <code class="highlighter-rouge">perfect</code> <code class="highlighter-rouge">okay</code> <code class="highlighter-rouge">nice</code></td>
       <td>👌</td>
     </tr>
     <tr>
-      <td><code>thumbsup</code></td>
-      <td><code>1F44D</code> <code>+1</code> <code>like</code></td>
+      <td><code class="highlighter-rouge">thumbsup</code></td>
+      <td><code class="highlighter-rouge">1F44D</code> <code class="highlighter-rouge">+1</code> <code class="highlighter-rouge">like</code></td>
       <td>👍</td>
     </tr>
     <tr>
-      <td><code>thumbsdown</code></td>
-      <td><code>1F44E</code> <code>-1</code> <code>no</code> <code>dislike</code></td>
+      <td><code class="highlighter-rouge">thumbsdown</code></td>
+      <td><code class="highlighter-rouge">1F44E</code> <code class="highlighter-rouge">-1</code> <code class="highlighter-rouge">no</code> <code class="highlighter-rouge">dislike</code></td>
       <td>👎</td>
     </tr>
     <tr>
-      <td><code>smiley_cat</code></td>
-      <td><code>1F63A</code> <code>happycat</code></td>
+      <td><code class="highlighter-rouge">smiley_cat</code></td>
+      <td><code class="highlighter-rouge">1F63A</code> <code class="highlighter-rouge">happycat</code></td>
       <td>😺</td>
     </tr>
     <tr>
-      <td><code>cat</code></td>
-      <td><code>1F431</code> <code>kitten</code> <code>:3</code> <code>kitty</code></td>
+      <td><code class="highlighter-rouge">cat</code></td>
+      <td><code class="highlighter-rouge">1F431</code> <code class="highlighter-rouge">kitten</code> <code class="highlighter-rouge">:3</code> <code class="highlighter-rouge">kitty</code></td>
       <td>🐱</td>
     </tr>
     <tr>
-      <td><code>dog</code></td>
-      <td><code>1F436</code> <code>puppy</code></td>
+      <td><code class="highlighter-rouge">dog</code></td>
+      <td><code class="highlighter-rouge">1F436</code> <code class="highlighter-rouge">puppy</code></td>
       <td>🐶</td>
     </tr>
     <tr>
-      <td><code>bee</code></td>
-      <td><code>1F41D</code> <code>honeybee</code> <code>bumblebee</code></td>
+      <td><code class="highlighter-rouge">bee</code></td>
+      <td><code class="highlighter-rouge">1F41D</code> <code class="highlighter-rouge">honeybee</code> <code class="highlighter-rouge">bumblebee</code></td>
       <td>🐝</td>
     </tr>
     <tr>
-      <td><code>pig</code></td>
-      <td><code>1F437</code> <code>pighead</code></td>
+      <td><code class="highlighter-rouge">pig</code></td>
+      <td><code class="highlighter-rouge">1F437</code> <code class="highlighter-rouge">pighead</code></td>
       <td>🐷</td>
     </tr>
     <tr>
-      <td><code>monkey</code></td>
-      <td><code>1F437</code> <code>monkey_face</code></td>
+      <td><code class="highlighter-rouge">monkey</code></td>
+      <td><code class="highlighter-rouge">1F437</code> <code class="highlighter-rouge">monkey_face</code></td>
       <td>🐵</td>
     </tr>
     <tr>
-      <td><code>cow</code></td>
-      <td><code>1F42E</code> <code>happycow</code></td>
+      <td><code class="highlighter-rouge">cow</code></td>
+      <td><code class="highlighter-rouge">1F42E</code> <code class="highlighter-rouge">happycow</code></td>
       <td>🐮</td>
     </tr>
     <tr>
-      <td><code>panda</code></td>
-      <td><code>1F43C</code> <code>panda_face</code> <code>shpanda</code></td>
+      <td><code class="highlighter-rouge">panda</code></td>
+      <td><code class="highlighter-rouge">1F43C</code> <code class="highlighter-rouge">panda_face</code> <code class="highlighter-rouge">shpanda</code></td>
       <td>🐼</td>
     </tr>
     <tr>
-      <td><code>sushi</code></td>
-      <td><code>1F363</code> <code>raw</code> <code>sashimi</code></td>
+      <td><code class="highlighter-rouge">sushi</code></td>
+      <td><code class="highlighter-rouge">1F363</code> <code class="highlighter-rouge">raw</code> <code class="highlighter-rouge">sashimi</code></td>
       <td>🍣</td>
     </tr>
     <tr>
-      <td><code>home</code></td>
-      <td><code>1F3E0</code> <code>house</code></td>
+      <td><code class="highlighter-rouge">home</code></td>
+      <td><code class="highlighter-rouge">1F3E0</code> <code class="highlighter-rouge">house</code></td>
       <td>🏠</td>
     </tr>
     <tr>
-      <td><code>eyeglases</code></td>
-      <td><code>1F453</code> <code>bifocals</code> <code>eyeglasses</code></td>
+      <td><code class="highlighter-rouge">eyeglases</code></td>
+      <td><code class="highlighter-rouge">1F453</code> <code class="highlighter-rouge">bifocals</code> <code class="highlighter-rouge">eyeglasses</code></td>
       <td>👓</td>
     </tr>
     <tr>
-      <td><code>smoke</code></td>
-      <td><code>1F6AC</code> <code>smoking</code> <code>cigarette</code></td>
+      <td><code class="highlighter-rouge">smoke</code></td>
+      <td><code class="highlighter-rouge">1F6AC</code> <code class="highlighter-rouge">smoking</code> <code class="highlighter-rouge">cigarette</code></td>
       <td>🚬</td>
     </tr>
     <tr>
-      <td><code>fire</code></td>
-      <td><code>1F525</code> <code>flame</code> <code>hot</code></td>
+      <td><code class="highlighter-rouge">fire</code></td>
+      <td><code class="highlighter-rouge">1F525</code> <code class="highlighter-rouge">flame</code> <code class="highlighter-rouge">hot</code></td>
       <td>🔥</td>
     </tr>
     <tr>
-      <td><code>hankey</code></td>
-      <td><code>1F4A9</code> <code>poop</code> <code>shit</code></td>
+      <td><code class="highlighter-rouge">hankey</code></td>
+      <td><code class="highlighter-rouge">1F4A9</code> <code class="highlighter-rouge">poop</code> <code class="highlighter-rouge">shit</code></td>
       <td>💩</td>
     </tr>
     <tr>
-      <td><code>beer</code></td>
-      <td><code>1F37A</code> <code>homebrew</code> <code>brew</code></td>
+      <td><code class="highlighter-rouge">beer</code></td>
+      <td><code class="highlighter-rouge">1F37A</code> <code class="highlighter-rouge">homebrew</code> <code class="highlighter-rouge">brew</code></td>
       <td>🍺</td>
     </tr>
     <tr>
-      <td><code>cookie</code></td>
-      <td><code>1F36A</code> <code>biscuit</code> <code>chocolate</code></td>
+      <td><code class="highlighter-rouge">cookie</code></td>
+      <td><code class="highlighter-rouge">1F36A</code> <code class="highlighter-rouge">biscuit</code> <code class="highlighter-rouge">chocolate</code></td>
       <td>🍪</td>
     </tr>
     <tr>
-      <td><code>lock</code></td>
-      <td><code>1F512</code> <code>padlock</code> <code>secure</code></td>
+      <td><code class="highlighter-rouge">lock</code></td>
+      <td><code class="highlighter-rouge">1F512</code> <code class="highlighter-rouge">padlock</code> <code class="highlighter-rouge">secure</code></td>
       <td>🔒</td>
     </tr>
     <tr>
-      <td><code>unlock</code></td>
-      <td><code>1F513</code> <code>openpadlock</code></td>
+      <td><code class="highlighter-rouge">unlock</code></td>
+      <td><code class="highlighter-rouge">1F513</code> <code class="highlighter-rouge">openpadlock</code></td>
       <td>🔓</td>
     </tr>
     <tr>
-      <td><code>star</code></td>
-      <td><code>2B50</code> <code>yellowstar</code></td>
+      <td><code class="highlighter-rouge">star</code></td>
+      <td><code class="highlighter-rouge">2B50</code> <code class="highlighter-rouge">yellowstar</code></td>
       <td>⭐</td>
     </tr>
     <tr>
-      <td><code>joker</code></td>
-      <td><code>1F0CF</code> <code>black_joker</code> <code>wild</code></td>
+      <td><code class="highlighter-rouge">joker</code></td>
+      <td><code class="highlighter-rouge">1F0CF</code> <code class="highlighter-rouge">black_joker</code> <code class="highlighter-rouge">wild</code></td>
       <td>🃏</td>
     </tr>
     <tr>
-      <td><code>check</code></td>
-      <td><code>2705</code> <code>white_check_mark</code></td>
+      <td><code class="highlighter-rouge">check</code></td>
+      <td><code class="highlighter-rouge">2705</code> <code class="highlighter-rouge">white_check_mark</code></td>
       <td>✅</td>
     </tr>
     <tr>
-      <td><code>x</code></td>
-      <td><code>274C</code> <code>cross</code> <code>xmark</code></td>
+      <td><code class="highlighter-rouge">x</code></td>
+      <td><code class="highlighter-rouge">274C</code> <code class="highlighter-rouge">cross</code> <code class="highlighter-rouge">xmark</code></td>
       <td>❌</td>
     </tr>
     <tr>
-      <td><code>toilet</code></td>
-      <td><code>1F6BD</code> <code>restroom</code> <code>loo</code></td>
+      <td><code class="highlighter-rouge">toilet</code></td>
+      <td><code class="highlighter-rouge">1F6BD</code> <code class="highlighter-rouge">restroom</code> <code class="highlighter-rouge">loo</code></td>
       <td>🚽</td>
     </tr>
     <tr>
-      <td><code>bell</code></td>
-      <td><code>1F514</code> <code>ringer</code> <code>ring</code></td>
+      <td><code class="highlighter-rouge">bell</code></td>
+      <td><code class="highlighter-rouge">1F514</code> <code class="highlighter-rouge">ringer</code> <code class="highlighter-rouge">ring</code></td>
       <td>🔔</td>
     </tr>
     <tr>
-      <td><code>search</code></td>
-      <td><code>1F50E</code> <code>mag_right</code> <code>magnify</code></td>
+      <td><code class="highlighter-rouge">search</code></td>
+      <td><code class="highlighter-rouge">1F50E</code> <code class="highlighter-rouge">mag_right</code> <code class="highlighter-rouge">magnify</code></td>
       <td>🔎</td>
     </tr>
     <tr>
-      <td><code>dart</code></td>
-      <td><code>1F3AF</code> <code>bullseye</code> <code>darts</code></td>
+      <td><code class="highlighter-rouge">dart</code></td>
+      <td><code class="highlighter-rouge">1F3AF</code> <code class="highlighter-rouge">bullseye</code> <code class="highlighter-rouge">darts</code></td>
       <td>🎯</td>
     </tr>
     <tr>
-      <td><code>cash</code></td>
-      <td><code>1F4B5</code> <code>dollar</code> <code>cream</code></td>
+      <td><code class="highlighter-rouge">cash</code></td>
+      <td><code class="highlighter-rouge">1F4B5</code> <code class="highlighter-rouge">dollar</code> <code class="highlighter-rouge">cream</code></td>
       <td>💵</td>
     </tr>
     <tr>
-      <td><code>thinking</code></td>
-      <td><code>1F4AD</code> <code>thought_balloon</code></td>
+      <td><code class="highlighter-rouge">thinking</code></td>
+      <td><code class="highlighter-rouge">1F4AD</code> <code class="highlighter-rouge">thought_balloon</code></td>
       <td>💭</td>
     </tr>
     <tr>
-      <td><code>luck</code></td>
-      <td><code>1F340</code> <code>four_leaf_clover</code></td>
+      <td><code class="highlighter-rouge">luck</code></td>
+      <td><code class="highlighter-rouge">1F340</code> <code class="highlighter-rouge">four_leaf_clover</code></td>
       <td>🍀</td>
     </tr>
   </tbody>
@@ -634,10 +666,11 @@ Icons are flat ascii characters that are supported by most unix-like systems.  I
 
 <h3 id="code-samples-4">Code Samples</h3>
 
-<pre><code class="language-bash">echo "Couldn't peep it with a pair of $(emoji bifocals)"
-echo "I'm no $(emoji joker) play me as a $(emoji joker)"
-echo "$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke) ya"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Couldn't peep it with a pair of </span><span class="k">$(</span>emoji bifocals<span class="k">)</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"I'm no </span><span class="k">$(</span>emoji joker<span class="k">)</span><span class="s2"> play me as a </span><span class="k">$(</span>emoji joker<span class="k">)</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>emoji bee<span class="k">)</span><span class="s2"> on you like a </span><span class="k">$(</span>emoji house<span class="k">)</span><span class="s2"> on </span><span class="k">$(</span>emoji fire<span class="k">)</span><span class="s2">, </span><span class="k">$(</span>emoji smoke<span class="k">)</span><span class="s2"> ya"</span>
 </code></pre>
+</div>
 
 <h3 id="results-4">Results</h3>
 <center>
@@ -650,7 +683,7 @@ echo "$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke)
 <p><a name="Color-Bar"></a>
 # Color Bar</p>
 
-<p>To add a color bar you need to call the <code>color-bar</code> method followed by an (optional) argument.</p>
+<p>To add a color bar you need to call the <code class="highlighter-rouge">color-bar</code> method followed by an (optional) argument.</p>
 
 <h3 id="arguments-6">Arguments</h3>
 
@@ -674,21 +707,23 @@ echo "$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke)
 
 <h3 id="code-samples-5">Code Samples</h3>
 
-<pre><code class="language-bash">echo "$(color-bar)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>color-bar<span class="k">)</span><span class="s2">"</span>
 
-echo "
-$(color-bar red green yellow blue magenta \
-cyan lightgray darkgray lightred \
-lightmagenta lightcyan)
-"
+<span class="nb">echo</span> <span class="s2">"
+</span><span class="k">$(</span>color-bar red green yellow blue magenta <span class="se">\</span>
+cyan lightgray darkgray lightred <span class="se">\</span>
+lightmagenta lightcyan<span class="k">)</span><span class="s2">
+"</span>
 
-echo "Yeah ahuh, you know what it is $(color-bar black yellow black yellow)"
+<span class="nb">echo</span> <span class="s2">"Yeah ahuh, you know what it is </span><span class="k">$(</span>color-bar black yellow black yellow<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
-<p>You can also use <code>bar</code> as an alias for <code>color-bar</code></p>
+<p>You can also use <code class="highlighter-rouge">bar</code> as an alias for <code class="highlighter-rouge">color-bar</code></p>
 
-<pre><code class="language-bash">echo "I put it down from the whip to my diamonds, I'm in $(bar black yellow black yellow)"
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"I put it down from the whip to my diamonds, I'm in </span><span class="k">$(</span>bar black yellow black yellow<span class="k">)</span><span class="s2">"</span>
 </code></pre>
+</div>
 
 <h3 id="results-5">Results</h3>
 <center>

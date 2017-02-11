@@ -57,6 +57,6 @@ echo $(fgc red "Killa Beez on a swarm") $(fgc end)
 ### Results
 Here is what the output should look like.  Style may differ slightly depending on your terminal emulator settings.
 <center>
-![Foreground Demo](../public/images/foreground-demo.png)
+<img src="../public/images/foreground-demo.png">
 </center>
 <center><a href="http://code.runnable.com/Vh_zxUB4ufRnyO_F/shml-foreground-for-shell-bash-and-color" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

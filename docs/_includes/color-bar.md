@@ -1,5 +1,6 @@
 <hr>
 <a name="Color-Bar"></a>
+
 # Color Bar
 
 To add a color bar you need to call the `color-bar` method followed by an (optional) argument.
@@ -46,6 +47,6 @@ echo "I put it down from the whip to my diamonds, I'm in $(bar black yellow blac
 
 ### Results
 <center>
-![Color Bar Demo](../public/images/color-bar-demo.png)
+<img src="../public/images/color-bar-demo.png">
 </center>
 <center><a href="http://code.runnable.com/Viu7kFttuDkzWnHs/shml-color-bar-for-shell-and-bash" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

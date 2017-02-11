@@ -34,7 +34,7 @@ Following a string or object you must terminate the `background` method to ensur
 
 Here we will demonstrate how the `background` method can be used on a single line.
 
-```bash
+```shell
 echo $(bgcolor red "I'm the O-D-B") $(bgcolor end)
 ```
 Some times one-line is not enough.

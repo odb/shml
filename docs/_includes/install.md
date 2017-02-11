@@ -1,15 +1,30 @@
 <hr>
 <a name="Install"></a>
+
 # Install
 
 #### Unix-like
-```bash
+``` bash
 $ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 ```
+
 #### npm
-```bash
+
+``` shell
 $ npm install -g shml
 ```
+
+~~~ bash
+#!/usr/bin/env bash
+source $(which shml)
+~~~
+
+~~~ ruby
+def what?
+  42
+end
+~~~
+
 #### Homebrew
 ```bash
 $ brew install shml

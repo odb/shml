@@ -1,5 +1,6 @@
 <hr>
 <a name="Emojis"></a>
+
 # Emojis
 
 To add an emoji you need to call the `emoji` method followed by an argument. Each emoji added to SHML was approved as part of [Unicode&reg; 6.0.0 Standard](http://unicode.org/versions/Unicode6.0.0/) in 2010.
@@ -59,6 +60,6 @@ echo "$(emoji bee) on you like a $(emoji house) on $(emoji fire), $(emoji smoke)
 
 ### Results
 <center>
-![Emojis Demo](../public/images/emojis-demo.png)
+<img src="../public/images/emojis-demo.png">
 </center>
 <center><a href="http://code.runnable.com/Viu5vP4l21kzxZI2/shml-emojis-for-shell-bash-and-icons" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

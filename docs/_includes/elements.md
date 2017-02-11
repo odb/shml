@@ -1,5 +1,6 @@
 <hr>
 <a name="Elements"></a>
+
 # Elements
 
 Elements are methods that work a lot like `<hr>` & `<br>` HTML element tags. There is also a `tab` & `indent` method that acts like a `&nbsp;` character entity. They are empty which means that they have no termination ends like the foreground `color`, `background` and `attribute` methods.
@@ -29,9 +30,10 @@ echo "$(hr '*' 10)"
 ```bash
 echo "$(hr '+' 5)"
 ```
+
 ### Results (hr)
 <center>
-![HR Demo](../public/images/elements-hr-demo.png)
+<img src="../public/images/elements-hr-demo.png">
 </center>
 
 ### Code Samples (br, indent, tab)
@@ -61,6 +63,6 @@ echo "W$(tab)U$(tab)T$(tab)A$(tab)N$(tab)G"
 
 ### Results (br, indent, tab)
 <center>
-![hr demo](../public/images/elements-other-demo.png)
+<img src="../public/images/elements-other-demo.png">
 </center>
 <center><a href="http://code.runnable.com/ViKAzLgQjHx6yn8U/shml-elements-for-shell-bash-hr-br-indent-and-tab" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

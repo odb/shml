@@ -63,7 +63,6 @@ $(fgcolor end)
 ```
 
 View all examples: [https://odb.github.io/shml/getting-started/](https://odb.github.io/shml/getting-started/)
-<center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="https://odb.github.io/shml/public/images/demo-on-runnable.png" border="0"></a></center>
 
 ### Contributing
 

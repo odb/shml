@@ -24,7 +24,6 @@ $ npm install -g shml
 </small>
 <br><br>
 <iframe src="slideshow.html" width="100%" height="250" frameborder="0"></iframe>
-<br><br><center><a href="http://code.runnable.com/u/jdorfman" target="_blank"><img src="public/images/demo-on-runnable.png" border="0"></a></center>
 </div>
 <hr>
 

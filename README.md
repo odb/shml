@@ -70,4 +70,18 @@ Contributions are more than welcome. Before submitting ANY new features please r
 
 To report any bugs or if you have a feature request feel free to [open an issue](https://github.com/odb/shml/issues).
 
-Thanks!
+#### Updating The Docs
+Updating the docs requires Ruby/Jekyll to generate & view locally.
+
+**Run once:**
+```
+$ cd docs/
+$ gem install bundler
+$ bundle install
+```
+
+**Generate and serve:**
+```
+$ bundle exec jekyll s
+```
+Then go to: `http://localhost:4000/shml/`

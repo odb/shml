@@ -65,4 +65,3 @@ echo "W$(tab)U$(tab)T$(tab)A$(tab)N$(tab)G"
 <center>
 <img src="../public/images/elements-other-demo.png">
 </center>
-<center><a href="http://code.runnable.com/ViKAzLgQjHx6yn8U/shml-elements-for-shell-bash-hr-br-indent-and-tab" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

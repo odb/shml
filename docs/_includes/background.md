@@ -61,4 +61,3 @@ Here is what the output should look like.  Style may differ slightly depending o
 <center>
 <img src="../public/images/background-demo.png">
 </center>
-<center><a href="http://code.runnable.com/ViG7cr3G56p074rT/shml-background-for-shell-bash-and-color" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

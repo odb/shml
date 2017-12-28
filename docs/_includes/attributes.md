@@ -48,4 +48,3 @@ Here is what the output should look like. Style may differ slightly depending on
 <center>
 <img src="../public/images/attributes-demo.png">
 </center>
-<center><a href="http://code.runnable.com/ViG-mVKrgKR0rUIS/shml-attributes-for-shell-bash-bold-underline-and-invert" target="_blank"><img src="../public/images/demo-on-runnable.png" border="0"></a></center>

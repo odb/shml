@@ -14,11 +14,6 @@ $ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.s
 $ npm install -g shml
 ```
 
-~~~ bash
-#!/usr/bin/env bash
-source $(which shml)
-~~~
-
 #### Homebrew
 ```bash
 $ brew install shml

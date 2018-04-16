@@ -394,7 +394,7 @@ function e {
 
 # Usage / Examples
 ##
-if [ "$0" == "$BASH_SOURCE" ]; then
+if [ "$0" = "$BASH_SOURCE" ]; then
 
 if [[ $@ =~ .*-v.* ]]; then
   echo "shml version ${SHML_VERSION}"

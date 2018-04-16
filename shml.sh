@@ -3,14 +3,14 @@
 #SHML:START
 #************************************************#
 #    SHML - Shell Markup Language Framework
-#                   v1.0.4
+#                   v1.1.0
 #                    (MIT)
 #        by Justin Dorfman - @jdorfman
 #        && Joshua Mervine - @mervinej
 #
-#        https://maxcdn.github.io/shml/
+#               http://shml.xyz
 #************************************************#
-SHML_VERSION="1.0.4"
+SHML_VERSION="1.1.0"
 
 # Progress Bar
 ##

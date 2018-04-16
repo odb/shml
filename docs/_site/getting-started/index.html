@@ -69,9 +69,10 @@
       <a class="sidebar-nav-item sidebar-nav-indent" href="#Icons">Icons</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="#Emojis">Emojis</a>
       <a class="sidebar-nav-item sidebar-nav-indent" href="#Color-Bar">Color Bar</a>
+      <a class="sidebar-nav-item sidebar-nav-indent" href="#Confirm">Confirm</a>
       <a class="sidebar-nav-item" href="https://github.com/MaxCDN/shml" target="_blank">GitHub</a>
     </nav>
-    <span class="sidebar-nav">&copy; 2013-2018 <br> <a href="http://www.maxcdn.com/open-source?utm_source=SHML&utm_medium=footer-link">ol' dirty bashnerds</a> | v1.1.0</span>
+    <span class="sidebar-nav">&copy; 2013-2018 <br> <a href="https://github.com/odb/">ol' dirty bashnerds</a> | v1.1.0</span>
   </div>
 </div>
 
@@ -682,6 +683,48 @@ lightmagenta lightcyan<span class="k">)</span><span class="s2">
 <h3 id="results-5">Results</h3>
 <center>
 <img src="../public/images/color-bar-demo.png" />
+</center>
+
+<hr />
+
+<p><a name="Confirm"></a></p>
+
+<h1 id="confirm">Confirm</h1>
+<p>Confirm allows you to simply ask end-users questions.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p><code class="highlighter-rouge">confirm QUESTION [SUCCESS_FUNCTION] [FAILURE_FUNCTION]</code></p>
+
+<h3 id="code-samples-6">Code Samples</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>on_human<span class="o">()</span> <span class="o">{</span>
+  dialog <span class="s2">"What is your name?"</span> <span class="s2">"on_dialog"</span>
+<span class="o">}</span>
+
+on_dialog<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>color green <span class="s2">"Hello, </span><span class="nv">$1</span><span class="s2">! </span><span class="k">$(</span>emoji beer<span class="k">)</span><span class="s2">"</span><span class="k">)</span><span class="s2">"</span>
+<span class="o">}</span>
+
+on_not_human<span class="o">()</span> <span class="o">{</span>
+  confirm <span class="s2">"</span><span class="k">$(</span>color red <span class="s2">"Do you come in peace?"</span><span class="k">)</span><span class="s2">"</span> <span class="s2">"on_friend"</span> <span class="s2">"on_enemy"</span>
+<span class="o">}</span>
+
+on_friend<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>emoji <span class="s1">'=)'</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>emoji beer<span class="k">)</span><span class="s2">"</span>
+<span class="o">}</span>
+
+on_enemy<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"</span><span class="k">$(</span>emoji rage<span class="k">)</span><span class="s2"> </span><span class="k">$(</span>emoji poop<span class="k">)</span><span class="s2">"</span>
+<span class="o">}</span>
+
+confirm <span class="s2">"</span><span class="k">$(</span>color blue <span class="s2">"Are you human?"</span><span class="k">)</span><span class="s2">"</span> <span class="s2">"on_human"</span> <span class="s2">"on_not_human"</span>
+<span class="nb">exit </span>0
+</code></pre></div></div>
+
+<h3 id="results-6">Results</h3>
+<center>
+<img src="../public/images/confirm-demo.png" />
 </center>
 
 <hr />

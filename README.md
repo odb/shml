@@ -82,6 +82,6 @@ $ bundle install
 
 **Generate and serve:**
 ```
-$ bundle exec jekyll s
+$ bundle exec jekyll s --watch
 ```
 Then go to: `http://localhost:4000/shml/`

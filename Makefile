@@ -5,6 +5,10 @@ test/shunt.sh:
 	cd test && curl -L https://raw.githubusercontent.com/odb/shunt/latest/install.sh | bash -s latest local
 
 test: test/shunt.sh .PHONY
+	# Check 'source' for supported shells
+	$(shell which bash) -c 'source ./shml.sh && color-bar'
+	$(shell which zsh) -c 'source ./shml.sh && color-bar'
+	# Execute test suite
 	./test/shunt.sh --verbose ./test/*_tests.sh
 
 test/%: .PHONY

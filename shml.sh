@@ -3,14 +3,14 @@
 #SHML:START
 #************************************************#
 #    SHML - Shell Markup Language Framework
-#                   v1.0.4
+#                   v1.1.0
 #                    (MIT)
 #        by Justin Dorfman - @jdorfman
 #        && Joshua Mervine - @mervinej
 #
-#        https://maxcdn.github.io/shml/
+#               http://shml.xyz
 #************************************************#
-SHML_VERSION="1.0.4"
+SHML_VERSION="1.1.0"
 
 # Progress Bar
 ##
@@ -88,6 +88,43 @@ progress() {
 
   # show cursor again
   test "$(which tput)" && $__ncursor && tput cnorm
+}
+
+# Confirm / Dialog
+##
+__default_confirm_success_input="y Y yes Yes YES ok OK Ok okay Okay OKAY k K continue Continue CONTINUE proceed Proceed PROCEED success Success SUCCESS successful Successful SUCCESSFUL good Good GOOD"
+confirm() {
+  [[ -z $1 ]] && return 127
+
+  [[ -z $SHML_CONFIRM_SUCCESS ]] && SHML_CONFIRM_SUCCESS=$__default_confirm_success_input
+
+  echo -ne "$1 "
+  local found=false
+  while read __input; do
+    for str in $(echo $SHML_CONFIRM_SUCCESS); do
+      [[ "$str" == "$__input" ]] && found=true
+    done
+    break
+  done
+
+  if $found; then
+    [[ ! -z $2 ]] && eval $2
+    return 0
+  else
+    [[ ! -z $3 ]] && eval $3
+    return 1
+  fi
+}
+
+dialog() {
+  [[ -z $1 ]] && return 127
+  [[ -z $2 ]] && return 127
+
+  echo -en "$1 "
+  while read __input; do
+    eval "$2 $__input"
+    break
+  done
 }
 
 # Foreground (Text)
@@ -357,7 +394,7 @@ function e {
 
 # Usage / Examples
 ##
-if [ "$0" == "$BASH_SOURCE" ]; then
+if [ "$0" = "$BASH_SOURCE" ]; then
 
 if [[ $@ =~ .*-v.* ]]; then
   echo "shml version ${SHML_VERSION}"
@@ -581,22 +618,21 @@ $(i $I)$(bar black yellow black yellow black yellow)
 $(a bold "Section 8: $(color red "[EXPERIMENTAL]") Progress Bar")
 $(hr '-')
 
-$(i $I)Usage: progress [title] [steps] [char]
+$(i $I)Usage: progress [TITLE] [STEPS] [CHAR]
 
 $(i $I) - 'title' defines the progress bar title
 $(i $I) - 'steps' defines the number of steps for the progress bar to act upon
 $(i $I) - 'char' defines the character to be displayed in the progress bar
 
+$(i $I)Example:
+
 $(i $I)echo "\$\(color green\)"
 $(i $I)for i in \$(seq 0 10); do echo \$i; sleep .25; done | progress
 $(i $I)echo "\$\(color end\)"
 
-$(color green)
-$(i $I)Example  [####################                    ] (50%)
-$(color end)
+$(color green "$(i $I)Example  [####################                    ] (50%)")
 
-$(i $I)'progress' supports overriding default values by setting the following
-$(i $I)variables:
+$(i $I)'progress' supports overriding default values by setting the following variables:
 
 $(i $I) - SHML_PROGRESS_WIDTH    - width of progress bar, default 60
 $(i $I) - SHML_PROGRESS_BREAK    - put a new line at the end of the output, default 'true'
@@ -604,6 +640,47 @@ $(i $I) - SHML_PROGRESS_CLEAR    - clear line at the end of the output, default 
 $(i $I) - SHML_PGOGRESS_NOCURSOR - hide the cursor, default 'true'
 
 $(i $I)NOTE: These variables $(a bold 'must') be defined before sourcing 'shml'!
+
+$(a bold "Section 9: $(color red "[EXPERIMENTAL]") Confirm")
+$(hr '-')
+
+$(i $I)Ask a yes or no question and handle results.
+
+$(i $I)Usage: confirm QUESTION [SUCCESS_FUNCTION] [FAILURE_FUNCTION]
+
+$(i $I)Supports the following as affirmitive responses by default:
+
+$(for r in `echo "$__default_confirm_success_input"`; do echo "$(i $I) - '$r'"; done)
+
+$(i $I)Default affirmtive responses can be overwritten by setting 'SHML_CONFIRM_SUCCESS'.
+
+$(i $I)Example:
+
+$(i $I)function on_success() {
+$(i $I)    echo \"yay\"
+$(i $I)}
+
+$(i $I)function on_failure() {
+$(i $I)    echo \"boo\"
+$(i $I)}
+
+$(i $I)confirm \"CREAM?\" \"on_success\" \"on_failure\"
+
+
+$(a bold "Section 9: $(color red "[EXPERIMENTAL]") Dialog")
+$(hr '-')
+
+$(i $I)Asks a question and passes the answer to a response handler function.
+
+$(i $I)Usage: dialog QUESTION [RESPONSE_FUNCTION]
+
+$(i $I)Example:
+
+$(i $I)function on_response() {
+$(i $I)    echo \"hello $1\"
+$(i $I)}
+
+$(i $I)dialog \"What is your name?\" \"on_response\"
 
 " | less -r
 fi

@@ -18,6 +18,7 @@ To use SHML you must have unix-like (Darwin/OS X, Linux, etc.) POSIX-compliant o
 {% include icons.md %}
 {% include emojis.md %}
 {% include color-bar.md %}
+{% include confirm.md %}
 
 <hr>
 

@@ -1,4 +1,4 @@
-SHML v.1.0.4
+SHML v.1.1.0
 ====
 
 [![Build Status](https://travis-ci.org/odb/shml.svg)](https://travis-ci.org/odb/shml)
@@ -12,7 +12,7 @@ HTML has CSS, terminals have "ANSI/VT100 Control Sequences". SHML makes is easy 
 ### 1-liner Install
 ```bash
 # Unix-like
-$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 
 # Darwin (Homebrew)
 $ brew install shml

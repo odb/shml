@@ -31,7 +31,7 @@ $ npm install -g shml
 
 #### wget
 
-`$ wget https://raw.githubusercontent.com/odb/shml/latest/shml.sh`
+`$ wget https://raw.githubusercontent.com/odb/shml/master/shml.sh`
 
 ### Sourcing
 

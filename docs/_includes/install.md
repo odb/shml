@@ -5,7 +5,7 @@
 
 #### Unix-like
 ``` bash
-$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/latest/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/1.1.0/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 ```
 
 #### npm

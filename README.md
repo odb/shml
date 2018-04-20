@@ -12,12 +12,12 @@ HTML has CSS, terminals have "ANSI/VT100 Control Sequences". SHML makes is easy 
 ### 1-liner Install
 ```bash
 # Unix-like
-$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/master/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
+$ sudo bash -c 'curl -L https://raw.githubusercontent.com/odb/shml/1.1.0/shml.sh -o /usr/local/bin/shml && chmod +x /usr/local/bin/shml'
 
-# Darwin (Homebrew)
+# Homebrew
 $ brew install shml
 
-# NPM
+# npm
 $ npm install -g shml
 ```
 

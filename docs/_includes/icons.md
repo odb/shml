@@ -2,7 +2,7 @@
 <a name="Icons"></a>
 
 # Icons
-Icons are flat ascii characters that are supported by most unix-like systems.  If you run into compatibility issues please [report it here](https://github.com/MaxCDN/shml/issues).
+Icons are flat ascii characters that are supported by most unix-like systems.  If you run into compatibility issues please [report it here](https://github.com/odb/shml/issues).
 
 ### Arguments
 

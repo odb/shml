@@ -1,3 +1,7 @@
+<div align="center">
+	<img width="400" src="docs/public/images/odb-shml-logo-readme.svg" alt="SHML by ODB">
+</div>
+
 SHML v.1.1.0
 ====
 
